@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stock Ledger</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-row">
+    <h1>Stock Ledger</h1>
+    <div class="masthead-meta">
+      <span id="updated-at">cargando…</span>
+    </div>
+  </div>
+  <p class="subtitle">Registro diario de lo que valen estas posiciones, con precios de cierre reales.</p>
+</header>
+
+<main>
+
+  <section id="ticker-strip" class="ticker-strip" aria-label="Resumen por ticker">
+    <!-- generado por app.js -->
+  </section>
+
+  <section class="panel">
+    <div class="panel-header">
+      <h2>Evolución diaria</h2>
+      <div class="toggle" role="group" aria-label="Modo de vista">
+        <button id="view-absolute" class="toggle-btn is-active" type="button">Precio ($)</button>
+        <button id="view-normalized" class="toggle-btn" type="button">% desde inicio</button>
+      </div>
+    </div>
+    <div class="chart-wrap">
+      <canvas id="main-chart" role="img" aria-label="Gráfico de precios diarios por ticker"></canvas>
+    </div>
+    <p class="hint">Clic en un nombre de la leyenda para mostrar/ocultar esa línea.</p>
+  </section>
+
+  <section class="panel">
+    <div class="panel-header">
+      <h2>Rendimiento acumulado</h2>
+    </div>
+    <div class="chart-wrap chart-wrap--short">
+      <canvas id="return-chart" role="img" aria-label="Rendimiento acumulado por ticker"></canvas>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-header">
+      <h2>Detalle</h2>
+    </div>
+    <div class="table-wrap">
+      <table id="detail-table">
+        <thead>
+          <tr>
+            <th>Ticker</th>
+            <th class="num">Cierre</th>
+            <th class="num">Var. día</th>
+            <th class="num">Desde inicio</th>
+            <th>Última fecha</th>
+          </tr>
+        </thead>
+        <tbody><!-- generado por app.js --></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel panel--notes">
+    <h2>Cómo funciona</h2>
+    <ul>
+      <li><strong>Añadir un ticker:</strong> edita <code>data/tickers.json</code> en el repo y súbelo. La próxima ejecución del workflow trae 2 años de histórico para el nuevo símbolo automáticamente.</li>
+      <li><strong>Actualización:</strong> un GitHub Action corre de lunes a viernes y hace commit de los precios nuevos en <code>data/prices.json</code>. También puedes ejecutarlo a mano desde la pestaña Actions.</li>
+      <li><strong>Pedir análisis a Claude:</strong> pásale a Claude la URL cruda del archivo de datos (algo como <code>https://raw.githubusercontent.com/TU_USUARIO/TU_REPO/main/data/prices.json</code>) o descarga el archivo y súbelo al chat. Está en JSON simple: un arreglo de {fecha, cierre, volumen} por ticker.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <span>Datos de Yahoo Finance vía yfinance · actualizado automáticamente</span>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
