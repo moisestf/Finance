@@ -405,6 +405,27 @@ function renderMonthlyTable(tickers, series) {
   }
 }
 
+function wireComparisonToggle() {
+  const monthlyBtn = document.getElementById("comparison-monthly");
+  const weeklyBtn = document.getElementById("comparison-weekly");
+  const monthlyPanel = document.getElementById("comparison-monthly-panel");
+  const weeklyPanel = document.getElementById("comparison-weekly-panel");
+
+  monthlyBtn.addEventListener("click", () => {
+    monthlyBtn.classList.add("is-active");
+    weeklyBtn.classList.remove("is-active");
+    monthlyPanel.classList.remove("is-hidden");
+    weeklyPanel.classList.add("is-hidden");
+  });
+
+  weeklyBtn.addEventListener("click", () => {
+    weeklyBtn.classList.add("is-active");
+    monthlyBtn.classList.remove("is-active");
+    weeklyPanel.classList.remove("is-hidden");
+    monthlyPanel.classList.add("is-hidden");
+  });
+}
+
 function wireToggle(tickers, series) {
   const absBtn = document.getElementById("view-absolute");
   const normBtn = document.getElementById("view-normalized");
@@ -438,6 +459,7 @@ async function init() {
     renderWeeklyTable(tickers, series);
     renderMonthlyTable(tickers, series);
     wireToggle(tickers, series);
+    wireComparisonToggle();
   } catch (err) {
     console.error(err);
     document.getElementById("updated-at").textContent = "error cargando datos";
