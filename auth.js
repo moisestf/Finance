@@ -27,16 +27,17 @@ async function checkCredentials(username, password) {
   if (!res.ok) throw new Error("No se pudo leer data/auth.json");
   const auth = await res.json();
 
-  if (username !== auth.username) return false;
+  const user = (auth.users || []).find((u) => u.username === username);
+  if (!user) return false;
 
-  const outputBytes = auth.hash.length / 2;
-  const computed = await pbkdf2Hex(password, auth.salt, auth.iterations, outputBytes);
+  const outputBytes = user.hash.length / 2;
+  const computed = await pbkdf2Hex(password, user.salt, auth.iterations, outputBytes);
 
   // Comparación en tiempo constante para no filtrar información por timing.
-  if (computed.length !== auth.hash.length) return false;
+  if (computed.length !== user.hash.length) return false;
   let diff = 0;
   for (let i = 0; i < computed.length; i++) {
-    diff |= computed.charCodeAt(i) ^ auth.hash.charCodeAt(i);
+    diff |= computed.charCodeAt(i) ^ user.hash.charCodeAt(i);
   }
   return diff === 0;
 }

@@ -33,13 +33,14 @@ De ahí en adelante, el Action corre solo de lunes a viernes a las 21:30 UTC (de
 
 ## Login
 
-El sitio pide usuario y contraseña antes de mostrar el dashboard. Las credenciales viven en `data/auth.json`, pero la contraseña **nunca se guarda en texto plano**: se guarda un hash PBKDF2-SHA256 (210.000 iteraciones + salt aleatorio de 16 bytes). Aunque alguien copie ese archivo, no puede obtener la contraseña original a partir del hash.
+El sitio pide usuario y contraseña antes de mostrar el dashboard. Las credenciales viven en `data/auth.json` como una lista de usuarios, pero la contraseña **nunca se guarda en texto plano**: cada usuario tiene su propio hash PBKDF2-SHA256 (210.000 iteraciones + salt aleatorio de 16 bytes). Aunque alguien copie ese archivo, no puede obtener ninguna contraseña original a partir de su hash.
 
-**Cambiar usuario o contraseña:**
+**Añadir, cambiar o quitar un usuario:**
 ```bash
-python scripts/generate_credentials.py --username tu_usuario
+python scripts/generate_credentials.py --username nuevo_usuario     # añade o actualiza
+python scripts/generate_credentials.py --username nuevo_usuario --remove   # lo quita
 ```
-Te la pide de forma oculta (no se ve en pantalla ni queda en el historial de la terminal), genera el nuevo `data/auth.json` y lo puedes subir al repo normalmente.
+La contraseña se pide de forma oculta (no se ve en pantalla ni queda en el historial de la terminal). Añadir o cambiar un usuario no requiere ni expone la contraseña de los demás — cada uno tiene su salt y hash independientes.
 
 ### ⚠️ Qué protege esto y qué no
 
