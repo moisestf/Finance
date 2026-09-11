@@ -11,17 +11,31 @@
 </head>
 <body>
 
+<div id="login-screen" class="login-screen">
+  <form id="login-form" class="login-box">
+    <h1 class="login-title">Stock Ledger</h1>
+    <p class="login-subtitle">Acceso restringido</p>
+    <label for="login-username">Usuario</label>
+    <input id="login-username" name="username" type="text" autocomplete="username" required />
+    <label for="login-password">Contraseña</label>
+    <input id="login-password" name="password" type="password" autocomplete="current-password" required />
+    <button id="login-submit" type="submit">Entrar</button>
+    <p id="login-error" class="login-error" role="alert"></p>
+  </form>
+</div>
+
 <header class="masthead">
   <div class="masthead-row">
     <h1>Stock Ledger</h1>
     <div class="masthead-meta">
       <span id="updated-at">cargando…</span>
+      <button id="logout-btn" class="logout-btn is-hidden" type="button">Cerrar sesión</button>
     </div>
   </div>
   <p class="subtitle">Registro diario de lo que valen estas posiciones, con precios de cierre reales.</p>
 </header>
 
-<main>
+<main id="app-main" class="is-hidden">
 
   <section id="ticker-strip" class="ticker-strip" aria-label="Resumen por ticker">
     <!-- generado por app.js -->
@@ -52,6 +66,21 @@
 
   <section class="panel">
     <div class="panel-header">
+      <h2>Comparativa semanal</h2>
+    </div>
+    <p class="hint">Variación de cada viernes respecto al viernes anterior, últimas 40 semanas. Verde = subió, rojo = bajó; el color se intensifica cuanto mayor es el cambio.</p>
+    <div class="table-wrap table-wrap--scroll">
+      <table id="weekly-table">
+        <thead>
+          <tr id="weekly-table-head"><!-- generado por app.js --></tr>
+        </thead>
+        <tbody><!-- generado por app.js --></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-header">
       <h2>Detalle</h2>
     </div>
     <div class="table-wrap">
@@ -76,6 +105,7 @@
       <li><strong>Añadir un ticker:</strong> edita <code>data/tickers.json</code> en el repo y súbelo. La próxima ejecución del workflow trae 2 años de histórico para el nuevo símbolo automáticamente.</li>
       <li><strong>Actualización:</strong> un GitHub Action corre de lunes a viernes y hace commit de los precios nuevos en <code>data/prices.json</code>. También puedes ejecutarlo a mano desde la pestaña Actions.</li>
       <li><strong>Pedir análisis a Claude:</strong> pásale a Claude la URL cruda del archivo de datos (algo como <code>https://raw.githubusercontent.com/TU_USUARIO/TU_REPO/main/data/prices.json</code>) o descarga el archivo y súbelo al chat. Está en JSON simple: un arreglo de {fecha, cierre, volumen} por ticker.</li>
+      <li><strong>Cambiar usuario/contraseña:</strong> corre <code>python scripts/generate_credentials.py --username TU_USUARIO</code> localmente (te pide la contraseña de forma oculta) y sube el <code>data/auth.json</code> resultante. La contraseña nunca se guarda en texto plano, solo su hash.</li>
     </ul>
   </section>
 
@@ -87,5 +117,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <script src="app.js"></script>
+<script src="auth.js"></script>
 </body>
 </html>

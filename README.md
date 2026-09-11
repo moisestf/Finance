@@ -31,6 +31,25 @@ Tickers iniciales: `PLTR, CLS, GOOG, AAPL, BRK-B, AXON, FIX`
 
 De ahí en adelante, el Action corre solo de lunes a viernes a las 21:30 UTC (después del cierre del mercado de EE.UU.) y va agregando el día nuevo a `prices.json`.
 
+## Login
+
+El sitio pide usuario y contraseña antes de mostrar el dashboard. Las credenciales viven en `data/auth.json`, pero la contraseña **nunca se guarda en texto plano**: se guarda un hash PBKDF2-SHA256 (210.000 iteraciones + salt aleatorio de 16 bytes). Aunque alguien copie ese archivo, no puede obtener la contraseña original a partir del hash.
+
+**Cambiar usuario o contraseña:**
+```bash
+python scripts/generate_credentials.py --username tu_usuario
+```
+Te la pide de forma oculta (no se ve en pantalla ni queda en el historial de la terminal), genera el nuevo `data/auth.json` y lo puedes subir al repo normalmente.
+
+### ⚠️ Qué protege esto y qué no
+
+Esto es una app **100% estática** servida por GitHub Pages: no hay servidor que valide nada. En la práctica:
+
+- **Sí protege:** la contraseña en sí. Aunque roben `data/auth.json`, no pueden recuperarla — solo podrían intentar adivinarla probando contraseñas una por una contra el hash (por eso conviene una contraseña que no sea trivial de adivinar).
+- **No protege:** el contenido del sitio ni los datos. Como el repo es público (requisito para Pages gratis) y no hay backend, cualquiera que sepa la URL directa de `data/prices.json` o del propio repo puede verlos sin pasar por el login — la pantalla de login solo oculta la *interfaz* a quien entra por la web normal, no vuelve privados los archivos.
+
+Si en algún momento necesitas que los datos en sí sean realmente privados (no solo la pantalla), hay que salir del modelo "solo GitHub Pages" — por ejemplo con un repo privado + GitHub Pro/Team, o moviendo el acceso a los datos detrás de una función serverless con sesión real. Dímelo si quieres que lo montemos así.
+
 ## Añadir un ticker nuevo
 
 Edita `data/tickers.json` y agrega el símbolo (formato Yahoo Finance, por ejemplo `BRK-B` para Berkshire clase B). Haz commit. En la siguiente ejecución del workflow, el script detecta que es nuevo y descarga 2 años de histórico automáticamente para que el gráfico no empiece vacío.
