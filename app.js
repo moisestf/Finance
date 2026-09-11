@@ -310,6 +310,101 @@ function renderWeeklyTable(tickers, series) {
   }
 }
 
+// ---------- Monthly (month-over-month) comparison ----------
+
+const MONTH_LABELS_ES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+
+function lastDayOfMonth(year, monthIndex0) {
+  // Day 0 of the following month == last day of this month.
+  return new Date(Date.UTC(year, monthIndex0 + 1, 0));
+}
+
+// Last day of the most recent month that's already fully elapsed as of `latestDate`.
+function mostRecentCompletedMonthEnd(latestDate) {
+  let y = latestDate.getUTCFullYear();
+  let m = latestDate.getUTCMonth();
+  let end = lastDayOfMonth(y, m);
+  if (end > latestDate) {
+    m -= 1;
+    if (m < 0) {
+      m = 11;
+      y -= 1;
+    }
+    end = lastDayOfMonth(y, m);
+  }
+  return end;
+}
+
+// `count` month-end dates, going backward one month at a time, newest first, starting at `anchorEnd`.
+function monthEndsBack(anchorEnd, count) {
+  const dates = [];
+  let y = anchorEnd.getUTCFullYear();
+  let m = anchorEnd.getUTCMonth();
+  for (let i = 0; i < count; i++) {
+    dates.push(lastDayOfMonth(y, m));
+    m -= 1;
+    if (m < 0) {
+      m = 11;
+      y -= 1;
+    }
+  }
+  return dates;
+}
+
+function monthLabel(d) {
+  return `${MONTH_LABELS_ES[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
+}
+
+/**
+ * For a ticker's records, return the last `months` month-over-month % changes,
+ * one per month (using each month's last trading day), newest first:
+ * [{ label, pct }, ...]. `pct` is null if there isn't enough history yet.
+ */
+function monthlyChanges(records, anchorEnd, months) {
+  if (!records || records.length === 0) return [];
+  const ends = monthEndsBack(anchorEnd, months + 1); // one extra to diff against
+  const closes = ends.map((e) => closeOnOrBefore(records, toISO(e)));
+
+  const out = [];
+  for (let i = 0; i < months; i++) {
+    const current = closes[i];
+    const previous = closes[i + 1];
+    let pct = null;
+    if (current && previous && previous.close) {
+      pct = ((current.close - previous.close) / previous.close) * 100;
+    }
+    out.push({ label: monthLabel(ends[i]), pct });
+  }
+  return out;
+}
+
+function renderMonthlyTable(tickers, series) {
+  const MONTHS = 24;
+
+  const latest = allDates(tickers, series).slice(-1)[0];
+  const anchor = mostRecentCompletedMonthEnd(latest ? new Date(latest + "T00:00:00Z") : new Date());
+
+  const perTicker = tickers.map((t) => monthlyChanges(series[t], anchor, MONTHS));
+
+  const head = document.getElementById("monthly-table-head");
+  head.innerHTML = `<th>Mes</th>${tickers.map((t) => `<th class="num">${t}</th>`).join("")}`;
+
+  const tbody = document.querySelector("#monthly-table tbody");
+  tbody.innerHTML = "";
+  for (let row = 0; row < MONTHS; row++) {
+    const tr = document.createElement("tr");
+    const label = perTicker[0] && perTicker[0][row] ? perTicker[0][row].label : "";
+    let cells = `<td>${label}</td>`;
+    tickers.forEach((t, ti) => {
+      const entry = perTicker[ti][row];
+      const pct = entry ? entry.pct : null;
+      cells += `<td class="heat" style="background:${heatColor(pct)}">${fmtPct(pct)}</td>`;
+    });
+    tr.innerHTML = cells;
+    tbody.appendChild(tr);
+  }
+}
+
 function wireToggle(tickers, series) {
   const absBtn = document.getElementById("view-absolute");
   const normBtn = document.getElementById("view-normalized");
@@ -341,6 +436,7 @@ async function init() {
     renderMainChart(tickers, series, state.mode);
     renderReturnChart(tickers, series);
     renderWeeklyTable(tickers, series);
+    renderMonthlyTable(tickers, series);
     wireToggle(tickers, series);
   } catch (err) {
     console.error(err);

@@ -320,14 +320,15 @@ footer {
   overflow-y: auto;
 }
 
-#weekly-table thead th {
+#weekly-table thead th,
+.data-heatmap thead th {
   position: sticky;
   top: 0;
   background: var(--surface);
   z-index: 1;
 }
 
-#weekly-table td.heat {
+.data-heatmap td.heat {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }

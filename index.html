@@ -70,9 +70,24 @@
     </div>
     <p class="hint">Variación de cada viernes respecto al viernes anterior, últimas 40 semanas. Verde = subió, rojo = bajó; el color se intensifica cuanto mayor es el cambio.</p>
     <div class="table-wrap table-wrap--scroll">
-      <table id="weekly-table">
+      <table id="weekly-table" class="data-heatmap">
         <thead>
           <tr id="weekly-table-head"><!-- generado por app.js --></tr>
+        </thead>
+        <tbody><!-- generado por app.js --></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-header">
+      <h2>Comparativa mensual</h2>
+    </div>
+    <p class="hint">Variación de cada mes respecto al mes anterior (con el precio de cierre del último día hábil de cada mes), últimos 24 meses.</p>
+    <div class="table-wrap table-wrap--scroll">
+      <table id="monthly-table" class="data-heatmap">
+        <thead>
+          <tr id="monthly-table-head"><!-- generado por app.js --></tr>
         </thead>
         <tbody><!-- generado por app.js --></tbody>
       </table>
