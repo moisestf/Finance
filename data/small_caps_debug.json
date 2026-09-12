@@ -8,8 +8,15 @@
       "body_len": 1736855
     },
     {
-      "attempt": "product page regex",
-      "note": "no matching .ajax csv link found in page HTML"
+      "attempt": "broad csv href scan",
+      "matches_found": 0,
+      "sample": []
+    },
+    {
+      "attempt": "substring presence",
+      "has_IWM_holdings": false,
+      "has_fileType_csv": false,
+      "has_ajax_holdings": false
     },
     {
       "attempt": "known URL",
