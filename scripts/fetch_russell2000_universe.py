@@ -1,231 +1,164 @@
 #!/usr/bin/env python3
 """
-Build data/small_caps_universe.json: the top N holdings (by market value,
-i.e. approximate market cap) of the iShares Russell 2000 ETF (IWM).
+Build data/small_caps_universe.json: an approximation of "the largest ~500
+Russell 2000 components by market cap" using Yahoo Finance's public screener
+(via yfinance's yf.screen()) instead of scraping an official index provider.
 
-Why IWM holdings instead of an official Russell 2000 constituent list:
-FTSE Russell's official membership list isn't freely available via API.
-IWM tracks the Russell 2000 and iShares publishes its full holdings as a
-public CSV — this is the standard free, practical proxy for "Russell 2000
-components ranked by market cap" and is what this script uses.
+Why not scrape the official Russell 2000 constituent list or an ETF's
+holdings page directly: FTSE Russell's membership data isn't freely
+available via API, and ETF-provider sites (e.g. iShares) are behind
+enterprise bot-protection (Akamai) that blocks plain HTTP clients — there's
+no lightweight, free way around that. Yahoo's screener endpoint is the same
+infrastructure this project already relies on for daily prices, so this
+reuses a data source we know works.
+
+Approximation used: US-listed equities (NASDAQ/NYSE) with a market cap
+between MIN_MARKET_CAP and MAX_MARKET_CAP (a band chosen to bracket the
+Russell 2000's typical range), sorted by market cap descending, top N kept.
+This will not be byte-identical to official Russell 2000 membership, but is
+a reasonable, transparent, freely-obtainable stand-in for "largest small/
+mid-cap components."
 
 Usage:
     python scripts/fetch_russell2000_universe.py [--top 500]
 """
 import argparse
-import csv
-import io
-import re
+import json
 import sys
 from pathlib import Path
 
-import json
-import requests
+import yfinance as yf
+from yfinance import EquityQuery
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT_FILE = ROOT / "data" / "small_caps_universe.json"
+DEBUG_FILE = ROOT / "data" / "small_caps_debug.json"
 
-PRODUCT_PAGE = "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf"
-# Known-good direct CSV export link for IWM holdings. iShares occasionally
-# changes the numeric path segment; if this stops working the script falls
-# back to scraping the current link off the product page below.
-KNOWN_CSV_URL = (
-    "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf/"
-    "1467271812596.ajax?fileType=csv&fileName=IWM_holdings&dataType=fund"
-)
-
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/124.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-    "Accept-Language": "en-US,en;q=0.9",
-}
-
-CSV_HEADERS = {
-    **HEADERS,
-    "Accept": "text/csv,application/csv,text/plain,*/*;q=0.8",
-    "Referer": PRODUCT_PAGE,
-}
+MIN_MARKET_CAP = 300_000_000
+MAX_MARKET_CAP = 20_000_000_000
+PAGE_SIZE = 250  # Yahoo's hard max per request
 
 
-def discover_csv_url(diagnostics: list, session: requests.Session):
-    try:
-        resp = session.get(PRODUCT_PAGE, headers=HEADERS, timeout=30)
-        diagnostics.append({"attempt": "product page fetch", "url": PRODUCT_PAGE, "status_code": resp.status_code, "body_len": len(resp.content), "cookies_set": list(session.cookies.get_dict().keys())})
-        resp.raise_for_status()
-    except Exception as exc:  # noqa: BLE001
-        print(f"Could not load product page to discover CSV link: {exc}")
-        diagnostics.append({"attempt": "product page fetch", "url": PRODUCT_PAGE, "error": str(exc)})
-        return None
-
-    text = resp.text
-
-    broad_matches = re.findall(r'href="([^"]*?fileType=csv[^"]*)"', text)
-    diagnostics.append({"attempt": "broad csv href scan", "matches_found": len(broad_matches), "sample": broad_matches[:5]})
-    diagnostics.append(
-        {
-            "attempt": "substring presence",
-            "has_IWM_holdings": "IWM_holdings" in text,
-            "has_fileType_csv": "fileType=csv" in text,
-        }
+def build_query() -> EquityQuery:
+    return EquityQuery(
+        "and",
+        [
+            EquityQuery("is-in", ["exchange", "NMS", "NYQ"]),
+            EquityQuery("btwn", ["intradaymarketcap", MIN_MARKET_CAP, MAX_MARKET_CAP]),
+            EquityQuery("eq", ["region", "us"]),
+        ],
     )
 
-    if broad_matches:
-        href = broad_matches[0]
-        return href if href.startswith("http") else "https://www.ishares.com" + href
-    return None
 
-
-def download_csv_text(diagnostics: list):
-    session = requests.Session()
-    discovered = discover_csv_url(diagnostics, session)
-
-    attempts = [("known URL", KNOWN_CSV_URL)]
-    if discovered:
-        attempts.insert(0, ("discovered URL", discovered))
-
-    for label, url in attempts:
-        try:
-            print(f"Trying {label}: {url}")
-            resp = session.get(url, headers=CSV_HEADERS, timeout=60)
-            snippet = resp.content[:300].decode("utf-8", errors="replace")
-            diagnostics.append(
-                {"attempt": label, "url": url, "status_code": resp.status_code, "content_type": resp.headers.get("Content-Type"), "body_snippet": snippet}
-            )
-            resp.raise_for_status()
-            text = resp.content.decode("utf-8-sig", errors="replace")
-            if "Ticker" in text and "Weight" in text:
-                print(f"  -> got a plausible CSV via {label} ({len(text)} bytes)")
-                return text
-            print(f"  -> response didn't look like the holdings CSV (no 'Ticker'/'Weight' columns found)")
-        except Exception as exc:  # noqa: BLE001
-            print(f"  -> failed via {label}: {exc}")
-            diagnostics.append({"attempt": label, "url": url, "error": str(exc)})
-    return None
-
-
-def find_header_row(lines):
-    for i, line in enumerate(lines):
-        cells = [c.strip().strip('"') for c in line.split(",")]
-        if "Ticker" in cells and any("Weight" in c for c in cells):
-            return i
-    raise RuntimeError("Could not locate the holdings table header row in the CSV.")
-
-
-def parse_holdings(csv_text: str):
-    lines = csv_text.splitlines()
-    header_idx = find_header_row(lines)
-    reader = csv.DictReader(io.StringIO("\n".join(lines[header_idx:])))
-
-    weight_col = next((c for c in reader.fieldnames if "Weight" in c), None)
-    mv_col = next((c for c in reader.fieldnames if c.strip() == "Market Value"), None)
-    name_col = next((c for c in reader.fieldnames if c.strip() == "Name"), None)
-    sector_col = next((c for c in reader.fieldnames if c.strip() == "Sector"), None)
-    asset_class_col = next((c for c in reader.fieldnames if "Asset Class" in c), None)
-
-    holdings = []
-    for row in reader:
-        ticker = (row.get("Ticker") or "").strip()
-        if not ticker:
-            continue
-        if asset_class_col and row.get(asset_class_col, "").strip().lower() not in ("equity", ""):
-            continue
-        if sector_col and "cash" in row.get(sector_col, "").strip().lower():
-            continue
-
-        def to_float(raw):
-            if not raw:
-                return None
-            cleaned = raw.replace(",", "").replace("%", "").strip()
-            try:
-                return float(cleaned)
-            except ValueError:
-                return None
-
-        market_value = to_float(row.get(mv_col)) if mv_col else None
-        weight = to_float(row.get(weight_col)) if weight_col else None
-        if market_value is None and weight is None:
-            continue
-
-        holdings.append(
-            {
-                "ticker": ticker.replace(".", "-").upper(),
-                "name": (row.get(name_col) or "").strip() if name_col else "",
-                "market_value": market_value,
-                "weight_pct": weight,
-            }
-        )
-    return holdings
+def extract_quote_fields(q: dict):
+    symbol = q.get("symbol")
+    name = q.get("longName") or q.get("shortName") or q.get("displayName") or ""
+    market_cap = q.get("marketCap")
+    if market_cap is None:
+        market_cap = q.get("intradayMarketCap") or q.get("regularMarketCap")
+    if isinstance(market_cap, dict):
+        market_cap = market_cap.get("raw")
+    return symbol, name, market_cap
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--top", type=int, default=500)
     args = parser.parse_args()
 
-    diagnostics: list = []
-    debug_file = ROOT / "data" / "small_caps_debug.json"
+    diagnostics = []
+    all_quotes = []
+    offset = 0
+    total = None
+    query = build_query()
 
-    def write_debug(status: str, extra: dict | None = None):
-        payload = {"status": status, "attempts": diagnostics}
-        if extra:
-            payload.update(extra)
-        debug_file.parent.mkdir(parents=True, exist_ok=True)
-        with open(debug_file, "w", encoding="utf-8") as f:
-            json.dump(payload, f, indent=2)
+    while len(all_quotes) < args.top:
+        size = min(PAGE_SIZE, args.top - len(all_quotes))
+        try:
+            result = yf.screen(query, offset=offset, size=size, sortField="intradaymarketcap", sortAsc=False)
+        except Exception as exc:  # noqa: BLE001
+            print(f"screen() failed at offset={offset}: {exc}")
+            diagnostics.append({"attempt": f"screen offset={offset} size={size}", "error": str(exc)})
+            break
 
-    csv_text = download_csv_text(diagnostics)
-    if not csv_text:
-        print("Could not download IWM holdings CSV via any known method.")
-        write_debug("download_failed")
-        sys.exit(0)  # don't crash the job — leave the debug file for inspection
+        quotes = result.get("quotes", [])
+        total = result.get("total", total)
+        diagnostics.append(
+            {
+                "attempt": f"screen offset={offset} size={size}",
+                "returned": len(quotes),
+                "total_reported": total,
+                "sample_keys": sorted(quotes[0].keys()) if quotes else [],
+            }
+        )
+        print(f"offset={offset} size={size} -> {len(quotes)} quotes (total reported: {total})")
 
-    try:
-        holdings = parse_holdings(csv_text)
-    except Exception as exc:  # noqa: BLE001
-        print(f"Failed to parse holdings CSV: {exc}")
-        write_debug("parse_failed", {"error": str(exc), "csv_head": csv_text[:1000]})
-        sys.exit(0)
+        if not quotes:
+            break
+        all_quotes.extend(quotes)
+        offset += len(quotes)
+        if total is not None and offset >= total:
+            break
 
-    if not holdings:
-        print("Parsed zero holdings — aborting without overwriting the existing universe file.")
-        write_debug("zero_holdings_parsed", {"csv_head": csv_text[:1000]})
-        sys.exit(0)
+    holdings = []
+    missing_cap = 0
+    for q in all_quotes:
+        symbol, name, market_cap = extract_quote_fields(q)
+        if not symbol:
+            continue
+        if market_cap is None:
+            missing_cap += 1
+        holdings.append(
+            {
+                "ticker": symbol.replace(".", "-").upper(),
+                "name": name,
+                "market_value": market_cap,
+                "weight_pct": None,
+            }
+        )
+    diagnostics.append({"attempt": "field extraction", "quotes_seen": len(all_quotes), "holdings_built": len(holdings), "missing_market_cap": missing_cap})
 
-    # Rank by market value if available, else fall back to weight (both are
-    # proxies for market cap within a single market-cap-weighted fund).
-    holdings.sort(key=lambda h: (h["market_value"] if h["market_value"] is not None else h["weight_pct"] or 0), reverse=True)
-
-    # De-duplicate tickers just in case (share classes etc. can repeat post-sanitization).
+    # Yahoo already returns results sorted by market cap desc; de-dupe defensively.
     seen = set()
-    top = []
+    top_list = []
     for h in holdings:
         if h["ticker"] in seen:
             continue
         seen.add(h["ticker"])
-        top.append(h)
-        if len(top) >= args.top:
+        top_list.append(h)
+        if len(top_list) >= args.top:
             break
+
+    DEBUG_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with open(DEBUG_FILE, "w", encoding="utf-8") as f:
+        json.dump({"status": "ok" if top_list else "empty", "attempts": diagnostics}, f, indent=2, default=str)
+
+    if not top_list:
+        print("No holdings collected from yf.screen — see data/small_caps_debug.json.")
+        sys.exit(0)  # fail soft, keep any previously-good universe file in place
 
     OUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     with open(OUT_FILE, "w", encoding="utf-8") as f:
         json.dump(
             {
-                "source": "iShares IWM (Russell 2000 ETF) holdings, used as a free proxy for Russell 2000 membership/market cap ranking",
+                "source": (
+                    f"Yahoo Finance screener (yfinance yf.screen): US equities on NASDAQ/NYSE "
+                    f"with market cap between ${MIN_MARKET_CAP:,} and ${MAX_MARKET_CAP:,}, sorted "
+                    f"descending — a free proxy for 'largest Russell 2000 components', not official "
+                    f"FTSE Russell membership data."
+                ),
                 "requested_top": args.top,
-                "count": len(top),
-                "holdings": top,
+                "count": len(top_list),
+                "holdings": top_list,
             },
             f,
             indent=2,
         )
 
-    write_debug("ok", {"holdings_parsed": len(holdings), "top_written": len(top)})
-
-    print(f"Wrote {len(top)} holdings to {OUT_FILE}")
-    print("Top 10 by market value/weight:")
-    for h in top[:10]:
-        print(f"  {h['ticker']:8s} {h['name'][:40]:40s} mv={h['market_value']} weight={h['weight_pct']}")
+    print(f"Wrote {len(top_list)} holdings to {OUT_FILE}")
+    print("Top 10 by market cap:")
+    for h in top_list[:10]:
+        print(f"  {h['ticker']:8s} {h['name'][:40]:40s} mv={h['market_value']}")
 
 
 if __name__ == "__main__":
