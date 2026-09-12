@@ -50,10 +50,29 @@ def discover_csv_url(diagnostics: list):
         diagnostics.append({"attempt": "product page fetch", "url": PRODUCT_PAGE, "error": str(exc)})
         return None
 
-    match = re.search(r'(/us/products/239710/[^"]*?\.ajax\?fileType=csv&fileName=IWM_holdings&dataType=fund)', resp.text)
+    text = resp.text
+
+    # Broad first: any href containing fileType=csv at all (fileName may not be "IWM_holdings" anymore).
+    broad_matches = re.findall(r'href="([^"]*?fileType=csv[^"]*)"', text)
+    diagnostics.append({"attempt": "broad csv href scan", "matches_found": len(broad_matches), "sample": broad_matches[:5]})
+
+    # Also note whether the substring appears at all, uninterpreted by regex assumptions.
+    diagnostics.append(
+        {
+            "attempt": "substring presence",
+            "has_IWM_holdings": "IWM_holdings" in text,
+            "has_fileType_csv": "fileType=csv" in text,
+            "has_ajax_holdings": ".ajax?fileType=csv" in text,
+        }
+    )
+
+    if broad_matches:
+        href = broad_matches[0]
+        return href if href.startswith("http") else "https://www.ishares.com" + href
+
+    match = re.search(r'(/us/products/239710/[^"]*?\.ajax\?fileType=csv&fileName=IWM_holdings&dataType=fund)', text)
     if match:
         return "https://www.ishares.com" + match.group(1)
-    diagnostics.append({"attempt": "product page regex", "note": "no matching .ajax csv link found in page HTML"})
     return None
 
 
