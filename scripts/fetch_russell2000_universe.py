@@ -36,14 +36,22 @@ KNOWN_CSV_URL = (
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+    "(KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+}
+
+CSV_HEADERS = {
+    **HEADERS,
+    "Accept": "text/csv,application/csv,text/plain,*/*;q=0.8",
+    "Referer": PRODUCT_PAGE,
 }
 
 
-def discover_csv_url(diagnostics: list):
+def discover_csv_url(diagnostics: list, session: requests.Session):
     try:
-        resp = requests.get(PRODUCT_PAGE, headers=HEADERS, timeout=30)
-        diagnostics.append({"attempt": "product page fetch", "url": PRODUCT_PAGE, "status_code": resp.status_code, "body_len": len(resp.content)})
+        resp = session.get(PRODUCT_PAGE, headers=HEADERS, timeout=30)
+        diagnostics.append({"attempt": "product page fetch", "url": PRODUCT_PAGE, "status_code": resp.status_code, "body_len": len(resp.content), "cookies_set": list(session.cookies.get_dict().keys())})
         resp.raise_for_status()
     except Exception as exc:  # noqa: BLE001
         print(f"Could not load product page to discover CSV link: {exc}")
@@ -52,43 +60,37 @@ def discover_csv_url(diagnostics: list):
 
     text = resp.text
 
-    # Broad first: any href containing fileType=csv at all (fileName may not be "IWM_holdings" anymore).
     broad_matches = re.findall(r'href="([^"]*?fileType=csv[^"]*)"', text)
     diagnostics.append({"attempt": "broad csv href scan", "matches_found": len(broad_matches), "sample": broad_matches[:5]})
-
-    # Also note whether the substring appears at all, uninterpreted by regex assumptions.
     diagnostics.append(
         {
             "attempt": "substring presence",
             "has_IWM_holdings": "IWM_holdings" in text,
             "has_fileType_csv": "fileType=csv" in text,
-            "has_ajax_holdings": ".ajax?fileType=csv" in text,
         }
     )
 
     if broad_matches:
         href = broad_matches[0]
         return href if href.startswith("http") else "https://www.ishares.com" + href
-
-    match = re.search(r'(/us/products/239710/[^"]*?\.ajax\?fileType=csv&fileName=IWM_holdings&dataType=fund)', text)
-    if match:
-        return "https://www.ishares.com" + match.group(1)
     return None
 
 
 def download_csv_text(diagnostics: list):
+    session = requests.Session()
+    discovered = discover_csv_url(diagnostics, session)
+
     attempts = [("known URL", KNOWN_CSV_URL)]
-    discovered = discover_csv_url(diagnostics)
     if discovered:
-        attempts.append(("discovered URL", discovered))
+        attempts.insert(0, ("discovered URL", discovered))
 
     for label, url in attempts:
         try:
             print(f"Trying {label}: {url}")
-            resp = requests.get(url, headers=HEADERS, timeout=60)
+            resp = session.get(url, headers=CSV_HEADERS, timeout=60)
             snippet = resp.content[:300].decode("utf-8", errors="replace")
             diagnostics.append(
-                {"attempt": label, "url": url, "status_code": resp.status_code, "body_snippet": snippet}
+                {"attempt": label, "url": url, "status_code": resp.status_code, "content_type": resp.headers.get("Content-Type"), "body_snippet": snippet}
             )
             resp.raise_for_status()
             text = resp.content.decode("utf-8-sig", errors="replace")
