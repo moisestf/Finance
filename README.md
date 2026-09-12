@@ -51,6 +51,18 @@ Esto es una app **100% estática** servida por GitHub Pages: no hay servidor que
 
 Si en algún momento necesitas que los datos en sí sean realmente privados (no solo la pantalla), hay que salir del modelo "solo GitHub Pages" — por ejemplo con un repo privado + GitHub Pro/Team, o moviendo el acceso a los datos detrás de una función serverless con sesión real. Dímelo si quieres que lo montemos así.
 
+## Tercera página: Small Caps (Russell 2000 top 500)
+
+`smallcaps.html` — ranking de las ~500 acciones de mayor capitalización dentro de un rango típico del Russell 2000, ordenable por mejor trimestre o por trimestres consecutivos positivos.
+
+**Metodología y su límite honesto:** no existe una API pública gratuita con la composición oficial del Russell 2000 (FTSE Russell es un dato comercial). Se probó primero con los holdings públicos del ETF iShares IWM, pero su sitio está protegido por Akamai Bot Manager y bloquea peticiones no-navegador — no hay forma limpia de esquivarlo. En su lugar se usa el screener de Yahoo Finance (`yf.screen()` de yfinance): acciones de NASDAQ/NYSE con capitalización entre $300M y $7.000M, ordenadas de mayor a menor. Esto **no es membresía oficial del índice** — es una aproximación razonable y transparente basada en rango de capitalización, no en pertenencia real al índice.
+
+- `data/small_caps_universe.json` — el universo de ~500 tickers (capitalización, nombre).
+- `data/small_caps_quarterly.json` — variación trimestral precalculada (8 trimestres) + `best_quarter_pct` (mejor trimestre) y `positive_quarters` (trimestres positivos) por ticker, usados para el ranking.
+- `data/small_caps_debug.json` — diagnóstico de la última ejecución (útil si algo falla).
+- Se actualiza una vez por semana (`update-smallcaps.yml`, sábados) — los datos trimestrales apenas cambian día a día.
+- El cálculo de variación se hace en Python al momento de traer los datos (no en el navegador, por el volumen: 500 tickers), a diferencia de las otras dos páginas.
+
 ## Segunda página: Watchlist
 
 `watchlist.html` es una página aparte (enlazada desde la cabecera del dashboard principal, y viceversa) con su propia lista de tickers y su propio histórico — totalmente independiente del dashboard principal, aunque comparte el mismo login.
