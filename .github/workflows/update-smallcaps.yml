@@ -1,0 +1,43 @@
+name: Update small-caps (Russell 2000 top 500)
+
+on:
+  schedule:
+    # Once a week (Saturday 08:00 UTC) — quarterly figures barely move day to day.
+    - cron: "0 8 * * 6"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Refresh Russell 2000 top-500 universe (IWM holdings proxy)
+        run: python scripts/fetch_russell2000_universe.py --top 500
+
+      - name: Fetch quarterly changes for the universe
+        run: python scripts/fetch_smallcaps_quarterly.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/small_caps_universe.json data/small_caps_quarterly.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: refresh small-caps universe + quarterly changes $(date -u +%Y-%m-%d)"
+            git push
+          fi

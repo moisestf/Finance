@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Small Caps — Russell 2000 Top 500</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=2" />
+</head>
+<body>
+
+<div id="login-screen" class="login-screen">
+  <form id="login-form" class="login-box">
+    <h1 class="login-title">Stock Ledger</h1>
+    <p class="login-subtitle">Acceso restringido</p>
+    <label for="login-username">Usuario</label>
+    <input id="login-username" name="username" type="text" autocomplete="username" required />
+    <label for="login-password">Contraseña</label>
+    <input id="login-password" name="password" type="password" autocomplete="current-password" required />
+    <button id="login-submit" type="submit">Entrar</button>
+    <p id="login-error" class="login-error" role="alert"></p>
+  </form>
+</div>
+
+<header class="masthead">
+  <div class="masthead-row">
+    <h1>Small Caps</h1>
+    <div class="masthead-meta">
+      <span id="updated-at">cargando…</span>
+      <a href="index.html" class="nav-link">Stock Ledger</a>
+      <a href="watchlist.html" class="nav-link">Otra lista</a>
+      <button id="logout-btn" class="logout-btn is-hidden" type="button">Cerrar sesión</button>
+    </div>
+  </div>
+  <p class="subtitle">Russell 2000 — top 500 componentes por capitalización, variación trimestral de los últimos 8 trimestres.</p>
+</header>
+
+<main id="app-main" class="is-hidden">
+
+  <section class="panel panel--notes">
+    <h2>Metodología</h2>
+    <ul>
+      <li>No existe una API pública gratuita con la composición oficial del Russell 2000. Como proxy práctico, se usan los <strong>holdings públicos del ETF iShares IWM</strong> (que replica ese índice), ordenados por valor de mercado, y se toman los 500 mayores.</li>
+      <li>Se actualiza una vez por semana (los datos trimestrales apenas cambian de un día para otro).</li>
+      <li>El precio de cada trimestre es el del último día hábil de ese trimestre natural (mismo criterio que en las otras páginas).</li>
+    </ul>
+  </section>
+
+  <section class="panel">
+    <div class="panel-header">
+      <h2>Ranking</h2>
+      <div class="toggle" role="group" aria-label="Criterio de orden">
+        <button id="sort-best" class="toggle-btn is-active" type="button">Mejor trimestre</button>
+        <button id="sort-positive" class="toggle-btn" type="button">Trimestres positivos</button>
+      </div>
+    </div>
+    <input id="ticker-filter" type="text" placeholder="Filtrar por ticker o nombre…" class="filter-input" />
+    <p class="hint"><span id="smallcaps-count"></span> · verde = subió, rojo = bajó ese trimestre; el color se intensifica cuanto mayor es el cambio.</p>
+    <div class="table-wrap table-wrap--scroll">
+      <table id="smallcaps-table" class="data-heatmap">
+        <thead>
+          <tr id="smallcaps-table-head"><!-- generado por smallcaps.js --></tr>
+        </thead>
+        <tbody><!-- generado por smallcaps.js --></tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<script src="common.js?v=1"></script>
+<script src="smallcaps.js?v=1"></script>
+<script src="auth.js?v=3"></script>
+</body>
+</html>

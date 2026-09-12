@@ -343,6 +343,31 @@ footer {
   font-variant-numeric: tabular-nums;
 }
 
+.filter-input {
+  width: 100%;
+  max-width: 320px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  padding: 8px 10px;
+  margin: 4px 0 10px;
+}
+
+.filter-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.company-name {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 560px) {
   h1 { font-size: 1.9rem; }
