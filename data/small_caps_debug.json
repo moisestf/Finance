@@ -1,0 +1,23 @@
+{
+  "status": "parse_failed",
+  "attempts": [
+    {
+      "attempt": "product page fetch",
+      "url": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf",
+      "status_code": 200,
+      "body_len": 1736855
+    },
+    {
+      "attempt": "product page regex",
+      "note": "no matching .ajax csv link found in page HTML"
+    },
+    {
+      "attempt": "known URL",
+      "url": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf/1467271812596.ajax?fileType=csv&fileName=IWM_holdings&dataType=fund",
+      "status_code": 200,
+      "body_snippet": "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\" lang=\"en-US\" xml:lang=\"en-US\">\n<head>\n<link rel=\"preload\" href=\"/blk-one02-c-assets/include/bundles/minified-11c12810e689ee9814acdccf2393ec3c.css\" as=\"style\" />\n<link rel=\"preload\" href=\"/blk-one02-c-assets/inc"
+    }
+  ],
+  "error": "Could not locate the holdings table header row in the CSV.",
+  "csv_head": "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\" lang=\"en-US\" xml:lang=\"en-US\">\n<head>\n<link rel=\"preload\" href=\"/blk-one02-c-assets/include/bundles/minified-11c12810e689ee9814acdccf2393ec3c.css\" as=\"style\" />\n<link rel=\"preload\" href=\"/blk-one02-c-assets/include/bundles/minified-7d8c353034168d5d739199e831c9d787.css\" as=\"style\" />\n<link rel=\"preload\" href=\"/blk-one02-c-assets/include/bundles/minified-73fb0070fc6445a600936b0d6fbe818e.css\" as=\"style\" />\n<link rel=\"preload\" href=\"/blk-one02-c-assets/include/bundles/minified-692a67342d5066321f1e2fc0a2208abd.css\" as=\"style\" />\n<link rel=\"preload\" href=\"/blk-one02-c-assets/include/bundles/minified-84da33f491f73d4f9b41e3fb015a9485.css\" as=\"style\" />\n<link rel=\"preload\" href=\"/blk-one02-c-assets/include/bundles/minified-b33f62226bb814a6120549e360ef78de.css\" as=\"style\" />\n<link rel=\"preload\" href=\"/blk-one02-c-assets/include/bundles/minified-e6588b8df2fb545c362e7ef96e6bbda6.css\" as=\"style\" />\n<link rel=\""
+}
