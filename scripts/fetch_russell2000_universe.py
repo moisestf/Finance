@@ -35,7 +35,7 @@ OUT_FILE = ROOT / "data" / "small_caps_universe.json"
 DEBUG_FILE = ROOT / "data" / "small_caps_debug.json"
 
 MIN_MARKET_CAP = 300_000_000
-MAX_MARKET_CAP = 20_000_000_000
+MAX_MARKET_CAP = 7_000_000_000
 PAGE_SIZE = 250  # Yahoo's hard max per request
 
 
