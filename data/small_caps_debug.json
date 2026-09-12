@@ -5,7 +5,17 @@
       "attempt": "product page fetch",
       "url": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf",
       "status_code": 200,
-      "body_len": 1736855
+      "body_len": 1737043,
+      "cookies_set": [
+        "ts-us-ishares-locale",
+        "StatisticalAnalyticsEnabled",
+        "us-ishares-recent-funds",
+        "SSESSIONID_blk-one02",
+        "STICKY_SESSION_COOKIE_BLK_ONE02_LIVE",
+        "DC_STICKY_SESSION_COOKIE",
+        "bm_s",
+        "bm_so"
+      ]
     },
     {
       "attempt": "broad csv href scan",
@@ -15,13 +25,13 @@
     {
       "attempt": "substring presence",
       "has_IWM_holdings": false,
-      "has_fileType_csv": false,
-      "has_ajax_holdings": false
+      "has_fileType_csv": false
     },
     {
       "attempt": "known URL",
       "url": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf/1467271812596.ajax?fileType=csv&fileName=IWM_holdings&dataType=fund",
       "status_code": 200,
+      "content_type": "text/csv;charset=UTF-8",
       "body_snippet": "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\" lang=\"en-US\" xml:lang=\"en-US\">\n<head>\n<link rel=\"preload\" href=\"/blk-one02-c-assets/include/bundles/minified-11c12810e689ee9814acdccf2393ec3c.css\" as=\"style\" />\n<link rel=\"preload\" href=\"/blk-one02-c-assets/inc"
     }
   ],
