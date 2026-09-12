@@ -40,27 +40,37 @@ HEADERS = {
 }
 
 
-def discover_csv_url() -> str | None:
+def discover_csv_url(diagnostics: list):
     try:
         resp = requests.get(PRODUCT_PAGE, headers=HEADERS, timeout=30)
+        diagnostics.append({"attempt": "product page fetch", "url": PRODUCT_PAGE, "status_code": resp.status_code, "body_len": len(resp.content)})
         resp.raise_for_status()
     except Exception as exc:  # noqa: BLE001
         print(f"Could not load product page to discover CSV link: {exc}")
+        diagnostics.append({"attempt": "product page fetch", "url": PRODUCT_PAGE, "error": str(exc)})
         return None
 
     match = re.search(r'(/us/products/239710/[^"]*?\.ajax\?fileType=csv&fileName=IWM_holdings&dataType=fund)', resp.text)
     if match:
         return "https://www.ishares.com" + match.group(1)
+    diagnostics.append({"attempt": "product page regex", "note": "no matching .ajax csv link found in page HTML"})
     return None
 
 
-def download_csv_text() -> str:
-    for label, url in [("known URL", KNOWN_CSV_URL), ("discovered URL", discover_csv_url())]:
-        if not url:
-            continue
+def download_csv_text(diagnostics: list):
+    attempts = [("known URL", KNOWN_CSV_URL)]
+    discovered = discover_csv_url(diagnostics)
+    if discovered:
+        attempts.append(("discovered URL", discovered))
+
+    for label, url in attempts:
         try:
             print(f"Trying {label}: {url}")
             resp = requests.get(url, headers=HEADERS, timeout=60)
+            snippet = resp.content[:300].decode("utf-8", errors="replace")
+            diagnostics.append(
+                {"attempt": label, "url": url, "status_code": resp.status_code, "body_snippet": snippet}
+            )
             resp.raise_for_status()
             text = resp.content.decode("utf-8-sig", errors="replace")
             if "Ticker" in text and "Weight" in text:
@@ -69,7 +79,8 @@ def download_csv_text() -> str:
             print(f"  -> response didn't look like the holdings CSV (no 'Ticker'/'Weight' columns found)")
         except Exception as exc:  # noqa: BLE001
             print(f"  -> failed via {label}: {exc}")
-    raise RuntimeError("Could not download IWM holdings CSV via any known method.")
+            diagnostics.append({"attempt": label, "url": url, "error": str(exc)})
+    return None
 
 
 def find_header_row(lines):
@@ -131,11 +142,34 @@ def main() -> None:
     parser.add_argument("--top", type=int, default=500)
     args = parser.parse_args()
 
-    csv_text = download_csv_text()
-    holdings = parse_holdings(csv_text)
+    diagnostics: list = []
+    debug_file = ROOT / "data" / "small_caps_debug.json"
+
+    def write_debug(status: str, extra: dict | None = None):
+        payload = {"status": status, "attempts": diagnostics}
+        if extra:
+            payload.update(extra)
+        debug_file.parent.mkdir(parents=True, exist_ok=True)
+        with open(debug_file, "w", encoding="utf-8") as f:
+            json.dump(payload, f, indent=2)
+
+    csv_text = download_csv_text(diagnostics)
+    if not csv_text:
+        print("Could not download IWM holdings CSV via any known method.")
+        write_debug("download_failed")
+        sys.exit(0)  # don't crash the job — leave the debug file for inspection
+
+    try:
+        holdings = parse_holdings(csv_text)
+    except Exception as exc:  # noqa: BLE001
+        print(f"Failed to parse holdings CSV: {exc}")
+        write_debug("parse_failed", {"error": str(exc), "csv_head": csv_text[:1000]})
+        sys.exit(0)
+
     if not holdings:
         print("Parsed zero holdings — aborting without overwriting the existing universe file.")
-        sys.exit(1)
+        write_debug("zero_holdings_parsed", {"csv_head": csv_text[:1000]})
+        sys.exit(0)
 
     # Rank by market value if available, else fall back to weight (both are
     # proxies for market cap within a single market-cap-weighted fund).
@@ -164,6 +198,8 @@ def main() -> None:
             f,
             indent=2,
         )
+
+    write_debug("ok", {"holdings_parsed": len(holdings), "top_written": len(top)})
 
     print(f"Wrote {len(top)} holdings to {OUT_FILE}")
     print("Top 10 by market value/weight:")
