@@ -1,25 +1,11 @@
-const PALETTE = ["#6FA8DC", "#B4A7D6", "#45B8AC", "#E1A95F", "#D08DC4", "#8E97FD", "#59C3C3", "#F28B82"];
+// index.html-specific rendering: ticker strip, main chart, return chart,
+// detail table, and the weekly/monthly comparison panel.
+// Shared date-math and formatting helpers live in common.js.
 
 const state = {
   mode: "absolute", // "absolute" | "normalized"
   mainChart: null,
   returnChart: null,
-};
-
-const colorFor = (index) => PALETTE[index % PALETTE.length];
-
-const fmtMoney = (v) => (v === null || v === undefined ? "—" : `$${v.toFixed(2)}`);
-
-const fmtPct = (v) => {
-  if (v === null || v === undefined || Number.isNaN(v)) return "—";
-  return `${v > 0 ? "+" : ""}${v.toFixed(2)}%`;
-};
-
-const changeClass = (v) => {
-  if (v === null || v === undefined || Number.isNaN(v)) return "flat";
-  if (v > 0.0001) return "up";
-  if (v < -0.0001) return "down";
-  return "flat";
 };
 
 async function loadData() {
@@ -30,33 +16,6 @@ async function loadData() {
   const tickers = await tickersRes.json();
   const prices = await pricesRes.json();
   return { tickers, series: prices.series || {}, meta: prices.meta || {} };
-}
-
-function allDates(tickers, series) {
-  const set = new Set();
-  tickers.forEach((t) => (series[t] || []).forEach((r) => set.add(r.date)));
-  return Array.from(set).sort();
-}
-
-function seriesMap(records) {
-  const m = new Map();
-  (records || []).forEach((r) => m.set(r.date, r));
-  return m;
-}
-
-function dayChange(records) {
-  if (!records || records.length < 2) return { abs: null, pct: null };
-  const last = records[records.length - 1];
-  const prev = records[records.length - 2];
-  const abs = last.close - prev.close;
-  return { abs, pct: (abs / prev.close) * 100 };
-}
-
-function sinceStartChange(records) {
-  if (!records || records.length < 2) return null;
-  const first = records[0];
-  const last = records[records.length - 1];
-  return ((last.close - first.close) / first.close) * 100;
 }
 
 function renderTickerStrip(tickers, series) {
@@ -213,196 +172,20 @@ function renderReturnChart(tickers, series) {
   });
 }
 
-// ---------- Weekly (Friday-over-Friday) comparison ----------
-
-function toISO(d) {
-  return d.toISOString().slice(0, 10);
-}
-
-// Most recent Friday on/before `d` (if `d` is itself a Friday, returns `d`).
-function mostRecentFriday(d) {
-  const copy = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()));
-  const day = copy.getUTCDay(); // 0=Sun ... 5=Fri ... 6=Sat
-  const diff = (day - 5 + 7) % 7;
-  copy.setUTCDate(copy.getUTCDate() - diff);
-  return copy;
-}
-
-// `count` Friday dates, weekly apart, newest first, ending at (and including) `anchor`.
-function fridaysBack(anchor, count) {
-  const dates = [];
-  const d = new Date(anchor);
-  for (let i = 0; i < count; i++) {
-    dates.push(new Date(d));
-    d.setUTCDate(d.getUTCDate() - 7);
-  }
-  return dates;
-}
-
-// Last record with date <= targetISO. `records` must be sorted ascending by date.
-function closeOnOrBefore(records, targetISO) {
-  let result = null;
-  for (const r of records) {
-    if (r.date <= targetISO) result = r;
-    else break;
-  }
-  return result;
-}
-
-/**
- * For a ticker's records, return the last `weeks` week-over-week % changes,
- * one per Friday, newest first: [{ date, pct }, ...]
- * `pct` is null if there isn't enough history to compute that week yet.
- */
-function weeklyChanges(records, anchorDate, weeks) {
-  if (!records || records.length === 0) return [];
-  const fridays = fridaysBack(anchorDate, weeks + 1); // need one extra to diff against
-  const closes = fridays.map((f) => closeOnOrBefore(records, toISO(f)));
-
-  const out = [];
-  for (let i = 0; i < weeks; i++) {
-    const current = closes[i];
-    const previous = closes[i + 1];
-    let pct = null;
-    if (current && previous && previous.close) {
-      pct = ((current.close - previous.close) / previous.close) * 100;
-    }
-    out.push({ date: toISO(fridays[i]), pct });
-  }
-  return out;
-}
-
-function heatColor(pct) {
-  if (pct === null || pct === undefined || Number.isNaN(pct)) return "transparent";
-  const capped = Math.max(-10, Math.min(10, pct));
-  const alpha = 0.12 + (Math.abs(capped) / 10) * 0.55;
-  const rgb = capped >= 0 ? "79,174,122" : "214,96,77";
-  return `rgba(${rgb}, ${alpha.toFixed(2)})`;
-}
-
 function renderWeeklyTable(tickers, series) {
   const WEEKS = 40;
-
-  // Anchor on the most recent date we actually have data for (not "today"),
-  // so the table stays meaningful even if the site is opened on a weekend
-  // or before the day's fetch has run.
   const latest = allDates(tickers, series).slice(-1)[0];
   const anchor = mostRecentFriday(latest ? new Date(latest + "T00:00:00Z") : new Date());
-
   const perTicker = tickers.map((t) => weeklyChanges(series[t], anchor, WEEKS));
-
-  const head = document.getElementById("weekly-table-head");
-  head.innerHTML = `<th>Viernes</th>${tickers.map((t) => `<th class="num">${t}</th>`).join("")}`;
-
-  const tbody = document.querySelector("#weekly-table tbody");
-  tbody.innerHTML = "";
-  for (let row = 0; row < WEEKS; row++) {
-    const tr = document.createElement("tr");
-    const dateLabel = perTicker[0] && perTicker[0][row] ? perTicker[0][row].date : "";
-    let cells = `<td>${dateLabel}</td>`;
-    tickers.forEach((t, ti) => {
-      const entry = perTicker[ti][row];
-      const pct = entry ? entry.pct : null;
-      cells += `<td class="heat" style="background:${heatColor(pct)}">${fmtPct(pct)}</td>`;
-    });
-    tr.innerHTML = cells;
-    tbody.appendChild(tr);
-  }
-}
-
-// ---------- Monthly (month-over-month) comparison ----------
-
-const MONTH_LABELS_ES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
-
-function lastDayOfMonth(year, monthIndex0) {
-  // Day 0 of the following month == last day of this month.
-  return new Date(Date.UTC(year, monthIndex0 + 1, 0));
-}
-
-// Last day of the most recent month that's already fully elapsed as of `latestDate`.
-function mostRecentCompletedMonthEnd(latestDate) {
-  let y = latestDate.getUTCFullYear();
-  let m = latestDate.getUTCMonth();
-  let end = lastDayOfMonth(y, m);
-  if (end > latestDate) {
-    m -= 1;
-    if (m < 0) {
-      m = 11;
-      y -= 1;
-    }
-    end = lastDayOfMonth(y, m);
-  }
-  return end;
-}
-
-// `count` month-end dates, going backward one month at a time, newest first, starting at `anchorEnd`.
-function monthEndsBack(anchorEnd, count) {
-  const dates = [];
-  let y = anchorEnd.getUTCFullYear();
-  let m = anchorEnd.getUTCMonth();
-  for (let i = 0; i < count; i++) {
-    dates.push(lastDayOfMonth(y, m));
-    m -= 1;
-    if (m < 0) {
-      m = 11;
-      y -= 1;
-    }
-  }
-  return dates;
-}
-
-function monthLabel(d) {
-  return `${MONTH_LABELS_ES[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
-}
-
-/**
- * For a ticker's records, return the last `months` month-over-month % changes,
- * one per month (using each month's last trading day), newest first:
- * [{ label, pct }, ...]. `pct` is null if there isn't enough history yet.
- */
-function monthlyChanges(records, anchorEnd, months) {
-  if (!records || records.length === 0) return [];
-  const ends = monthEndsBack(anchorEnd, months + 1); // one extra to diff against
-  const closes = ends.map((e) => closeOnOrBefore(records, toISO(e)));
-
-  const out = [];
-  for (let i = 0; i < months; i++) {
-    const current = closes[i];
-    const previous = closes[i + 1];
-    let pct = null;
-    if (current && previous && previous.close) {
-      pct = ((current.close - previous.close) / previous.close) * 100;
-    }
-    out.push({ label: monthLabel(ends[i]), pct });
-  }
-  return out;
+  renderHeatTable("weekly-table-head", "#weekly-table tbody", "Viernes", tickers, perTicker, WEEKS);
 }
 
 function renderMonthlyTable(tickers, series) {
   const MONTHS = 24;
-
   const latest = allDates(tickers, series).slice(-1)[0];
   const anchor = mostRecentCompletedMonthEnd(latest ? new Date(latest + "T00:00:00Z") : new Date());
-
   const perTicker = tickers.map((t) => monthlyChanges(series[t], anchor, MONTHS));
-
-  const head = document.getElementById("monthly-table-head");
-  head.innerHTML = `<th>Mes</th>${tickers.map((t) => `<th class="num">${t}</th>`).join("")}`;
-
-  const tbody = document.querySelector("#monthly-table tbody");
-  tbody.innerHTML = "";
-  for (let row = 0; row < MONTHS; row++) {
-    const tr = document.createElement("tr");
-    const label = perTicker[0] && perTicker[0][row] ? perTicker[0][row].label : "";
-    let cells = `<td>${label}</td>`;
-    tickers.forEach((t, ti) => {
-      const entry = perTicker[ti][row];
-      const pct = entry ? entry.pct : null;
-      cells += `<td class="heat" style="background:${heatColor(pct)}">${fmtPct(pct)}</td>`;
-    });
-    tr.innerHTML = cells;
-    tbody.appendChild(tr);
-  }
+  renderHeatTable("monthly-table-head", "#monthly-table tbody", "Mes", tickers, perTicker, MONTHS);
 }
 
 function wireComparisonToggle() {

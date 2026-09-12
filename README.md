@@ -51,6 +51,15 @@ Esto es una app **100% estática** servida por GitHub Pages: no hay servidor que
 
 Si en algún momento necesitas que los datos en sí sean realmente privados (no solo la pantalla), hay que salir del modelo "solo GitHub Pages" — por ejemplo con un repo privado + GitHub Pro/Team, o moviendo el acceso a los datos detrás de una función serverless con sesión real. Dímelo si quieres que lo montemos así.
 
+## Segunda página: Watchlist
+
+`watchlist.html` es una página aparte (enlazada desde la cabecera del dashboard principal, y viceversa) con su propia lista de tickers y su propio histórico — totalmente independiente del dashboard principal, aunque comparte el mismo login.
+
+- `data/watchlist_tickers.json` — tickers de esta lista (de momento `SEZL`, `DOGZ`, `DRUG`). Edítalo igual que `data/tickers.json` para añadir más.
+- `data/watchlist_prices.json` — su propio histórico diario.
+- Muestra comparativas **semanal** (40 viernes), **mensual** (24 meses) y **trimestral** (12 trimestres) en un mismo selector.
+- El workflow (`update-prices.yml`) actualiza ambas listas en cada ejecución.
+
 ## Añadir un ticker nuevo
 
 Edita `data/tickers.json` y agrega el símbolo (formato Yahoo Finance, por ejemplo `BRK-B` para Berkshire clase B). Haz commit. En la siguiente ejecución del workflow, el script detecta que es nuevo y descarga 2 años de histórico automáticamente para que el gráfico no empiece vacío.

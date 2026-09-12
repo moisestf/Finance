@@ -1,20 +1,28 @@
 #!/usr/bin/env python3
 """
-Fetch daily closing prices for the tickers listed in data/tickers.json and
-merge them into data/prices.json.
+Fetch daily closing prices for the tickers listed in a tickers file and
+merge them into the corresponding prices file.
 
 Designed to run inside GitHub Actions (which has normal internet access),
 but also works locally: `pip install -r requirements.txt && python scripts/fetch_prices.py`
 
+By default this updates the main dashboard's data (data/tickers.json ->
+data/prices.json). Pass --tickers-file/--prices-file to update a different
+pair, e.g. the independent watchlist page:
+
+    python scripts/fetch_prices.py \\
+        --tickers-file data/watchlist_tickers.json \\
+        --prices-file data/watchlist_prices.json
+
 Behaviour:
-- Reads data/tickers.json for the list of symbols to track.
 - For a ticker that already has history stored, only pulls the last 7 days
   (cheap, catches up on anything missed).
-- For a brand-new ticker (just added to tickers.json), pulls 2 years of
+- For a brand-new ticker (just added to the tickers file), pulls 2 years of
   history so charts aren't empty on day one.
 - Merges by date (existing days are overwritten with fresher data, nothing
   is ever duplicated), then writes the file back out, sorted by date.
 """
+import argparse
 import json
 import sys
 from datetime import datetime, timezone
@@ -23,8 +31,6 @@ from pathlib import Path
 import yfinance as yf
 
 ROOT = Path(__file__).resolve().parent.parent
-TICKERS_FILE = ROOT / "data" / "tickers.json"
-PRICES_FILE = ROOT / "data" / "prices.json"
 
 BACKFILL_PERIOD = "2y"
 REFRESH_PERIOD = "7d"
@@ -69,12 +75,20 @@ def merge_history(existing, new_records):
 
 
 def main() -> None:
-    tickers = load_json(TICKERS_FILE, [])
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--tickers-file", default=str(ROOT / "data" / "tickers.json"))
+    parser.add_argument("--prices-file", default=str(ROOT / "data" / "prices.json"))
+    args = parser.parse_args()
+
+    tickers_file = Path(args.tickers_file)
+    prices_file = Path(args.prices_file)
+
+    tickers = load_json(tickers_file, [])
     if not tickers:
-        print("data/tickers.json is empty — nothing to fetch.")
+        print(f"{tickers_file} is empty — nothing to fetch.")
         sys.exit(0)
 
-    store = load_json(PRICES_FILE, {"meta": {}, "series": {}})
+    store = load_json(prices_file, {"meta": {}, "series": {}})
     series = store.setdefault("series", {})
 
     any_success = False
@@ -100,7 +114,7 @@ def main() -> None:
         "last_updated_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "tickers": tickers,
     }
-    save_json(PRICES_FILE, store)
+    save_json(prices_file, store)
 
     if not any_success:
         print("No ticker was successfully updated this run.")
