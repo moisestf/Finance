@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cartera Ficticia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=2" />
+</head>
+<body>
+
+<div id="login-screen" class="login-screen">
+  <form id="login-form" class="login-box">
+    <h1 class="login-title">Stock Ledger</h1>
+    <p class="login-subtitle">Acceso restringido</p>
+    <label for="login-username">Usuario</label>
+    <input id="login-username" name="username" type="text" autocomplete="username" required />
+    <label for="login-password">Contraseña</label>
+    <input id="login-password" name="password" type="password" autocomplete="current-password" required />
+    <button id="login-submit" type="submit">Entrar</button>
+    <p id="login-error" class="login-error" role="alert"></p>
+  </form>
+</div>
+
+<header class="masthead">
+  <div class="masthead-row">
+    <h1>Cartera Ficticia</h1>
+    <div class="masthead-meta">
+      <span id="updated-at">cargando…</span>
+      <a href="index.html" class="nav-link">Stock Ledger</a>
+      <a href="watchlist.html" class="nav-link">Otra lista</a>
+      <a href="smallcaps.html" class="nav-link">Small Caps</a>
+      <button id="logout-btn" class="logout-btn is-hidden" type="button">Cerrar sesión</button>
+    </div>
+  </div>
+  <p class="subtitle">Simulación de una cartera con compras reales en distintas fechas — revalorización desde el precio de compra de cada posición.</p>
+</header>
+
+<main id="app-main" class="is-hidden">
+
+  <section id="ticker-strip" class="ticker-strip" aria-label="Revalorización por posición">
+    <!-- generado por cartera_ficticia.js -->
+  </section>
+
+  <section class="panel">
+    <div class="panel-header">
+      <h2>Revalorización acumulada desde la compra</h2>
+      <div class="toggle" role="group" aria-label="Periodo">
+        <button id="view-monthly" class="toggle-btn is-active" type="button">Mensual</button>
+        <button id="view-quarterly" class="toggle-btn" type="button">Trimestral</button>
+      </div>
+    </div>
+    <p class="hint">Cada celda es la revalorización acumulada <strong>desde la compra</strong> hasta el cierre de ese periodo (no variación respecto al periodo anterior). Antes de la fecha de compra no hay posición, por eso aparece “—”.</p>
+    <div class="table-wrap table-wrap--scroll">
+      <table id="period-table" class="data-heatmap">
+        <thead>
+          <tr id="period-table-head"><!-- generado por cartera_ficticia.js --></tr>
+        </thead>
+        <tbody><!-- generado por cartera_ficticia.js --></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel panel--notes">
+    <h2>Cómo está calculado</h2>
+    <ul>
+      <li><strong>Celestica y Alphabet se compraron en varios lotes</strong> (por ejemplo, 35% + 7% + 58% de Celestica en tres fechas distintas). El coste de cada posición es el promedio ponderado de esos lotes, y la posición solo "existe" a partir de la fecha del primer lote — los lotes siguientes se suman según llegan.</li>
+      <li><strong>Alphabet se compró en euros</strong> (156,10 € y 131,00 €). Se convirtieron a dólares con el tipo de cambio EUR/USD histórico del día exacto de cada compra, para que sean comparables con el precio en USD que se sigue en el resto de la app.</li>
+      <li><strong>Total de la cartera:</strong> la tarjeta "Cartera (media)" asume el mismo importe invertido en cada una de las 6 posiciones (BE, FIX, CLS, PLTR, AXON, GOOG) y promedia sus revalorizaciones — es una simplificación, no un dato real de importes invertidos.</li>
+      <li>Los precios de mercado se reutilizan de las otras páginas de esta app (no hay descarga adicional): Comfort Systems, Celestica, Palantir, Axon y Alphabet vienen del dashboard principal; Bloom Energy viene de la página "Otra lista".</li>
+    </ul>
+  </section>
+
+</main>
+
+<script src="common.js?v=1"></script>
+<script src="cartera_ficticia.js?v=1"></script>
+<script src="auth.js?v=3"></script>
+</body>
+</html>
