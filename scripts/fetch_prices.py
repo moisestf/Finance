@@ -25,14 +25,14 @@ Behaviour:
 import argparse
 import json
 import sys
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 import yfinance as yf
 
 ROOT = Path(__file__).resolve().parent.parent
 
-BACKFILL_PERIOD = "5y"
+BACKFILL_YEARS = 5
 REFRESH_PERIOD = "7d"
 
 
@@ -49,8 +49,11 @@ def save_json(path: Path, data) -> None:
         json.dump(data, f, indent=2, ensure_ascii=False, sort_keys=True)
 
 
-def fetch_history(ticker: str, period: str):
-    hist = yf.Ticker(ticker).history(period=period, interval="1d", auto_adjust=False)
+def fetch_history(ticker: str, period: str = None, start: str = None, end: str = None):
+    if start:
+        hist = yf.Ticker(ticker).history(start=start, end=end, interval="1d", auto_adjust=False)
+    else:
+        hist = yf.Ticker(ticker).history(period=period, interval="1d", auto_adjust=False)
     records = []
     for idx, row in hist.iterrows():
         close = row.get("Close")
@@ -94,10 +97,13 @@ def main() -> None:
     any_success = False
     for ticker in tickers:
         is_new = not series.get(ticker)
-        period = BACKFILL_PERIOD if is_new else REFRESH_PERIOD
-        print(f"[{ticker}] fetching period={period} (new ticker: {is_new})")
+        print(f"[{ticker}] fetching (new ticker: {is_new})")
         try:
-            records = fetch_history(ticker, period)
+            if is_new:
+                start_date = (date.today() - timedelta(days=BACKFILL_YEARS * 365)).isoformat()
+                records = fetch_history(ticker, start=start_date)
+            else:
+                records = fetch_history(ticker, period=REFRESH_PERIOD)
         except Exception as exc:  # noqa: BLE001 - keep the job going for other tickers
             print(f"[{ticker}] ERROR: {exc}")
             continue
