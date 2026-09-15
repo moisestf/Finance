@@ -1,0 +1,37 @@
+name: FX lookup (utility)
+
+on:
+  workflow_dispatch:
+    inputs:
+      dates:
+        description: "Space-separated ISO dates, e.g. 2024-07-29 2024-02-01"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  lookup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run FX lookup
+        run: python scripts/fx_lookup.py ${{ github.event.inputs.dates }}
+
+      - name: Commit debug file
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/fx_debug.json
+          git diff --staged --quiet || git commit -m "chore: fx lookup debug output"
+          git diff --staged --quiet || git push
