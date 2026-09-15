@@ -46,13 +46,13 @@
 
   <section class="panel">
     <div class="panel-header">
-      <h2>Revalorización acumulada desde la compra</h2>
+      <h2>Revalorización por periodo</h2>
       <div class="toggle" role="group" aria-label="Periodo">
         <button id="view-monthly" class="toggle-btn is-active" type="button">Mensual</button>
         <button id="view-quarterly" class="toggle-btn" type="button">Trimestral</button>
       </div>
     </div>
-    <p class="hint">Cada celda es la revalorización acumulada <strong>desde la compra</strong> hasta el cierre de ese periodo (no variación respecto al periodo anterior). Antes de la fecha de compra no hay posición, por eso aparece “—”.</p>
+    <p class="hint">Cada celda es la variación <strong>respecto al periodo anterior</strong> (como en el resto de la app). Para el primer periodo de cada posición —cuando aún no existía un "periodo anterior" propio— se mide desde el precio de compra hasta el cierre de ese periodo. Antes de la compra no hay posición, por eso aparece "—".</p>
     <div class="table-wrap table-wrap--scroll">
       <table id="period-table" class="data-heatmap">
         <thead>

@@ -40,6 +40,8 @@ function unitsAndInvestedAt(lots, dateISO) {
   return { units, invested };
 }
 
+// Total return since purchase (weighted-average cost basis across all lots).
+// Used only for the headline ticker-strip cards, not the period table.
 function totalReturnAt(records, lots, dateISO) {
   const rec = closeOnOrBefore(records, dateISO);
   if (!rec) return null;
@@ -47,6 +49,62 @@ function totalReturnAt(records, lots, dateISO) {
   if (units <= 0 || invested <= 0) return null;
   const value = units * rec.close;
   return ((value - invested) / invested) * 100;
+}
+
+function extendOnePeriodEarlier(dateObj, mode) {
+  const d = new Date(dateObj);
+  if (mode === "monthly") {
+    let y = d.getUTCFullYear();
+    let m = d.getUTCMonth() - 1;
+    if (m < 0) {
+      m = 11;
+      y -= 1;
+    }
+    return lastDayOfMonth(y, m);
+  }
+  let y = d.getUTCFullYear();
+  let q = quarterOf(d.getUTCMonth()) - 1;
+  if (q < 0) {
+    q = 3;
+    y -= 1;
+  }
+  return lastDayOfQuarter(y, q);
+}
+
+function buildPeriodDates(earliestFirstISO, latestISO, mode) {
+  const base = mode === "monthly" ? monthsRange(earliestFirstISO, latestISO) : quartersRange(earliestFirstISO, latestISO);
+  const oldest = base[base.length - 1];
+  const extraReference = extendOnePeriodEarlier(oldest, mode);
+  return [...base, extraReference]; // last entry exists only to give the oldest row a "previous period"
+}
+
+function earliestLot(lots) {
+  return lots.reduce((a, b) => (a.date < b.date ? a : b));
+}
+
+// Return % change vs the previous period — except for a position's first
+// active period, where there is no meaningful "previous period" (the user
+// didn't own it yet), so that one row is measured from the purchase price
+// of the earliest lot instead.
+function periodReturnForPosition(records, lots, periodEndDate, previousPeriodEndDate) {
+  const periodEndISO = toISO(periodEndDate);
+  const firstLotDate = earliestLot(lots).date;
+  if (firstLotDate > periodEndISO) return null; // position didn't exist yet by this period's end
+
+  const endRec = closeOnOrBefore(records, periodEndISO);
+  if (!endRec) return null;
+
+  const previousISO = previousPeriodEndDate ? toISO(previousPeriodEndDate) : null;
+  const existedAtPreviousEnd = previousISO && firstLotDate <= previousISO;
+
+  if (existedAtPreviousEnd) {
+    const prevRec = closeOnOrBefore(records, previousISO);
+    if (!prevRec) return null;
+    return ((endRec.close - prevRec.close) / prevRec.close) * 100;
+  }
+
+  const basisPrice = earliestLot(lots).price_usd;
+  return ((endRec.close - basisPrice) / basisPrice) * 100;
 }
 
 function latestDataDate(series, positions) {
@@ -134,17 +192,21 @@ function renderPeriodTable(series, positions, latestISO) {
     return !min || f < min ? f : min;
   }, null);
 
-  const dates = periodState.mode === "monthly" ? monthsRange(earliestFirst, latestISO) : quartersRange(earliestFirst, latestISO);
+  const allDates = buildPeriodDates(earliestFirst, latestISO, periodState.mode);
+  const displayDates = allDates.slice(0, -1); // last entry is only a reference point for the oldest row
   const labelFn = periodState.mode === "monthly" ? monthLabel : quarterLabel;
 
   const tickers = positions.map((p) => p.ticker);
   const perTicker = positions.map((p) => {
     const records = series[p.ticker] || [];
-    return dates.map((d) => ({ date: labelFn(d), pct: totalReturnAt(records, p.lots, toISO(d)) }));
+    return displayDates.map((d, i) => ({
+      date: labelFn(d),
+      pct: periodReturnForPosition(records, p.lots, d, allDates[i + 1]),
+    }));
   });
 
   const periodColumnLabel = periodState.mode === "monthly" ? "Mes" : "Trimestre";
-  renderHeatTable("period-table-head", "#period-table tbody", periodColumnLabel, tickers, perTicker, dates.length);
+  renderHeatTable("period-table-head", "#period-table tbody", periodColumnLabel, tickers, perTicker, displayDates.length);
 }
 
 function wireToggle(series, positions, latestISO) {
