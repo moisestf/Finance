@@ -32,7 +32,7 @@ import yfinance as yf
 
 ROOT = Path(__file__).resolve().parent.parent
 
-BACKFILL_YEARS = 5
+BACKFILL_YEARS = 8
 REFRESH_PERIOD = "7d"
 
 

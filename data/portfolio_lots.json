@@ -1,5 +1,5 @@
 {
-  "note": "Cartera ficticia definida manualmente. Los precios en EUR se convirtieron a USD usando el tipo de cambio EURUSD histórico del día de compra (ver 'fx_eur_usd' en cada lote), para que sean comparables con el histórico de precios en USD ya trackeado.",
+  "note": "Cartera ficticia definida manualmente. Los precios en EUR se convirtieron a USD usando el tipo de cambio EURUSD histórico del día de compra (ver 'fx_eur_usd' en cada lote), para que sean comparables con el histórico de precios en USD ya trackeado. Los lotes con 'weight_assumed': true no traían un porcentaje indicado por el usuario; se asumió 50/50 entre los lotes de esa posición.",
   "positions": [
     {
       "ticker": "BE",
@@ -28,14 +28,31 @@
       "ticker": "PLTR",
       "name": "Palantir Technologies Inc-A",
       "lots": [
-        { "date": "2025-09-05", "price_usd": 149.63, "weight_pct": 100 }
+        { "date": "2025-04-04", "price_usd": 75.40, "weight_pct": 50, "weight_assumed": true },
+        { "date": "2025-09-05", "price_usd": 149.63, "weight_pct": 50, "weight_assumed": true }
       ]
     },
     {
       "ticker": "AXON",
       "name": "Axon Enterprise Inc",
       "lots": [
-        { "date": "2024-10-07", "price_usd": 422.00, "weight_pct": 100 }
+        { "date": "2023-05-10", "price_usd": 196.8890, "weight_pct": 50, "weight_assumed": true },
+        { "date": "2024-10-07", "price_usd": 422.00, "weight_pct": 50, "weight_assumed": true }
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple Inc",
+      "lots": [
+        { "date": "2022-11-08", "price_usd": 139.40, "weight_pct": 100 }
+      ]
+    },
+    {
+      "ticker": "BRK-B",
+      "name": "Berkshire Hathaway B",
+      "lots": [
+        { "date": "2021-03-09", "price_usd": 261.80, "weight_pct": 80 },
+        { "date": "2021-05-12", "price_usd": 282.90, "weight_pct": 20 }
       ]
     },
     {
