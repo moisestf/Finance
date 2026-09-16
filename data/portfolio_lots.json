@@ -36,8 +36,8 @@
       "ticker": "AXON",
       "name": "Axon Enterprise Inc",
       "lots": [
-        { "date": "2023-05-10", "price_usd": 196.8890, "weight_pct": 50, "weight_assumed": true },
-        { "date": "2024-10-07", "price_usd": 422.00, "weight_pct": 50, "weight_assumed": true }
+        { "date": "2023-05-10", "price_usd": 196.8890, "weight_pct": 60 },
+        { "date": "2024-10-07", "price_usd": 422.00, "weight_pct": 40 }
       ]
     },
     {
