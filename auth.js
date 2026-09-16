@@ -42,6 +42,72 @@ async function checkCredentials(username, password) {
   return diff === 0;
 }
 
+const AUTH_LOG_KEY = "stock_ledger_auth_log_v1";
+const AUTH_LOG_MAX_ENTRIES = 300;
+
+async function fetchPublicIp() {
+  try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 3000);
+    const res = await fetch("https://api.ipify.org?format=json", { signal: controller.signal });
+    clearTimeout(timeout);
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data.ip || null;
+  } catch (err) {
+    return null; // network blocked, offline, or the IP service is unreachable — fail silently
+  }
+}
+
+function readAuthLog() {
+  try {
+    const raw = localStorage.getItem(AUTH_LOG_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch (err) {
+    return [];
+  }
+}
+
+function writeAuthLog(entries) {
+  try {
+    localStorage.setItem(AUTH_LOG_KEY, JSON.stringify(entries.slice(-AUTH_LOG_MAX_ENTRIES)));
+  } catch (err) {
+    console.error("No se pudo guardar el registro de accesos:", err);
+  }
+}
+
+function recordAuthEvent(username, success) {
+  const entry = {
+    timestamp: new Date().toISOString(),
+    username: username || "(vacío)",
+    success,
+    ip: "cargando…",
+    userAgent: navigator.userAgent,
+    language: navigator.language,
+    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+    screen: `${screen.width}x${screen.height}`,
+    page: location.pathname.split("/").pop() || "index.html",
+  };
+
+  const entries = readAuthLog();
+  entries.push(entry);
+  writeAuthLog(entries);
+
+  // Patch in the public IP once it resolves, without delaying login/render.
+  fetchPublicIp().then((ip) => {
+    const current = readAuthLog();
+    const match = current.find((e) => e.timestamp === entry.timestamp && e.username === entry.username);
+    if (match) {
+      match.ip = ip || "no disponible";
+      writeAuthLog(current);
+    }
+  });
+}
+
+function clearAuthLog() {
+  localStorage.removeItem(AUTH_LOG_KEY);
+}
+
 function isAuthenticated() {
   return sessionStorage.getItem(AUTH_SESSION_KEY) === "1";
 }
@@ -82,6 +148,7 @@ async function handleLoginSubmit(e) {
 
   try {
     const ok = await checkCredentials(username, password);
+    recordAuthEvent(username, ok); // fire-and-forget; never logs the password itself
     if (ok) {
       setAuthenticated();
       showDashboard();
