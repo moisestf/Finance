@@ -4,7 +4,7 @@
     {
       "attempt": "screen offset=0 size=250",
       "returned": 250,
-      "total_reported": 2001,
+      "total_reported": 1933,
       "sample_keys": [
         "ask",
         "askSize",
@@ -18,7 +18,9 @@
         "cryptoTradeable",
         "currency",
         "customPriceAlertConfidence",
-        "displayName",
+        "dividendDate",
+        "dividendRate",
+        "dividendYield",
         "earningsCallTimestampEnd",
         "earningsCallTimestampStart",
         "earningsTimestamp",
@@ -60,12 +62,10 @@
         "marketCap",
         "marketState",
         "messageBoardId",
-        "nameChangeDate",
         "postMarketChange",
         "postMarketChangePercent",
         "postMarketPrice",
         "postMarketTime",
-        "prevName",
         "priceEpsCurrentYear",
         "priceHint",
         "priceToBook",
@@ -99,10 +99,11 @@
     {
       "attempt": "screen offset=250 size=250",
       "returned": 250,
-      "total_reported": 2001,
+      "total_reported": 1933,
       "sample_keys": [
         "ask",
         "askSize",
+        "averageAnalystRating",
         "averageDailyVolume10Day",
         "averageDailyVolume3Month",
         "bid",
@@ -196,7 +197,7 @@
       "attempt": "field extraction",
       "quotes_seen": 500,
       "holdings_built": 500,
-      "missing_market_cap": 16
+      "missing_market_cap": 14
     }
   ]
 }
