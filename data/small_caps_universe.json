@@ -4,207 +4,321 @@
   "count": 500,
   "holdings": [
     {
-      "ticker": "LAD",
-      "name": "Lithia Motors, Inc.",
-      "market_value": 6955897856,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CLF",
-      "name": "Cleveland-Cliffs Inc.",
-      "market_value": 6949177856,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ESE",
-      "name": "ESCO Technologies Inc.",
-      "market_value": 6945560064,
-      "weight_pct": null
-    },
-    {
-      "ticker": "POWL",
-      "name": "Powell Industries, Inc.",
-      "market_value": 6905063936,
-      "weight_pct": null
-    },
-    {
-      "ticker": "AXS",
-      "name": "AXIS Capital Holdings Limited",
-      "market_value": 6891668480,
-      "weight_pct": null
-    },
-    {
-      "ticker": "AMRX",
-      "name": "Amneal Pharmaceuticals, Inc.",
-      "market_value": 6885812736,
-      "weight_pct": null
-    },
-    {
-      "ticker": "AWI",
-      "name": "Armstrong World Industries, Inc.",
-      "market_value": 6880810496,
-      "weight_pct": null
-    },
-    {
-      "ticker": "IMVT",
-      "name": "Immunovant, Inc.",
-      "market_value": 6878204416,
-      "weight_pct": null
-    },
-    {
-      "ticker": "HIMS",
-      "name": "Hims & Hers Health, Inc.",
-      "market_value": 6864080384,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ALKS",
-      "name": "Alkermes plc",
-      "market_value": 6853129216,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CAG",
-      "name": "Conagra Brands, Inc.",
-      "market_value": 6853059584,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ALGM",
-      "name": "Allegro MicroSystems, Inc.",
-      "market_value": 6852139008,
-      "weight_pct": null
-    },
-    {
-      "ticker": "NE",
-      "name": "Noble Corporation plc",
-      "market_value": 6835879936,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MBLY",
-      "name": "Mobileye Global Inc.",
-      "market_value": 6827005952,
-      "weight_pct": null
-    },
-    {
-      "ticker": "KEX",
-      "name": "Kirby Corporation",
-      "market_value": 6804864512,
-      "weight_pct": null
-    },
-    {
       "ticker": "GTES",
       "name": "Gates Industrial Corporation Ltd.",
-      "market_value": 6799640576,
+      "market_value": 6999629824,
       "weight_pct": null
     },
     {
-      "ticker": "FAF",
-      "name": "First American Financial Corporation",
-      "market_value": 6766166528,
+      "ticker": "MSA",
+      "name": "MSA Safety Incorporated",
+      "market_value": 6991542784,
       "weight_pct": null
     },
     {
-      "ticker": "GLBE",
-      "name": "Global-E Online Ltd.",
-      "market_value": 6747249664,
-      "weight_pct": null
-    },
-    {
-      "ticker": "FLR",
-      "name": "Fluor Corporation",
-      "market_value": 6737874944,
-      "weight_pct": null
-    },
-    {
-      "ticker": "DSGX",
-      "name": "The Descartes Systems Group Inc.",
-      "market_value": 6724971520,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MATX",
-      "name": "Matson, Inc.",
-      "market_value": 6718111232,
-      "weight_pct": null
-    },
-    {
-      "ticker": "NCLH",
-      "name": "Norwegian Cruise Line Holdings Ltd.",
-      "market_value": 6708733952,
-      "weight_pct": null
-    },
-    {
-      "ticker": "OR",
-      "name": "OR Royalties Inc.",
-      "market_value": 6708601856,
-      "weight_pct": null
-    },
-    {
-      "ticker": "TAP",
-      "name": "Molson Coors Beverage Company",
-      "market_value": 6703019008,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CHE",
-      "name": "Chemed Corporation",
-      "market_value": 6693911040,
+      "ticker": "SARO",
+      "name": "StandardAero, Inc.",
+      "market_value": 6965853696,
       "weight_pct": null
     },
     {
       "ticker": "VCTR",
       "name": "Victory Capital Holdings, Inc.",
-      "market_value": 6689165824,
+      "market_value": 6964728832,
       "weight_pct": null
     },
     {
-      "ticker": "DUOL",
-      "name": "Duolingo, Inc.",
-      "market_value": 6686577664,
+      "ticker": "NCLH",
+      "name": "Norwegian Cruise Line Holdings Ltd.",
+      "market_value": 6952103936,
+      "weight_pct": null
+    },
+    {
+      "ticker": "STAG",
+      "name": "STAG Industrial, Inc.",
+      "market_value": 7094916608,
+      "weight_pct": null
+    },
+    {
+      "ticker": "IMVT",
+      "name": "Immunovant, Inc.",
+      "market_value": 6944301056,
+      "weight_pct": null
+    },
+    {
+      "ticker": "AXS",
+      "name": "AXIS Capital Holdings Limited",
+      "market_value": 6923044352,
+      "weight_pct": null
+    },
+    {
+      "ticker": "URBN",
+      "name": "Urban Outfitters, Inc.",
+      "market_value": 6921342976,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MATX",
+      "name": "Matson, Inc.",
+      "market_value": 6910988288,
+      "weight_pct": null
+    },
+    {
+      "ticker": "AWI",
+      "name": "Armstrong World Industries, Inc.",
+      "market_value": 6893911552,
+      "weight_pct": null
+    },
+    {
+      "ticker": "AXTA",
+      "name": "Axalta Coating Systems Ltd.",
+      "market_value": 6891444224,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MORN",
+      "name": "Morningstar, Inc.",
+      "market_value": 6885616128,
+      "weight_pct": null
+    },
+    {
+      "ticker": "TAP",
+      "name": "Molson Coors Beverage Company",
+      "market_value": 6872692224,
+      "weight_pct": null
+    },
+    {
+      "ticker": "AUGO",
+      "name": "Aura Minerals Inc.",
+      "market_value": 6870428672,
+      "weight_pct": null
+    },
+    {
+      "ticker": "AAON",
+      "name": "AAON, Inc.",
+      "market_value": 6865914368,
       "weight_pct": null
     },
     {
       "ticker": "PDI",
       "name": "PIMCO Dynamic Income Fund",
-      "market_value": 6672630784,
+      "market_value": 6863277056,
+      "weight_pct": null
+    },
+    {
+      "ticker": "DSGX",
+      "name": "The Descartes Systems Group Inc.",
+      "market_value": 6850728448,
+      "weight_pct": null
+    },
+    {
+      "ticker": "PATH",
+      "name": "UiPath, Inc.",
+      "market_value": 6837559296,
+      "weight_pct": null
+    },
+    {
+      "ticker": "JAN",
+      "name": "Janus Living, Inc.",
+      "market_value": 9025334272,
+      "weight_pct": null
+    },
+    {
+      "ticker": "PACS",
+      "name": "PACS Group, Inc.",
+      "market_value": 6784680960,
+      "weight_pct": null
+    },
+    {
+      "ticker": "SSRM",
+      "name": "SSR Mining Inc.",
+      "market_value": 6784062976,
+      "weight_pct": null
+    },
+    {
+      "ticker": "HIMS",
+      "name": "Hims & Hers Health, Inc.",
+      "market_value": 6766088704,
+      "weight_pct": null
+    },
+    {
+      "ticker": "LAD",
+      "name": "Lithia Motors, Inc.",
+      "market_value": 6765743616,
+      "weight_pct": null
+    },
+    {
+      "ticker": "DUOL",
+      "name": "Duolingo, Inc.",
+      "market_value": 6721989120,
+      "weight_pct": null
+    },
+    {
+      "ticker": "NOV",
+      "name": "NOV Inc.",
+      "market_value": 6701788160,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MOS",
+      "name": "The Mosaic Company",
+      "market_value": 6698061312,
       "weight_pct": null
     },
     {
       "ticker": "TAL",
       "name": "TAL Education Group",
-      "market_value": 6656414720,
+      "market_value": 6689697280,
       "weight_pct": null
     },
     {
-      "ticker": "TFPM",
-      "name": "Triple Flag Precious Metals Corp.",
-      "market_value": 6631237120,
+      "ticker": "ETSY",
+      "name": "Etsy, Inc.",
+      "market_value": 6678957056,
       "weight_pct": null
     },
     {
-      "ticker": "PPC",
-      "name": "Pilgrim's Pride Corporation",
-      "market_value": 6624179200,
-      "weight_pct": null
-    },
-    {
-      "ticker": "VSXY",
-      "name": "Victorias Secret & Co.",
-      "market_value": 6613236736,
+      "ticker": "QLYS",
+      "name": "Qualys, Inc.",
+      "market_value": 6676834816,
       "weight_pct": null
     },
     {
       "ticker": "NICE",
       "name": "NICE Ltd.",
-      "market_value": 6610348544,
+      "market_value": 6674220032,
       "weight_pct": null
     },
     {
-      "ticker": "QBTS",
-      "name": "D-Wave Quantum Inc.",
-      "market_value": 6609299456,
+      "ticker": "FLR",
+      "name": "Fluor Corporation",
+      "market_value": 6673679360,
+      "weight_pct": null
+    },
+    {
+      "ticker": "OKLO",
+      "name": "Oklo Inc.",
+      "market_value": 6672452608,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CHE",
+      "name": "Chemed Corporation",
+      "market_value": 6633005056,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MTDR",
+      "name": "Matador Resources Company",
+      "market_value": 6620850688,
+      "weight_pct": null
+    },
+    {
+      "ticker": "RUSHB",
+      "name": "Rush Enterprises, Inc.",
+      "market_value": 6619781632,
+      "weight_pct": null
+    },
+    {
+      "ticker": "GLBE",
+      "name": "Global-E Online Ltd.",
+      "market_value": 6602798592,
+      "weight_pct": null
+    },
+    {
+      "ticker": "INGM",
+      "name": "Ingram Micro Holding Corporation",
+      "market_value": 6556051456,
+      "weight_pct": null
+    },
+    {
+      "ticker": "PPC",
+      "name": "Pilgrim's Pride Corporation",
+      "market_value": 6547984384,
+      "weight_pct": null
+    },
+    {
+      "ticker": "RNG",
+      "name": "RingCentral, Inc.",
+      "market_value": 6536862208,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MAC",
+      "name": "The Macerich Company",
+      "market_value": 6800449536,
+      "weight_pct": null
+    },
+    {
+      "ticker": "HXL",
+      "name": "Hexcel Corporation",
+      "market_value": 6534623232,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CIFR",
+      "name": "Cipher Digital Inc.",
+      "market_value": 6520132608,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MTRN",
+      "name": "Materion Corporation",
+      "market_value": 6503455232,
+      "weight_pct": null
+    },
+    {
+      "ticker": "NE",
+      "name": "Noble Corporation plc",
+      "market_value": 6497438720,
+      "weight_pct": null
+    },
+    {
+      "ticker": "BZ",
+      "name": "Kanzhun Limited",
+      "market_value": 6492637696,
+      "weight_pct": null
+    },
+    {
+      "ticker": "TEX",
+      "name": "Terex Corporation",
+      "market_value": 6481952768,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MGY",
+      "name": "Magnolia Oil & Gas Corporation",
+      "market_value": 6611910144,
+      "weight_pct": null
+    },
+    {
+      "ticker": "TTAN",
+      "name": "ServiceTitan, Inc.",
+      "market_value": 6472031232,
+      "weight_pct": null
+    },
+    {
+      "ticker": "OR",
+      "name": "OR Royalties Inc.",
+      "market_value": 6462983168,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CLF",
+      "name": "Cleveland-Cliffs Inc.",
+      "market_value": 6458512896,
+      "weight_pct": null
+    },
+    {
+      "ticker": "OMF",
+      "name": "OneMain Holdings, Inc.",
+      "market_value": 6444623360,
+      "weight_pct": null
+    },
+    {
+      "ticker": "TXNM",
+      "name": "TXNM Energy, Inc.",
+      "market_value": 6432445440,
       "weight_pct": null
     },
     {
@@ -214,177 +328,105 @@
       "weight_pct": null
     },
     {
-      "ticker": "OMF",
-      "name": "OneMain Holdings, Inc.",
-      "market_value": 6598778880,
-      "weight_pct": null
-    },
-    {
-      "ticker": "NPO",
-      "name": "Enpro Inc.",
-      "market_value": 6592250368,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ZG",
-      "name": "Zillow Group, Inc.",
-      "market_value": 6588836352,
-      "weight_pct": null
-    },
-    {
-      "ticker": "TEX",
-      "name": "Terex Corporation",
-      "market_value": 6552819200,
-      "weight_pct": null
-    },
-    {
-      "ticker": "PACS",
-      "name": "PACS Group, Inc.",
-      "market_value": 6539260928,
-      "weight_pct": null
-    },
-    {
-      "ticker": "PATH",
-      "name": "UiPath, Inc.",
-      "market_value": 6493596672,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MGY",
-      "name": "Magnolia Oil & Gas Corporation",
-      "market_value": 6622898176,
-      "weight_pct": null
-    },
-    {
-      "ticker": "HXL",
-      "name": "Hexcel Corporation",
-      "market_value": 6488492544,
-      "weight_pct": null
-    },
-    {
-      "ticker": "GATX",
-      "name": "GATX Corporation",
-      "market_value": 6486597632,
-      "weight_pct": null
-    },
-    {
-      "ticker": "VNO",
-      "name": "Vornado Realty Trust",
-      "market_value": 6878235648,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ACT",
-      "name": "Enact Holdings, Inc.",
-      "market_value": 6457607680,
-      "weight_pct": null
-    },
-    {
-      "ticker": "TBBB",
-      "name": "BBB Foods Inc.",
-      "market_value": 6457342464,
-      "weight_pct": null
-    },
-    {
-      "ticker": "URBN",
-      "name": "Urban Outfitters, Inc.",
-      "market_value": 6454494720,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ENS",
-      "name": "EnerSys",
-      "market_value": 6451707904,
-      "weight_pct": null
-    },
-    {
-      "ticker": "TXNM",
-      "name": "TXNM Energy, Inc.",
-      "market_value": 6444559360,
-      "weight_pct": null
-    },
-    {
-      "ticker": "RUSHB",
-      "name": "Rush Enterprises, Inc.",
-      "market_value": 6442351616,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MAC",
-      "name": "The Macerich Company",
-      "market_value": 6679487488,
-      "weight_pct": null
-    },
-    {
-      "ticker": "Z",
-      "name": "Zillow Group, Inc.",
-      "market_value": 6393195008,
-      "weight_pct": null
-    },
-    {
       "ticker": "UBSI",
       "name": "United Bankshares, Inc.",
-      "market_value": 6381083136,
+      "market_value": 6405594112,
       "weight_pct": null
     },
     {
-      "ticker": "MTDR",
-      "name": "Matador Resources Company",
-      "market_value": 6379529728,
+      "ticker": "FIGR",
+      "name": "Figure Technology Solutions, Inc.",
+      "market_value": 6401500672,
       "weight_pct": null
     },
     {
-      "ticker": "OWL",
-      "name": "Blue Owl Capital Inc.",
-      "market_value": 14605897728,
+      "ticker": "GRAL",
+      "name": "GRAIL, Inc.",
+      "market_value": 6398884352,
       "weight_pct": null
     },
     {
-      "ticker": "BLDR",
-      "name": "Builders FirstSource, Inc.",
-      "market_value": 6366481920,
+      "ticker": "FAF",
+      "name": "First American Financial Corporation",
+      "market_value": 6380229120,
       "weight_pct": null
     },
     {
-      "ticker": "RNG",
-      "name": "RingCentral, Inc.",
-      "market_value": 6359829504,
+      "ticker": "CAG",
+      "name": "Conagra Brands, Inc.",
+      "market_value": 6378217984,
       "weight_pct": null
     },
     {
       "ticker": "PL",
       "name": "Planet Labs PBC",
-      "market_value": 6341870592,
+      "market_value": 6367340032,
       "weight_pct": null
     },
     {
-      "ticker": "JOBY",
-      "name": "Joby Aviation, Inc.",
-      "market_value": 6296580096,
+      "ticker": "CAVA",
+      "name": "CAVA Group, Inc.",
+      "market_value": 6355425280,
       "weight_pct": null
     },
     {
-      "ticker": "ETSY",
-      "name": "Etsy, Inc.",
-      "market_value": 6281542656,
+      "ticker": "TBBB",
+      "name": "BBB Foods Inc.",
+      "market_value": 6347630592,
+      "weight_pct": null
+    },
+    {
+      "ticker": "ST",
+      "name": "Sensata Technologies Holding plc",
+      "market_value": 6332264960,
+      "weight_pct": null
+    },
+    {
+      "ticker": "ZG",
+      "name": "Zillow Group, Inc.",
+      "market_value": 6317861888,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MBLY",
+      "name": "Mobileye Global Inc.",
+      "market_value": 6308391936,
+      "weight_pct": null
+    },
+    {
+      "ticker": "TFPM",
+      "name": "Triple Flag Precious Metals Corp.",
+      "market_value": 6305752576,
+      "weight_pct": null
+    },
+    {
+      "ticker": "VNO",
+      "name": "Vornado Realty Trust",
+      "market_value": 6680186880,
+      "weight_pct": null
+    },
+    {
+      "ticker": "ECG",
+      "name": "Everus Construction Group, Inc.",
+      "market_value": 6295982080,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CVLT",
+      "name": "Commvault Systems, Inc.",
+      "market_value": 6228289024,
+      "weight_pct": null
+    },
+    {
+      "ticker": "ACT",
+      "name": "Enact Holdings, Inc.",
+      "market_value": 6222510592,
       "weight_pct": null
     },
     {
       "ticker": "FNB",
       "name": "F.N.B. Corporation",
-      "market_value": 6279203840,
-      "weight_pct": null
-    },
-    {
-      "ticker": "OGC",
-      "name": "OceanaGold Corporation",
-      "market_value": 6257448448,
-      "weight_pct": null
-    },
-    {
-      "ticker": "RNR-PF",
-      "name": "RenaissanceRe Holdings Ltd.",
-      "market_value": null,
+      "market_value": 6211571200,
       "weight_pct": null
     },
     {
@@ -394,15 +436,21 @@
       "weight_pct": null
     },
     {
-      "ticker": "IFS",
-      "name": "Intercorp Financial Services Inc.",
-      "market_value": 6209870848,
+      "ticker": "OWL",
+      "name": "Blue Owl Capital Inc.",
+      "market_value": 14229780480,
       "weight_pct": null
     },
     {
-      "ticker": "INGM",
-      "name": "Ingram Micro Holding Corporation",
-      "market_value": 6206395392,
+      "ticker": "DPC",
+      "name": "DPC Holdings PLC",
+      "market_value": 6177401344,
+      "weight_pct": null
+    },
+    {
+      "ticker": "ELF",
+      "name": "e.l.f. Beauty, Inc.",
+      "market_value": 6176956928,
       "weight_pct": null
     },
     {
@@ -412,579 +460,567 @@
       "weight_pct": null
     },
     {
-      "ticker": "HR",
-      "name": "Healthcare Realty Trust Incorporated",
-      "market_value": 6263309824,
-      "weight_pct": null
-    },
-    {
-      "ticker": "BZ",
-      "name": "Kanzhun Limited",
-      "market_value": 6177418240,
-      "weight_pct": null
-    },
-    {
       "ticker": "JSM",
       "name": "Navient Corporation SR NT 6% 121543",
       "market_value": null,
       "weight_pct": null
     },
     {
-      "ticker": "NXE",
-      "name": "NexGen Energy Ltd.",
-      "market_value": 6161950720,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ST",
-      "name": "Sensata Technologies Holding plc",
-      "market_value": 6140157440,
-      "weight_pct": null
-    },
-    {
-      "ticker": "BILI",
-      "name": "Bilibili Inc.",
-      "market_value": 6135700480,
-      "weight_pct": null
-    },
-    {
-      "ticker": "DPC",
-      "name": "DPC Holdings PLC",
-      "market_value": 6129595392,
-      "weight_pct": null
-    },
-    {
-      "ticker": "XE",
-      "name": "X-Energy, Inc.",
-      "market_value": 6128001024,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CWEN",
-      "name": "Clearway Energy, Inc.",
-      "market_value": 7342353920,
-      "weight_pct": null
-    },
-    {
-      "ticker": "INGR",
-      "name": "Ingredion Incorporated",
-      "market_value": 6099548160,
-      "weight_pct": null
-    },
-    {
-      "ticker": "LOAR",
-      "name": "Loar Holdings Inc.",
-      "market_value": 6093498368,
-      "weight_pct": null
-    },
-    {
-      "ticker": "WFRD",
-      "name": "Weatherford International plc",
-      "market_value": 6084250112,
-      "weight_pct": null
-    },
-    {
-      "ticker": "SGHC",
-      "name": "Super Group (SGHC) Limited",
-      "market_value": 6081679360,
-      "weight_pct": null
-    },
-    {
-      "ticker": "WEX",
-      "name": "WEX Inc.",
-      "market_value": 6076069888,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CROX",
-      "name": "Crocs, Inc.",
-      "market_value": 6047791616,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CVLT",
-      "name": "Commvault Systems, Inc.",
-      "market_value": 6031841792,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CZR",
-      "name": "Caesars Entertainment, Inc.",
-      "market_value": 6029854208,
-      "weight_pct": null
-    },
-    {
-      "ticker": "DOX",
-      "name": "Amdocs Limited",
-      "market_value": 6025789440,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CAVA",
-      "name": "CAVA Group, Inc.",
-      "market_value": 6024864256,
-      "weight_pct": null
-    },
-    {
-      "ticker": "BLCO",
-      "name": "Bausch + Lomb Corporation",
-      "market_value": 6021806080,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CRUS",
-      "name": "Cirrus Logic, Inc.",
-      "market_value": 6010097664,
-      "weight_pct": null
-    },
-    {
-      "ticker": "RIG",
-      "name": "Transocean Ltd.",
-      "market_value": 6008815104,
-      "weight_pct": null
-    },
-    {
-      "ticker": "POOL",
-      "name": "Pool Corporation",
-      "market_value": 5992952832,
-      "weight_pct": null
-    },
-    {
-      "ticker": "LW",
-      "name": "Lamb Weston Holdings, Inc.",
-      "market_value": 5991516160,
-      "weight_pct": null
-    },
-    {
-      "ticker": "SWX",
-      "name": "Southwest Gas Holdings, Inc.",
-      "market_value": 5972436480,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ECG",
-      "name": "Everus Construction Group, Inc.",
-      "market_value": 5968805888,
-      "weight_pct": null
-    },
-    {
-      "ticker": "QLYS",
-      "name": "Qualys, Inc.",
-      "market_value": 5965215744,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CGON",
-      "name": "CG Oncology, Inc.",
-      "market_value": 5952201216,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ENIC",
-      "name": "Enel Chile S.A.",
-      "market_value": 5934490624,
-      "weight_pct": null
-    },
-    {
-      "ticker": "HWC",
-      "name": "Hancock Whitney Corporation",
-      "market_value": 5924472320,
-      "weight_pct": null
-    },
-    {
-      "ticker": "SRRK",
-      "name": "Scholar Rock Holding Corporation",
-      "market_value": 5922418176,
-      "weight_pct": null
-    },
-    {
-      "ticker": "M",
-      "name": "Macy's, Inc.",
-      "market_value": 5913038848,
+      "ticker": "Z",
+      "name": "Zillow Group, Inc.",
+      "market_value": 6163822592,
       "weight_pct": null
     },
     {
       "ticker": "CIG",
       "name": "Companhia Energ\u00e9tica de Minas Gerais - CEMIG",
-      "market_value": 5893004800,
+      "market_value": 6150466560,
       "weight_pct": null
     },
     {
-      "ticker": "LKQ",
-      "name": "LKQ Corporation",
-      "market_value": 5892418560,
+      "ticker": "BLCO",
+      "name": "Bausch + Lomb Corporation",
+      "market_value": 6111097856,
       "weight_pct": null
     },
     {
-      "ticker": "LUMN",
-      "name": "Lumen Technologies, Inc.",
-      "market_value": 5889552896,
+      "ticker": "RNR-PF",
+      "name": "RenaissanceRe Holdings Ltd.",
+      "market_value": null,
       "weight_pct": null
     },
     {
-      "ticker": "AVAL",
-      "name": "Grupo Aval Acciones y Valores S.A.",
-      "market_value": 5888381952,
+      "ticker": "CRUS",
+      "name": "Cirrus Logic, Inc.",
+      "market_value": 6072744448,
       "weight_pct": null
     },
     {
-      "ticker": "VIPS",
-      "name": "Vipshop Holdings Limited",
-      "market_value": 5886690304,
+      "ticker": "DOX",
+      "name": "Amdocs Limited",
+      "market_value": 6068599808,
       "weight_pct": null
     },
     {
-      "ticker": "ELF",
-      "name": "e.l.f. Beauty, Inc.",
-      "market_value": 5871885824,
+      "ticker": "BLDR",
+      "name": "Builders FirstSource, Inc.",
+      "market_value": 6052300800,
       "weight_pct": null
     },
     {
-      "ticker": "KNSA",
-      "name": "Kiniksa Pharmaceuticals International, plc",
-      "market_value": 5858043392,
+      "ticker": "CZR",
+      "name": "Caesars Entertainment, Inc.",
+      "market_value": 6042080768,
       "weight_pct": null
     },
     {
-      "ticker": "MTG",
-      "name": "MGIC Investment Corporation",
-      "market_value": 5841955328,
+      "ticker": "GATX",
+      "name": "GATX Corporation",
+      "market_value": 6038223872,
       "weight_pct": null
     },
     {
-      "ticker": "HOMB",
-      "name": "Home BancShares, Inc.",
-      "market_value": 5839449088,
+      "ticker": "NXE",
+      "name": "NexGen Energy Ltd.",
+      "market_value": 6034554880,
+      "weight_pct": null
+    },
+    {
+      "ticker": "OGC",
+      "name": "OceanaGold Corporation",
+      "market_value": 6030552576,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CWEN",
+      "name": "Clearway Energy, Inc.",
+      "market_value": 7236300288,
+      "weight_pct": null
+    },
+    {
+      "ticker": "INGR",
+      "name": "Ingredion Incorporated",
+      "market_value": 6011889152,
       "weight_pct": null
     },
     {
       "ticker": "SFM",
       "name": "Sprouts Farmers Market, Inc.",
-      "market_value": 5827044352,
+      "market_value": 6011674624,
       "weight_pct": null
     },
     {
-      "ticker": "GBCI",
-      "name": "Glacier Bancorp, Inc.",
-      "market_value": 5826984960,
+      "ticker": "LW",
+      "name": "Lamb Weston Holdings, Inc.",
+      "market_value": 5994265088,
       "weight_pct": null
     },
     {
-      "ticker": "BLLN",
-      "name": "BillionToOne, Inc.",
-      "market_value": 5807780864,
+      "ticker": "SWX",
+      "name": "Southwest Gas Holdings, Inc.",
+      "market_value": 5990547968,
       "weight_pct": null
     },
     {
-      "ticker": "MKTX",
-      "name": "MarketAxess Holdings Inc.",
-      "market_value": 5779027456,
+      "ticker": "HR",
+      "name": "Healthcare Realty Trust Incorporated",
+      "market_value": 6062051328,
       "weight_pct": null
     },
     {
-      "ticker": "CPB",
-      "name": "The Campbell's Company",
-      "market_value": 5776806400,
+      "ticker": "QBTS",
+      "name": "D-Wave Quantum Inc.",
+      "market_value": 5986712064,
       "weight_pct": null
     },
     {
-      "ticker": "STVN",
-      "name": "Stevanato Group S.p.A.",
-      "market_value": 5771155968,
+      "ticker": "CGON",
+      "name": "CG Oncology, Inc.",
+      "market_value": 5972588544,
       "weight_pct": null
     },
     {
-      "ticker": "CACC",
-      "name": "Credit Acceptance Corporation",
-      "market_value": 5768280576,
+      "ticker": "BILI",
+      "name": "Bilibili Inc.",
+      "market_value": 5948272128,
       "weight_pct": null
     },
     {
-      "ticker": "XMTR",
-      "name": "Xometry, Inc.",
-      "market_value": 5765031424,
+      "ticker": "M",
+      "name": "Macy's, Inc.",
+      "market_value": 5936544768,
       "weight_pct": null
     },
     {
-      "ticker": "ANF",
-      "name": "Abercrombie & Fitch Co.",
-      "market_value": 5758769664,
+      "ticker": "LUMN",
+      "name": "Lumen Technologies, Inc.",
+      "market_value": 5930810880,
       "weight_pct": null
     },
     {
-      "ticker": "ORA",
-      "name": "Ormat Technologies, Inc.",
-      "market_value": 5757958144,
+      "ticker": "JOBY",
+      "name": "Joby Aviation, Inc.",
+      "market_value": 5927950848,
       "weight_pct": null
     },
     {
-      "ticker": "BXSL",
-      "name": "Blackstone Secured Lending Fund",
-      "market_value": 5745041920,
-      "weight_pct": null
-    },
-    {
-      "ticker": "EPRT",
-      "name": "Essential Properties Realty Trust, Inc.",
-      "market_value": 5752919040,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ESNT",
-      "name": "Essent Group Ltd.",
-      "market_value": 5727828992,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MBGL",
-      "name": "Mobility Global, Inc.",
-      "market_value": 5718400512,
-      "weight_pct": null
-    },
-    {
-      "ticker": "JBTM",
-      "name": "JBT Marel Corporation",
-      "market_value": 5711118336,
-      "weight_pct": null
-    },
-    {
-      "ticker": "BLSH",
-      "name": "Bullish",
-      "market_value": 5698945536,
-      "weight_pct": null
-    },
-    {
-      "ticker": "GRAL",
-      "name": "GRAIL, Inc.",
-      "market_value": 5667698176,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ACI",
-      "name": "Albertsons Companies, Inc.",
-      "market_value": 5663750656,
-      "weight_pct": null
-    },
-    {
-      "ticker": "BGC",
-      "name": "BGC Group, Inc.",
-      "market_value": 5629523968,
-      "weight_pct": null
-    },
-    {
-      "ticker": "LYFT",
-      "name": "Lyft, Inc.",
-      "market_value": 5627000832,
-      "weight_pct": null
-    },
-    {
-      "ticker": "VAL",
-      "name": "Valaris Limited",
-      "market_value": 5623605760,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MMED",
-      "name": "MiniMed Group, Inc.",
-      "market_value": 5621371392,
-      "weight_pct": null
-    },
-    {
-      "ticker": "RYN",
-      "name": "Rayonier Inc.",
-      "market_value": 5649830912,
-      "weight_pct": null
-    },
-    {
-      "ticker": "FSV",
-      "name": "FirstService Corporation",
-      "market_value": 5616805376,
-      "weight_pct": null
-    },
-    {
-      "ticker": "WFG",
-      "name": "West Fraser Timber Co. Ltd.",
-      "market_value": 5612817920,
-      "weight_pct": null
-    },
-    {
-      "ticker": "COGT",
-      "name": "Cogent Biosciences, Inc.",
-      "market_value": 5606592000,
-      "weight_pct": null
-    },
-    {
-      "ticker": "WPP",
-      "name": "WPP plc",
-      "market_value": 5606170624,
-      "weight_pct": null
-    },
-    {
-      "ticker": "TTAN",
-      "name": "ServiceTitan, Inc.",
-      "market_value": 5599961600,
-      "weight_pct": null
-    },
-    {
-      "ticker": "RUSHA",
-      "name": "Rush Enterprises, Inc.",
-      "market_value": 5599558144,
-      "weight_pct": null
-    },
-    {
-      "ticker": "EPAM",
-      "name": "EPAM Systems, Inc.",
-      "market_value": 5583259136,
-      "weight_pct": null
-    },
-    {
-      "ticker": "BETA",
-      "name": "BETA Technologies, Inc.",
-      "market_value": 5782254592,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CORZ",
-      "name": "Core Scientific, Inc.",
-      "market_value": 5572043264,
-      "weight_pct": null
-    },
-    {
-      "ticker": "VFC",
-      "name": "V.F. Corporation",
-      "market_value": 5562853888,
-      "weight_pct": null
-    },
-    {
-      "ticker": "G",
-      "name": "Genpact Limited",
-      "market_value": 5561938432,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CHDN",
-      "name": "Churchill Downs Incorporated",
-      "market_value": 5559987712,
+      "ticker": "KNSA",
+      "name": "Kiniksa Pharmaceuticals International, plc",
+      "market_value": 5913440256,
       "weight_pct": null
     },
     {
       "ticker": "LSTR",
       "name": "Landstar System, Inc.",
-      "market_value": 5557850112,
+      "market_value": 5887377408,
       "weight_pct": null
     },
     {
-      "ticker": "SAIC",
-      "name": "Science Applications International Corporation",
-      "market_value": 5556045312,
+      "ticker": "XMTR",
+      "name": "Xometry, Inc.",
+      "market_value": 5877385728,
       "weight_pct": null
     },
     {
-      "ticker": "BIRK",
-      "name": "Birkenstock Holding plc",
-      "market_value": 5548240384,
+      "ticker": "POOL",
+      "name": "Pool Corporation",
+      "market_value": 5866123264,
       "weight_pct": null
     },
     {
-      "ticker": "PEGA",
-      "name": "Pegasystems Inc.",
-      "market_value": 5547844608,
+      "ticker": "HWC",
+      "name": "Hancock Whitney Corporation",
+      "market_value": 5863502848,
       "weight_pct": null
     },
     {
-      "ticker": "ASB",
-      "name": "Associated Banc-Corp",
-      "market_value": 5546514944,
+      "ticker": "IFS",
+      "name": "Intercorp Financial Services Inc.",
+      "market_value": 5863222272,
       "weight_pct": null
     },
     {
-      "ticker": "AUB",
-      "name": "Atlantic Union Bankshares Corporation",
-      "market_value": 5538361344,
+      "ticker": "VIPS",
+      "name": "Vipshop Holdings Limited",
+      "market_value": 5862915072,
       "weight_pct": null
     },
     {
-      "ticker": "ABCB",
-      "name": "Ameris Bancorp",
-      "market_value": 5522254848,
+      "ticker": "VSH",
+      "name": "Vishay Intertechnology, Inc.",
+      "market_value": 5856016896,
       "weight_pct": null
     },
     {
-      "ticker": "AN",
-      "name": "AutoNation, Inc.",
-      "market_value": 5520493056,
+      "ticker": "LYFT",
+      "name": "Lyft, Inc.",
+      "market_value": 5852232192,
       "weight_pct": null
     },
     {
-      "ticker": "MTRN",
-      "name": "Materion Corporation",
-      "market_value": 5520103424,
+      "ticker": "CPB",
+      "name": "The Campbell's Company",
+      "market_value": 5851364864,
       "weight_pct": null
     },
     {
-      "ticker": "CMBT",
-      "name": "Cmb.Tech NV",
-      "market_value": 5516127232,
-      "weight_pct": null
-    },
-    {
-      "ticker": "POR",
-      "name": "Portland General Electric Company",
-      "market_value": 5509922816,
-      "weight_pct": null
-    },
-    {
-      "ticker": "SXT",
-      "name": "Sensient Technologies Corporation",
-      "market_value": 5499966464,
-      "weight_pct": null
-    },
-    {
-      "ticker": "DLB",
-      "name": "Dolby Laboratories, Inc.",
-      "market_value": 5485244416,
-      "weight_pct": null
-    },
-    {
-      "ticker": "SNDR",
-      "name": "Schneider National, Inc.",
-      "market_value": 5478153216,
-      "weight_pct": null
-    },
-    {
-      "ticker": "EXP",
-      "name": "Eagle Materials Inc.",
-      "market_value": 5475238912,
-      "weight_pct": null
-    },
-    {
-      "ticker": "OTEX",
-      "name": "Open Text Corporation",
-      "market_value": 5462329856,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CPA",
-      "name": "Copa Holdings, S.A.",
-      "market_value": 5458373632,
+      "ticker": "XE",
+      "name": "X-Energy, Inc.",
+      "market_value": 5843544576,
       "weight_pct": null
     },
     {
       "ticker": "PI",
       "name": "Impinj, Inc.",
-      "market_value": 5447240704,
+      "market_value": 5793421824,
+      "weight_pct": null
+    },
+    {
+      "ticker": "LOAR",
+      "name": "Loar Holdings Inc.",
+      "market_value": 5782452736,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MKTX",
+      "name": "MarketAxess Holdings Inc.",
+      "market_value": 5777267712,
+      "weight_pct": null
+    },
+    {
+      "ticker": "RIG",
+      "name": "Transocean Ltd.",
+      "market_value": 5774270464,
+      "weight_pct": null
+    },
+    {
+      "ticker": "ENIC",
+      "name": "Enel Chile S.A.",
+      "market_value": 5768491008,
+      "weight_pct": null
+    },
+    {
+      "ticker": "LKQ",
+      "name": "LKQ Corporation",
+      "market_value": 5768446976,
+      "weight_pct": null
+    },
+    {
+      "ticker": "ANF",
+      "name": "Abercrombie & Fitch Co.",
+      "market_value": 5767256064,
+      "weight_pct": null
+    },
+    {
+      "ticker": "SNDR",
+      "name": "Schneider National, Inc.",
+      "market_value": 5765646336,
+      "weight_pct": null
+    },
+    {
+      "ticker": "WEX",
+      "name": "WEX Inc.",
+      "market_value": 5763201024,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CMBT",
+      "name": "Cmb.Tech NV",
+      "market_value": 5759869952,
+      "weight_pct": null
+    },
+    {
+      "ticker": "INSW",
+      "name": "International Seaways, Inc.",
+      "market_value": 5736221184,
+      "weight_pct": null
+    },
+    {
+      "ticker": "HOMB",
+      "name": "Home BancShares, Inc.",
+      "market_value": 5735422976,
+      "weight_pct": null
+    },
+    {
+      "ticker": "GBCI",
+      "name": "Glacier Bancorp, Inc.",
+      "market_value": 5717606912,
+      "weight_pct": null
+    },
+    {
+      "ticker": "SGHC",
+      "name": "Super Group (SGHC) Limited",
+      "market_value": 5715864064,
+      "weight_pct": null
+    },
+    {
+      "ticker": "ORA",
+      "name": "Ormat Technologies, Inc.",
+      "market_value": 5710605824,
+      "weight_pct": null
+    },
+    {
+      "ticker": "ACI",
+      "name": "Albertsons Companies, Inc.",
+      "market_value": 5702577152,
+      "weight_pct": null
+    },
+    {
+      "ticker": "WFRD",
+      "name": "Weatherford International plc",
+      "market_value": 5700944896,
+      "weight_pct": null
+    },
+    {
+      "ticker": "SRRK",
+      "name": "Scholar Rock Holding Corporation",
+      "market_value": 5700769280,
+      "weight_pct": null
+    },
+    {
+      "ticker": "AVAL",
+      "name": "Grupo Aval Acciones y Valores S.A.",
+      "market_value": 5674691072,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CROX",
+      "name": "Crocs, Inc.",
+      "market_value": 5661833728,
       "weight_pct": null
     },
     {
       "ticker": "NOVT",
       "name": "Novanta Inc.",
-      "market_value": 5443110912,
+      "market_value": 5645058560,
       "weight_pct": null
     },
     {
-      "ticker": "PSMT",
-      "name": "PriceSmart, Inc.",
-      "market_value": 5392259072,
+      "ticker": "FSV",
+      "name": "FirstService Corporation",
+      "market_value": 5639077376,
+      "weight_pct": null
+    },
+    {
+      "ticker": "JBTM",
+      "name": "JBT Marel Corporation",
+      "market_value": 5633822208,
+      "weight_pct": null
+    },
+    {
+      "ticker": "VFC",
+      "name": "V.F. Corporation",
+      "market_value": 5633618432,
+      "weight_pct": null
+    },
+    {
+      "ticker": "AXTI",
+      "name": "AXT, Inc.",
+      "market_value": 5630771712,
+      "weight_pct": null
+    },
+    {
+      "ticker": "EPRT",
+      "name": "Essential Properties Realty Trust, Inc.",
+      "market_value": 5616306176,
+      "weight_pct": null
+    },
+    {
+      "ticker": "BGC",
+      "name": "BGC Group, Inc.",
+      "market_value": 5600995328,
+      "weight_pct": null
+    },
+    {
+      "ticker": "G",
+      "name": "Genpact Limited",
+      "market_value": 5593865216,
+      "weight_pct": null
+    },
+    {
+      "ticker": "EPAM",
+      "name": "EPAM Systems, Inc.",
+      "market_value": 5586354176,
+      "weight_pct": null
+    },
+    {
+      "ticker": "NAVN",
+      "name": "Navan, Inc.",
+      "market_value": 5580597248,
+      "weight_pct": null
+    },
+    {
+      "ticker": "PEGA",
+      "name": "Pegasystems Inc.",
+      "market_value": 5578259968,
+      "weight_pct": null
+    },
+    {
+      "ticker": "AUB",
+      "name": "Atlantic Union Bankshares Corporation",
+      "market_value": 5544074240,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MMED",
+      "name": "MiniMed Group, Inc.",
+      "market_value": 5542593536,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MTG",
+      "name": "MGIC Investment Corporation",
+      "market_value": 5528114176,
+      "weight_pct": null
+    },
+    {
+      "ticker": "STVN",
+      "name": "Stevanato Group S.p.A.",
+      "market_value": 5517149184,
+      "weight_pct": null
+    },
+    {
+      "ticker": "DLB",
+      "name": "Dolby Laboratories, Inc.",
+      "market_value": 5516154880,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CVI",
+      "name": "CVR Energy, Inc.",
+      "market_value": 5512093184,
+      "weight_pct": null
+    },
+    {
+      "ticker": "RUSHA",
+      "name": "Rush Enterprises, Inc.",
+      "market_value": 5507341312,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MBGL",
+      "name": "Mobility Global, Inc.",
+      "market_value": 5507199488,
+      "weight_pct": null
+    },
+    {
+      "ticker": "BIRK",
+      "name": "Birkenstock Holding plc",
+      "market_value": 5503656960,
+      "weight_pct": null
+    },
+    {
+      "ticker": "BXSL",
+      "name": "Blackstone Secured Lending Fund",
+      "market_value": 5500423168,
+      "weight_pct": null
+    },
+    {
+      "ticker": "KGS",
+      "name": "Kodiak Gas Services, Inc.",
+      "market_value": 5492982272,
+      "weight_pct": null
+    },
+    {
+      "ticker": "HAFN",
+      "name": "Hafnia Limited",
+      "market_value": 5487144448,
+      "weight_pct": null
+    },
+    {
+      "ticker": "ASB",
+      "name": "Associated Banc-Corp",
+      "market_value": 5476640256,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CACC",
+      "name": "Credit Acceptance Corporation",
+      "market_value": 5475756032,
+      "weight_pct": null
+    },
+    {
+      "ticker": "SXT",
+      "name": "Sensient Technologies Corporation",
+      "market_value": 5473152000,
+      "weight_pct": null
+    },
+    {
+      "ticker": "ABCB",
+      "name": "Ameris Bancorp",
+      "market_value": 5465213952,
+      "weight_pct": null
+    },
+    {
+      "ticker": "VRNS",
+      "name": "Varonis Systems, Inc.",
+      "market_value": 5463913472,
+      "weight_pct": null
+    },
+    {
+      "ticker": "BB",
+      "name": "BlackBerry Limited",
+      "market_value": 5459400192,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CAKE",
+      "name": "The Cheesecake Factory Incorporated",
+      "market_value": 5456253440,
+      "weight_pct": null
+    },
+    {
+      "ticker": "VAL",
+      "name": "Valaris Limited",
+      "market_value": 5443073024,
+      "weight_pct": null
+    },
+    {
+      "ticker": "EXLS",
+      "name": "ExlService Holdings, Inc.",
+      "market_value": 5420146688,
+      "weight_pct": null
+    },
+    {
+      "ticker": "ESNT",
+      "name": "Essent Group Ltd.",
+      "market_value": 5412362752,
+      "weight_pct": null
+    },
+    {
+      "ticker": "BKH",
+      "name": "Black Hills Corporation",
+      "market_value": 5410923008,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CPA",
+      "name": "Copa Holdings, S.A.",
+      "market_value": 5407757312,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MUR",
+      "name": "Murphy Oil Corporation",
+      "market_value": 5398544896,
+      "weight_pct": null
+    },
+    {
+      "ticker": "OTEX",
+      "name": "Open Text Corporation",
+      "market_value": 5391957504,
+      "weight_pct": null
+    },
+    {
+      "ticker": "AGX",
+      "name": "Argan, Inc.",
+      "market_value": 5385074176,
+      "weight_pct": null
+    },
+    {
+      "ticker": "COGT",
+      "name": "Cogent Biosciences, Inc.",
+      "market_value": 5382745088,
       "weight_pct": null
     },
     {
@@ -994,381 +1030,339 @@
       "weight_pct": null
     },
     {
-      "ticker": "BKH",
-      "name": "Black Hills Corporation",
-      "market_value": 5372796416,
+      "ticker": "RYN",
+      "name": "Rayonier Inc.",
+      "market_value": 5404446208,
       "weight_pct": null
     },
     {
-      "ticker": "OBDC",
-      "name": "Blue Owl Capital Corporation",
-      "market_value": 5365061632,
-      "weight_pct": null
-    },
-    {
-      "ticker": "BCPC",
-      "name": "Balchem Corporation",
-      "market_value": 5352000512,
-      "weight_pct": null
-    },
-    {
-      "ticker": "KGS",
-      "name": "Kodiak Gas Services, Inc.",
-      "market_value": 5349414400,
-      "weight_pct": null
-    },
-    {
-      "ticker": "AROC",
-      "name": "Archrock, Inc.",
-      "market_value": 5335541248,
-      "weight_pct": null
-    },
-    {
-      "ticker": "IBP",
-      "name": "Installed Building Products, Inc.",
-      "market_value": 5321948160,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ROAD",
-      "name": "Construction Partners, Inc.",
-      "market_value": 5318563328,
-      "weight_pct": null
-    },
-    {
-      "ticker": "STWD",
-      "name": "Starwood Property Trust, Inc.",
-      "market_value": 5453481984,
-      "weight_pct": null
-    },
-    {
-      "ticker": "VRNS",
-      "name": "Varonis Systems, Inc.",
-      "market_value": 5312297472,
-      "weight_pct": null
-    },
-    {
-      "ticker": "BEPC",
-      "name": "Brookfield Renewable Corporation",
-      "market_value": 5285254144,
-      "weight_pct": null
-    },
-    {
-      "ticker": "EXLS",
-      "name": "ExlService Holdings, Inc.",
-      "market_value": 5268534272,
-      "weight_pct": null
-    },
-    {
-      "ticker": "PAGP",
-      "name": "Plains GP Holdings, L.P.",
-      "market_value": 6193151488,
-      "weight_pct": null
-    },
-    {
-      "ticker": "NIQ",
-      "name": "NIQ Global Intelligence plc",
-      "market_value": 5259063296,
-      "weight_pct": null
-    },
-    {
-      "ticker": "SHC",
-      "name": "Sotera Health Company",
-      "market_value": 5233773568,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CWST",
-      "name": "Casella Waste Systems, Inc.",
-      "market_value": 5233757184,
-      "weight_pct": null
-    },
-    {
-      "ticker": "INSW",
-      "name": "International Seaways, Inc.",
-      "market_value": 5232487936,
-      "weight_pct": null
-    },
-    {
-      "ticker": "BBUC",
-      "name": "Brookfield Business Corporation",
-      "market_value": 5230553600,
-      "weight_pct": null
-    },
-    {
-      "ticker": "PTCT",
-      "name": "PTC Therapeutics, Inc.",
-      "market_value": 5230488064,
-      "weight_pct": null
-    },
-    {
-      "ticker": "BROS",
-      "name": "Dutch Bros Inc.",
-      "market_value": 6645770752,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MMSI",
-      "name": "Merit Medical Systems, Inc.",
-      "market_value": 5224661504,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MUR",
-      "name": "Murphy Oil Corporation",
-      "market_value": 5207889920,
-      "weight_pct": null
-    },
-    {
-      "ticker": "HRB",
-      "name": "H&R Block, Inc.",
-      "market_value": 5200588800,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CAKE",
-      "name": "The Cheesecake Factory Incorporated",
-      "market_value": 5199488512,
-      "weight_pct": null
-    },
-    {
-      "ticker": "WH",
-      "name": "Wyndham Hotels & Resorts, Inc.",
-      "market_value": 5194036224,
+      "ticker": "AN",
+      "name": "AutoNation, Inc.",
+      "market_value": 5371058688,
       "weight_pct": null
     },
     {
       "ticker": "GXO",
       "name": "GXO Logistics, Inc.",
-      "market_value": 5183742976,
+      "market_value": 5339714048,
       "weight_pct": null
     },
     {
-      "ticker": "CVI",
-      "name": "CVR Energy, Inc.",
-      "market_value": 5179336704,
-      "weight_pct": null
-    },
-    {
-      "ticker": "AXTI",
-      "name": "AXT, Inc.",
-      "market_value": 5176349696,
-      "weight_pct": null
-    },
-    {
-      "ticker": "BYD",
-      "name": "Boyd Gaming Corporation",
-      "market_value": 5175245312,
-      "weight_pct": null
-    },
-    {
-      "ticker": "TFX",
-      "name": "Teleflex Incorporated",
-      "market_value": 5172398592,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CE",
-      "name": "Celanese Corporation",
-      "market_value": 5168076800,
-      "weight_pct": null
-    },
-    {
-      "ticker": "IRDM",
-      "name": "Iridium Communications Inc.",
-      "market_value": 5166600704,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MAIN",
-      "name": "Main Street Capital Corporation",
-      "market_value": 5152316416,
-      "weight_pct": null
-    },
-    {
-      "ticker": "LAUR",
-      "name": "Laureate Education, Inc.",
-      "market_value": 5151826432,
-      "weight_pct": null
-    },
-    {
-      "ticker": "NJR",
-      "name": "New Jersey Resources Corporation",
-      "market_value": 5135292928,
-      "weight_pct": null
-    },
-    {
-      "ticker": "FLG",
-      "name": "Flagstar Bank, National Association",
-      "market_value": 5134698496,
-      "weight_pct": null
-    },
-    {
-      "ticker": "SIGI",
-      "name": "Selective Insurance Group, Inc.",
-      "market_value": 5130092544,
-      "weight_pct": null
-    },
-    {
-      "ticker": "OZK",
-      "name": "Bank OZK",
-      "market_value": 5112773632,
+      "ticker": "BROS",
+      "name": "Dutch Bros Inc.",
+      "market_value": 6782579712,
       "weight_pct": null
     },
     {
       "ticker": "GVA",
       "name": "Granite Construction Incorporated",
-      "market_value": 5112646656,
+      "market_value": 5327672832,
       "weight_pct": null
     },
     {
-      "ticker": "PIPR",
-      "name": "Piper Sandler Companies",
-      "market_value": 5112288256,
+      "ticker": "WH",
+      "name": "Wyndham Hotels & Resorts, Inc.",
+      "market_value": 5327616512,
       "weight_pct": null
     },
     {
-      "ticker": "AGX",
-      "name": "Argan, Inc.",
-      "market_value": 5110931456,
-      "weight_pct": null
-    },
-    {
-      "ticker": "RLI",
-      "name": "RLI Corp.",
-      "market_value": 5110836224,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MDA",
-      "name": "MDA Space Ltd.",
-      "market_value": 5105498624,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MWH",
-      "name": "SOLV Energy, Inc.",
-      "market_value": 5100145664,
-      "weight_pct": null
-    },
-    {
-      "ticker": "RITM",
-      "name": "Rithm Capital Corp.",
-      "market_value": 5098256384,
+      "ticker": "WPP",
+      "name": "WPP plc",
+      "market_value": 5321444352,
       "weight_pct": null
     },
     {
       "ticker": "FTDR",
       "name": "Frontdoor, Inc.",
-      "market_value": 5097416192,
+      "market_value": 5321319424,
       "weight_pct": null
     },
     {
-      "ticker": "VSEC",
-      "name": "VSE Corporation",
-      "market_value": 5073305088,
+      "ticker": "LAUR",
+      "name": "Laureate Education, Inc.",
+      "market_value": 5319880192,
       "weight_pct": null
     },
     {
-      "ticker": "SBRA",
-      "name": "Sabra Health Care REIT, Inc.",
-      "market_value": 5070935552,
+      "ticker": "AROC",
+      "name": "Archrock, Inc.",
+      "market_value": 5318007296,
       "weight_pct": null
     },
     {
-      "ticker": "SPHR",
-      "name": "Sphere Entertainment Co.",
-      "market_value": 5068487680,
+      "ticker": "BCPC",
+      "name": "Balchem Corporation",
+      "market_value": 5309602816,
       "weight_pct": null
     },
     {
-      "ticker": "GLNG",
-      "name": "Golar LNG Limited",
-      "market_value": 5065032192,
+      "ticker": "CHDN",
+      "name": "Churchill Downs Incorporated",
+      "market_value": 5300703232,
+      "weight_pct": null
+    },
+    {
+      "ticker": "PTCT",
+      "name": "PTC Therapeutics, Inc.",
+      "market_value": 5296422400,
+      "weight_pct": null
+    },
+    {
+      "ticker": "BEPC",
+      "name": "Brookfield Renewable Corporation",
+      "market_value": 5294536192,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CORZ",
+      "name": "Core Scientific, Inc.",
+      "market_value": 5286050816,
+      "weight_pct": null
+    },
+    {
+      "ticker": "KLIC",
+      "name": "Kulicke and Soffa Industries, Inc.",
+      "market_value": 5273204736,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CWST",
+      "name": "Casella Waste Systems, Inc.",
+      "market_value": 5267486720,
+      "weight_pct": null
+    },
+    {
+      "ticker": "PSMT",
+      "name": "PriceSmart, Inc.",
+      "market_value": 5267274240,
+      "weight_pct": null
+    },
+    {
+      "ticker": "BBUC",
+      "name": "Brookfield Business Corporation",
+      "market_value": 5259315712,
+      "weight_pct": null
+    },
+    {
+      "ticker": "TFX",
+      "name": "Teleflex Incorporated",
+      "market_value": 5259261952,
+      "weight_pct": null
+    },
+    {
+      "ticker": "EXP",
+      "name": "Eagle Materials Inc.",
+      "market_value": 5256523776,
+      "weight_pct": null
+    },
+    {
+      "ticker": "SAIC",
+      "name": "Science Applications International Corporation",
+      "market_value": 5248097792,
+      "weight_pct": null
+    },
+    {
+      "ticker": "POR",
+      "name": "Portland General Electric Company",
+      "market_value": 5239425024,
+      "weight_pct": null
+    },
+    {
+      "ticker": "NJR",
+      "name": "New Jersey Resources Corporation",
+      "market_value": 5234731008,
       "weight_pct": null
     },
     {
       "ticker": "VEON",
       "name": "VEON Ltd.",
-      "market_value": 5062674432,
+      "market_value": 5208660480,
       "weight_pct": null
     },
     {
-      "ticker": "NAVN",
-      "name": "Navan, Inc.",
-      "market_value": 5055869952,
+      "ticker": "WFG",
+      "name": "West Fraser Timber Co. Ltd.",
+      "market_value": 5207204352,
       "weight_pct": null
     },
     {
-      "ticker": "OCTV",
-      "name": "Octave Intelligence plc",
-      "market_value": 5054683648,
+      "ticker": "SHC",
+      "name": "Sotera Health Company",
+      "market_value": 5199528448,
       "weight_pct": null
     },
     {
-      "ticker": "AX",
-      "name": "Axos Financial, Inc.",
-      "market_value": 5022097920,
+      "ticker": "VIRT",
+      "name": "Virtu Financial, Inc.",
+      "market_value": 5191197184,
       "weight_pct": null
     },
     {
-      "ticker": "FND",
-      "name": "Floor & Decor Holdings, Inc.",
-      "market_value": 5011418112,
+      "ticker": "BLSH",
+      "name": "Bullish",
+      "market_value": 5190923264,
       "weight_pct": null
     },
     {
-      "ticker": "GRFS",
-      "name": "Grifols, S.A.",
-      "market_value": 5002266624,
+      "ticker": "IRDM",
+      "name": "Iridium Communications Inc.",
+      "market_value": 5188856832,
+      "weight_pct": null
+    },
+    {
+      "ticker": "BETA",
+      "name": "BETA Technologies, Inc.",
+      "market_value": 5374951424,
+      "weight_pct": null
+    },
+    {
+      "ticker": "ROAD",
+      "name": "Construction Partners, Inc.",
+      "market_value": 5169296384,
       "weight_pct": null
     },
     {
       "ticker": "MRCY",
       "name": "Mercury Systems, Inc.",
-      "market_value": 5001769472,
+      "market_value": 5165492736,
       "weight_pct": null
     },
     {
-      "ticker": "ACIW",
-      "name": "ACI Worldwide, Inc.",
-      "market_value": 4998294016,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CNO",
-      "name": "CNO Financial Group, Inc.",
-      "market_value": 4994303488,
-      "weight_pct": null
-    },
-    {
-      "ticker": "NXST",
-      "name": "Nexstar Media Group, Inc.",
-      "market_value": 4994025472,
-      "weight_pct": null
-    },
-    {
-      "ticker": "VSH",
-      "name": "Vishay Intertechnology, Inc.",
-      "market_value": 4992492032,
+      "ticker": "PAGP",
+      "name": "Plains GP Holdings, L.P.",
+      "market_value": 6071991296,
       "weight_pct": null
     },
     {
       "ticker": "ERAS",
       "name": "Erasca, Inc.",
-      "market_value": 4984109056,
+      "market_value": 5155492352,
       "weight_pct": null
     },
     {
-      "ticker": "OMAB",
-      "name": "Grupo Aeroportuario del Centro Norte, S.A.B. de C.V.",
-      "market_value": 4973379072,
+      "ticker": "MAIN",
+      "name": "Main Street Capital Corporation",
+      "market_value": 5153251328,
       "weight_pct": null
     },
     {
-      "ticker": "KRG",
-      "name": "Kite Realty Group Trust",
-      "market_value": 5084770304,
+      "ticker": "RLI",
+      "name": "RLI Corp.",
+      "market_value": 5133779456,
+      "weight_pct": null
+    },
+    {
+      "ticker": "IBP",
+      "name": "Installed Building Products, Inc.",
+      "market_value": 5129780736,
+      "weight_pct": null
+    },
+    {
+      "ticker": "OBDC",
+      "name": "Blue Owl Capital Corporation",
+      "market_value": 5111945728,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MWH",
+      "name": "SOLV Energy, Inc.",
+      "market_value": 5110264832,
+      "weight_pct": null
+    },
+    {
+      "ticker": "OCTV",
+      "name": "Octave Intelligence plc",
+      "market_value": 5108371456,
+      "weight_pct": null
+    },
+    {
+      "ticker": "HRB",
+      "name": "H&R Block, Inc.",
+      "market_value": 5105510912,
+      "weight_pct": null
+    },
+    {
+      "ticker": "SIGI",
+      "name": "Selective Insurance Group, Inc.",
+      "market_value": 5098520576,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MMSI",
+      "name": "Merit Medical Systems, Inc.",
+      "market_value": 5097478656,
+      "weight_pct": null
+    },
+    {
+      "ticker": "OZK",
+      "name": "Bank OZK",
+      "market_value": 5092601856,
+      "weight_pct": null
+    },
+    {
+      "ticker": "ACIW",
+      "name": "ACI Worldwide, Inc.",
+      "market_value": 5062905344,
+      "weight_pct": null
+    },
+    {
+      "ticker": "OUT",
+      "name": "OUTFRONT Media Inc.",
+      "market_value": 5055081984,
+      "weight_pct": null
+    },
+    {
+      "ticker": "GTX",
+      "name": "Garrett Motion Inc.",
+      "market_value": 5048376320,
+      "weight_pct": null
+    },
+    {
+      "ticker": "AX",
+      "name": "Axos Financial, Inc.",
+      "market_value": 5045359104,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MTN",
+      "name": "Vail Resorts, Inc.",
+      "market_value": 5030278656,
+      "weight_pct": null
+    },
+    {
+      "ticker": "DFTX",
+      "name": "Definium Therapeutics, Inc.",
+      "market_value": 5025324032,
+      "weight_pct": null
+    },
+    {
+      "ticker": "GLNG",
+      "name": "Golar LNG Limited",
+      "market_value": 5024193024,
+      "weight_pct": null
+    },
+    {
+      "ticker": "BLLN",
+      "name": "BillionToOne, Inc.",
+      "market_value": 4997107712,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CNO",
+      "name": "CNO Financial Group, Inc.",
+      "market_value": 4983200768,
+      "weight_pct": null
+    },
+    {
+      "ticker": "DOCS",
+      "name": "Doximity, Inc.",
+      "market_value": 4978410496,
+      "weight_pct": null
+    },
+    {
+      "ticker": "GRFS",
+      "name": "Grifols, S.A.",
+      "market_value": 4975043072,
       "weight_pct": null
     },
     {
@@ -1378,99 +1372,129 @@
       "weight_pct": null
     },
     {
-      "ticker": "SON",
-      "name": "Sonoco Products Company",
-      "market_value": 4949682688,
-      "weight_pct": null
-    },
-    {
-      "ticker": "IEP",
-      "name": "Icahn Enterprises L.P.",
-      "market_value": 4947969024,
-      "weight_pct": null
-    },
-    {
-      "ticker": "HESM",
-      "name": "Hess Midstream LP",
-      "market_value": 7886322688,
-      "weight_pct": null
-    },
-    {
-      "ticker": "EBC",
-      "name": "Eastern Bankshares, Inc.",
-      "market_value": 4894717440,
-      "weight_pct": null
-    },
-    {
-      "ticker": "GHC",
-      "name": "Graham Holdings Company",
-      "market_value": 4890875904,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MANE",
-      "name": "Veradermics, Incorporated",
-      "market_value": 4870310400,
-      "weight_pct": null
-    },
-    {
-      "ticker": "OUT",
-      "name": "OUTFRONT Media Inc.",
-      "market_value": 4870139392,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MIDD",
-      "name": "The Middleby Corporation",
-      "market_value": 4868638208,
-      "weight_pct": null
-    },
-    {
-      "ticker": "DFTX",
-      "name": "Definium Therapeutics, Inc.",
-      "market_value": 4860051968,
-      "weight_pct": null
-    },
-    {
-      "ticker": "KLAR",
-      "name": "Klarna Group plc",
-      "market_value": 4853249024,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CNX",
-      "name": "CNX Resources Corporation",
-      "market_value": 4851072000,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MTN",
-      "name": "Vail Resorts, Inc.",
-      "market_value": 4850079744,
-      "weight_pct": null
-    },
-    {
-      "ticker": "GOLF",
-      "name": "Acushnet Holdings Corp.",
-      "market_value": 4848786432,
-      "weight_pct": null
-    },
-    {
-      "ticker": "AKO-B",
-      "name": "Embotelladora Andina S.A.",
-      "market_value": 4843286016,
-      "weight_pct": null
-    },
-    {
-      "ticker": "WTM",
-      "name": "White Mountains Insurance Group, Ltd.",
-      "market_value": 4841750016,
+      "ticker": "SEI",
+      "name": "Solaris Energy Infrastructure, Inc.",
+      "market_value": 7539933184,
       "weight_pct": null
     },
     {
       "ticker": "CSW",
       "name": "CSW Industrials, Inc.",
-      "market_value": 4835906560,
+      "market_value": 4931875840,
+      "weight_pct": null
+    },
+    {
+      "ticker": "NIQ",
+      "name": "NIQ Global Intelligence plc",
+      "market_value": 4908065280,
+      "weight_pct": null
+    },
+    {
+      "ticker": "EBC",
+      "name": "Eastern Bankshares, Inc.",
+      "market_value": 4905000448,
+      "weight_pct": null
+    },
+    {
+      "ticker": "SBRA",
+      "name": "Sabra Health Care REIT, Inc.",
+      "market_value": 4894666240,
+      "weight_pct": null
+    },
+    {
+      "ticker": "KRG",
+      "name": "Kite Realty Group Trust",
+      "market_value": 5004743168,
+      "weight_pct": null
+    },
+    {
+      "ticker": "BYD",
+      "name": "Boyd Gaming Corporation",
+      "market_value": 4886076928,
+      "weight_pct": null
+    },
+    {
+      "ticker": "GOLF",
+      "name": "Acushnet Holdings Corp.",
+      "market_value": 4885581824,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MANE",
+      "name": "Veradermics, Incorporated",
+      "market_value": 4878248960,
+      "weight_pct": null
+    },
+    {
+      "ticker": "GHC",
+      "name": "Graham Holdings Company",
+      "market_value": 4868515328,
+      "weight_pct": null
+    },
+    {
+      "ticker": "RITM",
+      "name": "Rithm Capital Corp.",
+      "market_value": 4863725568,
+      "weight_pct": null
+    },
+    {
+      "ticker": "PECO",
+      "name": "Phillips Edison & Company, Inc.",
+      "market_value": 5341021184,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CLMT",
+      "name": "Calumet, Inc.",
+      "market_value": 4859014144,
+      "weight_pct": null
+    },
+    {
+      "ticker": "FLG",
+      "name": "Flagstar Bank, National Association",
+      "market_value": 4856586240,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CE",
+      "name": "Celanese Corporation",
+      "market_value": 4849804800,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MDA",
+      "name": "MDA Space Ltd.",
+      "market_value": 4846089728,
+      "weight_pct": null
+    },
+    {
+      "ticker": "HESM",
+      "name": "Hess Midstream LP",
+      "market_value": 7783233536,
+      "weight_pct": null
+    },
+    {
+      "ticker": "FND",
+      "name": "Floor & Decor Holdings, Inc.",
+      "market_value": 4844228608,
+      "weight_pct": null
+    },
+    {
+      "ticker": "STWD",
+      "name": "Starwood Property Trust, Inc.",
+      "market_value": 4955984896,
+      "weight_pct": null
+    },
+    {
+      "ticker": "WTM",
+      "name": "White Mountains Insurance Group, Ltd.",
+      "market_value": 4823372288,
+      "weight_pct": null
+    },
+    {
+      "ticker": "SON",
+      "name": "Sonoco Products Company",
+      "market_value": 4819167744,
       "weight_pct": null
     },
     {
@@ -1480,243 +1504,159 @@
       "weight_pct": null
     },
     {
-      "ticker": "BB",
-      "name": "BlackBerry Limited",
-      "market_value": 4819534848,
-      "weight_pct": null
-    },
-    {
-      "ticker": "PECO",
-      "name": "Phillips Edison & Company, Inc.",
-      "market_value": 5288686080,
-      "weight_pct": null
-    },
-    {
-      "ticker": "GTX",
-      "name": "Garrett Motion Inc.",
-      "market_value": 4796610560,
-      "weight_pct": null
-    },
-    {
-      "ticker": "HAE",
-      "name": "Haemonetics Corporation",
-      "market_value": 4790839808,
-      "weight_pct": null
-    },
-    {
-      "ticker": "HAFN",
-      "name": "Hafnia Limited",
-      "market_value": 4775154176,
-      "weight_pct": null
-    },
-    {
-      "ticker": "KLIC",
-      "name": "Kulicke and Soffa Industries, Inc.",
-      "market_value": 4771368960,
-      "weight_pct": null
-    },
-    {
-      "ticker": "PRM",
-      "name": "Perimeter Solutions, Inc.",
-      "market_value": 4764926464,
-      "weight_pct": null
-    },
-    {
-      "ticker": "SKY",
-      "name": "Champion Homes, Inc.",
-      "market_value": 4761453568,
+      "ticker": "SYNA",
+      "name": "Synaptics Incorporated",
+      "market_value": 4807838208,
       "weight_pct": null
     },
     {
       "ticker": "HLNE",
       "name": "Hamilton Lane Incorporated",
-      "market_value": 5777972224,
+      "market_value": 5833601024,
       "weight_pct": null
     },
     {
-      "ticker": "GNTX",
-      "name": "Gentex Corporation",
-      "market_value": 4757229568,
+      "ticker": "NXST",
+      "name": "Nexstar Media Group, Inc.",
+      "market_value": 4788226048,
+      "weight_pct": null
+    },
+    {
+      "ticker": "SKY",
+      "name": "Champion Homes, Inc.",
+      "market_value": 4782080000,
+      "weight_pct": null
+    },
+    {
+      "ticker": "DIOD",
+      "name": "Diodes Incorporated",
+      "market_value": 4782008832,
+      "weight_pct": null
+    },
+    {
+      "ticker": "HAE",
+      "name": "Haemonetics Corporation",
+      "market_value": 4762631168,
       "weight_pct": null
     },
     {
       "ticker": "WAY",
       "name": "Waystar Holding Corp.",
-      "market_value": 4736185856,
+      "market_value": 4757278208,
       "weight_pct": null
     },
     {
-      "ticker": "KRMN",
-      "name": "Karman Holdings Inc.",
-      "market_value": 4730127872,
+      "ticker": "CHEF",
+      "name": "The Chefs' Warehouse, Inc.",
+      "market_value": 4749479936,
       "weight_pct": null
     },
     {
-      "ticker": "KVYO",
-      "name": "Klaviyo, Inc.",
-      "market_value": 4728621056,
+      "ticker": "MYRG",
+      "name": "MYR Group Inc.",
+      "market_value": 4745040384,
+      "weight_pct": null
+    },
+    {
+      "ticker": "KLAR",
+      "name": "Klarna Group plc",
+      "market_value": 4743292416,
+      "weight_pct": null
+    },
+    {
+      "ticker": "IEP",
+      "name": "Icahn Enterprises L.P.",
+      "market_value": 4741803520,
+      "weight_pct": null
+    },
+    {
+      "ticker": "BOX",
+      "name": "Box, Inc.",
+      "market_value": 4732054528,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MIDD",
+      "name": "The Middleby Corporation",
+      "market_value": 4728901120,
       "weight_pct": null
     },
     {
       "ticker": "HCC",
       "name": "Warrior Met Coal, Inc.",
-      "market_value": 4726315008,
-      "weight_pct": null
-    },
-    {
-      "ticker": "OTF",
-      "name": "Blue Owl Technology Finance Corp.",
-      "market_value": 4723891200,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CUZ",
-      "name": "Cousins Properties Incorporated",
-      "market_value": 4716564992,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CLMT",
-      "name": "Calumet, Inc.",
-      "market_value": 4715740160,
-      "weight_pct": null
-    },
-    {
-      "ticker": "VIRT",
-      "name": "Virtu Financial, Inc.",
-      "market_value": 4715256320,
-      "weight_pct": null
-    },
-    {
-      "ticker": "GLXY",
-      "name": "Galaxy Digital",
-      "market_value": 14284567552,
-      "weight_pct": null
-    },
-    {
-      "ticker": "GEF",
-      "name": "Greif, Inc.",
-      "market_value": 4699068928,
-      "weight_pct": null
-    },
-    {
-      "ticker": "FBIN",
-      "name": "Fortune Brands Innovations, Inc.",
-      "market_value": 4697775104,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ADPT",
-      "name": "Adaptive Biotechnologies Corporation",
-      "market_value": 4696905728,
-      "weight_pct": null
-    },
-    {
-      "ticker": "DOCS",
-      "name": "Doximity, Inc.",
-      "market_value": 4696781824,
-      "weight_pct": null
-    },
-    {
-      "ticker": "AMTM",
-      "name": "Amentum Holdings, Inc.",
-      "market_value": 4692078080,
+      "market_value": 4717866496,
       "weight_pct": null
     },
     {
       "ticker": "TFSL",
       "name": "TFS Financial Corporation",
-      "market_value": 4689002496,
-      "weight_pct": null
-    },
-    {
-      "ticker": "UNF",
-      "name": "UniFirst Corporation",
-      "market_value": 4685428224,
-      "weight_pct": null
-    },
-    {
-      "ticker": "HASI",
-      "name": "HA Sustainable Infrastructure Capital, Inc.",
-      "market_value": 4682386432,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ADT",
-      "name": "ADT Inc.",
-      "market_value": 4675579392,
-      "weight_pct": null
-    },
-    {
-      "ticker": "AIR",
-      "name": "AAR Corp.",
-      "market_value": 4674454016,
-      "weight_pct": null
-    },
-    {
-      "ticker": "SEI",
-      "name": "Solaris Energy Infrastructure, Inc.",
-      "market_value": 7141452800,
+      "market_value": 4717046784,
       "weight_pct": null
     },
     {
       "ticker": "NSIT",
       "name": "Insight Enterprises, Inc.",
-      "market_value": 4667347456,
+      "market_value": 4715186176,
       "weight_pct": null
     },
     {
-      "ticker": "CRC",
-      "name": "California Resources Corporation",
-      "market_value": 4663932416,
+      "ticker": "REYN",
+      "name": "Reynolds Consumer Products Inc.",
+      "market_value": 4704854528,
       "weight_pct": null
     },
     {
-      "ticker": "LPX",
-      "name": "Louisiana-Pacific Corporation",
-      "market_value": 4663890944,
+      "ticker": "KVYO",
+      "name": "Klaviyo, Inc.",
+      "market_value": 4701685760,
       "weight_pct": null
     },
     {
-      "ticker": "FFIN",
-      "name": "First Financial Bankshares, Inc.",
-      "market_value": 4650977792,
+      "ticker": "VSEC",
+      "name": "VSE Corporation",
+      "market_value": 4694708736,
       "weight_pct": null
     },
     {
-      "ticker": "PBI-PB",
-      "name": "Pitney Bowes Inc. NT 43",
-      "market_value": null,
+      "ticker": "EQPT",
+      "name": "EquipmentShare.com Inc.",
+      "market_value": 4687455232,
+      "weight_pct": null
+    },
+    {
+      "ticker": "GEF",
+      "name": "Greif, Inc.",
+      "market_value": 4671781888,
       "weight_pct": null
     },
     {
       "ticker": "CHH",
       "name": "Choice Hotels International, Inc.",
-      "market_value": 4631896064,
+      "market_value": 4663287808,
       "weight_pct": null
     },
     {
-      "ticker": "RYAN",
-      "name": "Ryan Specialty Holdings, Inc.",
-      "market_value": 9710030848,
+      "ticker": "HASI",
+      "name": "HA Sustainable Infrastructure Capital, Inc.",
+      "market_value": 4660542464,
       "weight_pct": null
     },
     {
-      "ticker": "CIGI",
-      "name": "Colliers International Group Inc.",
-      "market_value": 4620807168,
+      "ticker": "CNX",
+      "name": "CNX Resources Corporation",
+      "market_value": 4660224512,
       "weight_pct": null
     },
     {
-      "ticker": "OII",
-      "name": "Oceaneering International, Inc.",
-      "market_value": 4604241408,
+      "ticker": "CRC",
+      "name": "California Resources Corporation",
+      "market_value": 4656827392,
       "weight_pct": null
     },
     {
-      "ticker": "PSN",
-      "name": "Parsons Corporation",
-      "market_value": 4600108032,
+      "ticker": "GNTX",
+      "name": "Gentex Corporation",
+      "market_value": 4651887616,
       "weight_pct": null
     },
     {
@@ -1726,765 +1666,819 @@
       "weight_pct": null
     },
     {
-      "ticker": "ALK",
-      "name": "Alaska Air Group, Inc.",
-      "market_value": 4569031680,
-      "weight_pct": null
-    },
-    {
-      "ticker": "REYN",
-      "name": "Reynolds Consumer Products Inc.",
-      "market_value": 4567840256,
-      "weight_pct": null
-    },
-    {
-      "ticker": "VSNT",
-      "name": "Versant Media Group, Inc.",
-      "market_value": 4564778496,
-      "weight_pct": null
-    },
-    {
-      "ticker": "SR",
-      "name": "Spire Inc.",
-      "market_value": 4564100096,
-      "weight_pct": null
-    },
-    {
-      "ticker": "TREX",
-      "name": "Trex Company, Inc.",
-      "market_value": 4562542080,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MYRG",
-      "name": "MYR Group Inc.",
-      "market_value": 4555251200,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MEOH",
-      "name": "Methanex Corporation",
-      "market_value": 4553273856,
+      "ticker": "PBI-PB",
+      "name": "Pitney Bowes Inc. NT 43",
+      "market_value": null,
       "weight_pct": null
     },
     {
       "ticker": "HRI",
       "name": "Herc Holdings Inc.",
-      "market_value": 4525280256,
+      "market_value": 4625908736,
+      "weight_pct": null
+    },
+    {
+      "ticker": "PIPR",
+      "name": "Piper Sandler Companies",
+      "market_value": 4619010048,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CUZ",
+      "name": "Cousins Properties Incorporated",
+      "market_value": 4611204096,
       "weight_pct": null
     },
     {
       "ticker": "RELY",
       "name": "Remitly Global, Inc.",
-      "market_value": 4521571328,
+      "market_value": 4608361984,
       "weight_pct": null
     },
     {
-      "ticker": "SFBS",
-      "name": "ServisFirst Bancshares, Inc.",
-      "market_value": 4517043200,
+      "ticker": "FFIN",
+      "name": "First Financial Bankshares, Inc.",
+      "market_value": 4607979520,
       "weight_pct": null
     },
     {
-      "ticker": "MRP",
-      "name": "Millrose Properties, Inc.",
-      "market_value": 4514843136,
+      "ticker": "SPHR",
+      "name": "Sphere Entertainment Co.",
+      "market_value": 4605920256,
       "weight_pct": null
     },
     {
-      "ticker": "OGS",
-      "name": "ONE Gas, Inc.",
-      "market_value": 4513080320,
+      "ticker": "FBIN",
+      "name": "Fortune Brands Innovations, Inc.",
+      "market_value": 4599954432,
       "weight_pct": null
     },
     {
-      "ticker": "GFF",
-      "name": "Griffon Corporation",
-      "market_value": 4512817664,
+      "ticker": "RYAN",
+      "name": "Ryan Specialty Holdings, Inc.",
+      "market_value": 9653651456,
       "weight_pct": null
     },
     {
-      "ticker": "LFST",
-      "name": "LifeStance Health Group, Inc.",
-      "market_value": 4501025280,
+      "ticker": "CIGI",
+      "name": "Colliers International Group Inc.",
+      "market_value": 4588101120,
       "weight_pct": null
     },
     {
-      "ticker": "TKC",
-      "name": "Turkcell Iletisim Hizmetleri A.S.",
-      "market_value": 4500883456,
+      "ticker": "SR",
+      "name": "Spire Inc.",
+      "market_value": 4583607296,
       "weight_pct": null
     },
     {
-      "ticker": "CHEF",
-      "name": "The Chefs' Warehouse, Inc.",
-      "market_value": 4498584064,
+      "ticker": "ADT",
+      "name": "ADT Inc.",
+      "market_value": 4565995008,
       "weight_pct": null
     },
     {
-      "ticker": "WHD",
-      "name": "Cactus, Inc.",
-      "market_value": 4483843072,
-      "weight_pct": null
-    },
-    {
-      "ticker": "FRVO",
-      "name": "Fervo Energy Company",
-      "market_value": 4474505216,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ESAB",
-      "name": "ESAB Corporation",
-      "market_value": 4468197888,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CON",
-      "name": "Concentra Group Holdings Parent, Inc.",
-      "market_value": 4464395776,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ATAT",
-      "name": "Atour Lifestyle Holdings Limited",
-      "market_value": 4453733376,
-      "weight_pct": null
-    },
-    {
-      "ticker": "NNI",
-      "name": "Nelnet, Inc.",
-      "market_value": 4448815616,
-      "weight_pct": null
-    },
-    {
-      "ticker": "SLM",
-      "name": "SLM Corporation",
-      "market_value": 4448079872,
-      "weight_pct": null
-    },
-    {
-      "ticker": "FULT",
-      "name": "Fulton Financial Corporation",
-      "market_value": 4434945024,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CNR",
-      "name": "Core Natural Resources, Inc.",
-      "market_value": 4418619392,
+      "ticker": "ACLS",
+      "name": "Axcelis Technologies, Inc.",
+      "market_value": 4563357696,
       "weight_pct": null
     },
     {
       "ticker": "TPC",
       "name": "Tutor Perini Corporation",
-      "market_value": 4418056704,
+      "market_value": 4563273216,
       "weight_pct": null
     },
     {
-      "ticker": "DIOD",
-      "name": "Diodes Incorporated",
-      "market_value": 4413595136,
+      "ticker": "OGS",
+      "name": "ONE Gas, Inc.",
+      "market_value": 4561479680,
       "weight_pct": null
     },
     {
-      "ticker": "CGAU",
-      "name": "Centerra Gold Inc.",
-      "market_value": 4412905984,
+      "ticker": "UNF",
+      "name": "UniFirst Corporation",
+      "market_value": 4553232896,
       "weight_pct": null
     },
     {
-      "ticker": "BMA",
-      "name": "Banco Macro S.A.",
-      "market_value": 4402841600,
+      "ticker": "LPX",
+      "name": "Louisiana-Pacific Corporation",
+      "market_value": 4552013824,
       "weight_pct": null
     },
     {
-      "ticker": "BCO",
-      "name": "The Brink's Company",
-      "market_value": 4398957568,
+      "ticker": "OMAB",
+      "name": "Grupo Aeroportuario del Centro Norte, S.A.B. de C.V.",
+      "market_value": 4546662400,
       "weight_pct": null
     },
     {
-      "ticker": "MMYT",
-      "name": "MakeMyTrip Limited",
-      "market_value": 4397242368,
-      "weight_pct": null
-    },
-    {
-      "ticker": "EQPT",
-      "name": "EquipmentShare.com Inc.",
-      "market_value": 4396072960,
-      "weight_pct": null
-    },
-    {
-      "ticker": "BDC",
-      "name": "Belden Inc.",
-      "market_value": 4394342400,
-      "weight_pct": null
-    },
-    {
-      "ticker": "UFPI",
-      "name": "UFP Industries, Inc.",
-      "market_value": 4384786944,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CNK",
-      "name": "Cinemark Holdings, Inc.",
-      "market_value": 4377990656,
-      "weight_pct": null
-    },
-    {
-      "ticker": "RDN",
-      "name": "Radian Group Inc.",
-      "market_value": 4368589824,
-      "weight_pct": null
-    },
-    {
-      "ticker": "KBR",
-      "name": "KBR, Inc.",
-      "market_value": 4354380288,
-      "weight_pct": null
-    },
-    {
-      "ticker": "BC",
-      "name": "Brunswick Corporation",
-      "market_value": 4353739264,
-      "weight_pct": null
-    },
-    {
-      "ticker": "EPR",
-      "name": "EPR Properties",
-      "market_value": 4353684992,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MC",
-      "name": "Moelis & Company",
-      "market_value": 4351512064,
-      "weight_pct": null
-    },
-    {
-      "ticker": "IBOC",
-      "name": "International Bancshares Corporation",
-      "market_value": 4349674496,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ALH",
-      "name": "Alliance Laundry Holdings Inc.",
-      "market_value": 4345529344,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CRGY",
-      "name": "Crescent Energy Company",
-      "market_value": 5173250560,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ACHR",
-      "name": "Archer Aviation Inc.",
-      "market_value": 4319850496,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ENVA",
-      "name": "Enova International, Inc.",
-      "market_value": 4319369216,
-      "weight_pct": null
-    },
-    {
-      "ticker": "FHI",
-      "name": "Federated Hermes, Inc.",
-      "market_value": 4316857344,
-      "weight_pct": null
-    },
-    {
-      "ticker": "BOX",
-      "name": "Box, Inc.",
-      "market_value": 4306732032,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CECO",
-      "name": "CECO Environmental Corp.",
-      "market_value": 4304882688,
-      "weight_pct": null
-    },
-    {
-      "ticker": "BIPC",
-      "name": "Brookfield Infrastructure Corporation",
-      "market_value": 4300625408,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ITGR",
-      "name": "Integer Holdings Corporation",
-      "market_value": 4295189504,
-      "weight_pct": null
-    },
-    {
-      "ticker": "FELE",
-      "name": "Franklin Electric Co., Inc.",
-      "market_value": 4291606784,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ARX",
-      "name": "Accelerant Holdings",
-      "market_value": 4289473792,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CVCO",
-      "name": "Cavco Industries, Inc.",
-      "market_value": 4285150208,
-      "weight_pct": null
-    },
-    {
-      "ticker": "HTFL",
-      "name": "Heartflow, Inc.",
-      "market_value": 4275509504,
-      "weight_pct": null
-    },
-    {
-      "ticker": "EWTX",
-      "name": "Edgewise Therapeutics, Inc.",
-      "market_value": 4272486400,
-      "weight_pct": null
-    },
-    {
-      "ticker": "VNT",
-      "name": "Vontier Corporation",
-      "market_value": 4256096000,
-      "weight_pct": null
-    },
-    {
-      "ticker": "OPLN",
-      "name": "OPENLANE, Inc.",
-      "market_value": 4250472704,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MTH",
-      "name": "Meritage Homes Corporation",
-      "market_value": 4235012608,
-      "weight_pct": null
-    },
-    {
-      "ticker": "NWE",
-      "name": "NorthWestern Energy Group, Inc.",
-      "market_value": 4234888448,
-      "weight_pct": null
-    },
-    {
-      "ticker": "LBTYB",
-      "name": "Liberty Global Ltd.",
-      "market_value": 4232896512,
-      "weight_pct": null
-    },
-    {
-      "ticker": "INDV",
-      "name": "Indivior Pharmaceuticals, Inc.",
-      "market_value": 4227904000,
-      "weight_pct": null
-    },
-    {
-      "ticker": "TDW",
-      "name": "Tidewater Inc.",
-      "market_value": 4216343040,
-      "weight_pct": null
-    },
-    {
-      "ticker": "LIVN",
-      "name": "LivaNova PLC",
-      "market_value": 4209556736,
-      "weight_pct": null
-    },
-    {
-      "ticker": "COLD",
-      "name": "Americold Realty Trust, Inc.",
-      "market_value": 4228122880,
-      "weight_pct": null
-    },
-    {
-      "ticker": "PAM",
-      "name": "Pampa Energ\u00eda S.A.",
-      "market_value": 4171445248,
-      "weight_pct": null
-    },
-    {
-      "ticker": "TCBI",
-      "name": "Texas Capital Bancshares, Inc.",
-      "market_value": 4165713920,
-      "weight_pct": null
-    },
-    {
-      "ticker": "PTEN",
-      "name": "Patterson-UTI Energy, Inc.",
-      "market_value": 4160908800,
+      "ticker": "CON",
+      "name": "Concentra Group Holdings Parent, Inc.",
+      "market_value": 4546007552,
       "weight_pct": null
     },
     {
       "ticker": "DK",
       "name": "Delek US Holdings, Inc.",
-      "market_value": 4153990656,
+      "market_value": 4542815232,
       "weight_pct": null
     },
     {
-      "ticker": "DLO",
-      "name": "DLocal Limited",
-      "market_value": 4143309312,
+      "ticker": "KRMN",
+      "name": "Karman Holdings Inc.",
+      "market_value": 4524700672,
       "weight_pct": null
     },
     {
-      "ticker": "FBP",
-      "name": "First BanCorp.",
-      "market_value": 4131203328,
+      "ticker": "ADPT",
+      "name": "Adaptive Biotechnologies Corporation",
+      "market_value": 4524541952,
       "weight_pct": null
     },
     {
-      "ticker": "TDS",
-      "name": "Telephone and Data Systems, Inc.",
-      "market_value": 4126908416,
+      "ticker": "AKO-B",
+      "name": "Embotelladora Andina S.A.",
+      "market_value": 4523029504,
       "weight_pct": null
     },
     {
-      "ticker": "ICUI",
-      "name": "ICU Medical, Inc.",
-      "market_value": 4124910848,
+      "ticker": "MEOH",
+      "name": "Methanex Corporation",
+      "market_value": 4520393728,
       "weight_pct": null
     },
     {
-      "ticker": "AZZ",
-      "name": "AZZ Inc.",
-      "market_value": 4122164224,
+      "ticker": "BIPC",
+      "name": "Brookfield Infrastructure Corporation",
+      "market_value": 4508521984,
       "weight_pct": null
     },
     {
-      "ticker": "KNTK",
-      "name": "Kinetik Holdings Inc.",
-      "market_value": 8664725504,
+      "ticker": "CVCO",
+      "name": "Cavco Industries, Inc.",
+      "market_value": 4499299840,
+      "weight_pct": null
+    },
+    {
+      "ticker": "LFST",
+      "name": "LifeStance Health Group, Inc.",
+      "market_value": 4497223680,
+      "weight_pct": null
+    },
+    {
+      "ticker": "EWTX",
+      "name": "Edgewise Therapeutics, Inc.",
+      "market_value": 4496210944,
+      "weight_pct": null
+    },
+    {
+      "ticker": "PRM",
+      "name": "Perimeter Solutions, Inc.",
+      "market_value": 4493206528,
+      "weight_pct": null
+    },
+    {
+      "ticker": "GLXY",
+      "name": "Galaxy Digital",
+      "market_value": 13589196800,
+      "weight_pct": null
+    },
+    {
+      "ticker": "ATAT",
+      "name": "Atour Lifestyle Holdings Limited",
+      "market_value": 4457878528,
       "weight_pct": null
     },
     {
       "ticker": "ABCL",
       "name": "AbCellera Biologics Inc.",
-      "market_value": 4115401472,
+      "market_value": 4452410880,
       "weight_pct": null
     },
     {
-      "ticker": "CVSA",
-      "name": "Covista Inc.",
-      "market_value": 4110187520,
+      "ticker": "TREX",
+      "name": "Trex Company, Inc.",
+      "market_value": 4437248000,
       "weight_pct": null
     },
     {
-      "ticker": "GEO",
-      "name": "The GEO Group, Inc.",
-      "market_value": 4109163264,
+      "ticker": "AMTM",
+      "name": "Amentum Holdings, Inc.",
+      "market_value": 4435346432,
       "weight_pct": null
     },
     {
-      "ticker": "AYA",
-      "name": "Aya Gold & Silver Inc.",
-      "market_value": 4100709376,
+      "ticker": "NNI",
+      "name": "Nelnet, Inc.",
+      "market_value": 4431999488,
       "weight_pct": null
     },
     {
-      "ticker": "CATY",
-      "name": "Cathay General Bancorp",
-      "market_value": 4099564288,
+      "ticker": "CRGY",
+      "name": "Crescent Energy Company",
+      "market_value": 5267667456,
       "weight_pct": null
     },
     {
-      "ticker": "UCB",
-      "name": "United Community Banks, Inc.",
-      "market_value": 4099515648,
+      "ticker": "WHD",
+      "name": "Cactus, Inc.",
+      "market_value": 4423872000,
       "weight_pct": null
     },
     {
-      "ticker": "GEF-B",
-      "name": "Greif, Inc.",
-      "market_value": 4098752256,
+      "ticker": "CNR",
+      "name": "Core Natural Resources, Inc.",
+      "market_value": 4415641088,
       "weight_pct": null
     },
     {
-      "ticker": "AKO-A",
-      "name": "Embotelladora Andina S.A.",
-      "market_value": 4097072896,
+      "ticker": "ALK",
+      "name": "Alaska Air Group, Inc.",
+      "market_value": 4411671040,
       "weight_pct": null
     },
     {
-      "ticker": "HHH",
-      "name": "Howard Hughes Holdings Inc.",
-      "market_value": 4086603008,
+      "ticker": "OII",
+      "name": "Oceaneering International, Inc.",
+      "market_value": 4411153920,
+      "weight_pct": null
+    },
+    {
+      "ticker": "BDC",
+      "name": "Belden Inc.",
+      "market_value": 4394733568,
+      "weight_pct": null
+    },
+    {
+      "ticker": "SFBS",
+      "name": "ServisFirst Bancshares, Inc.",
+      "market_value": 4390202880,
+      "weight_pct": null
+    },
+    {
+      "ticker": "OTF",
+      "name": "Blue Owl Technology Finance Corp.",
+      "market_value": 4389415936,
+      "weight_pct": null
+    },
+    {
+      "ticker": "TKC",
+      "name": "Turkcell Iletisim Hizmetleri A.S.",
+      "market_value": 4387708416,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MAT",
+      "name": "Mattel, Inc.",
+      "market_value": 4362639360,
+      "weight_pct": null
+    },
+    {
+      "ticker": "FELE",
+      "name": "Franklin Electric Co., Inc.",
+      "market_value": 4361460736,
+      "weight_pct": null
+    },
+    {
+      "ticker": "PSN",
+      "name": "Parsons Corporation",
+      "market_value": 4356592128,
+      "weight_pct": null
+    },
+    {
+      "ticker": "FULT",
+      "name": "Fulton Financial Corporation",
+      "market_value": 4354761216,
+      "weight_pct": null
+    },
+    {
+      "ticker": "IBOC",
+      "name": "International Bancshares Corporation",
+      "market_value": 4343454720,
+      "weight_pct": null
+    },
+    {
+      "ticker": "ESAB",
+      "name": "ESAB Corporation",
+      "market_value": 4343304192,
+      "weight_pct": null
+    },
+    {
+      "ticker": "OPLN",
+      "name": "OPENLANE, Inc.",
+      "market_value": 4337142272,
+      "weight_pct": null
+    },
+    {
+      "ticker": "EPR",
+      "name": "EPR Properties",
+      "market_value": 4324573696,
       "weight_pct": null
     },
     {
       "ticker": "STNG",
       "name": "Scorpio Tankers Inc.",
-      "market_value": 4081129216,
+      "market_value": 4318515200,
       "weight_pct": null
     },
     {
-      "ticker": "SYNA",
-      "name": "Synaptics Incorporated",
-      "market_value": 4077204736,
+      "ticker": "KBR",
+      "name": "KBR, Inc.",
+      "market_value": 4316559872,
       "weight_pct": null
     },
     {
-      "ticker": "YOU",
-      "name": "Clear Secure, Inc.",
-      "market_value": 5377207808,
+      "ticker": "CECO",
+      "name": "CECO Environmental Corp.",
+      "market_value": 4314253824,
       "weight_pct": null
     },
     {
-      "ticker": "DOO",
-      "name": "BRP Inc.",
-      "market_value": 4067662848,
+      "ticker": "GFF",
+      "name": "Griffon Corporation",
+      "market_value": 4310087680,
       "weight_pct": null
     },
     {
-      "ticker": "CBT",
-      "name": "Cabot Corporation",
-      "market_value": 4066458368,
+      "ticker": "RDN",
+      "name": "Radian Group Inc.",
+      "market_value": 4309053952,
       "weight_pct": null
     },
     {
-      "ticker": "CCC",
-      "name": "CCC Intelligent Solutions Holdings Inc.",
-      "market_value": 4064063488,
+      "ticker": "VSNT",
+      "name": "Versant Media Group, Inc.",
+      "market_value": 4305922560,
       "weight_pct": null
     },
     {
-      "ticker": "LGN",
-      "name": "Legence Corp.",
-      "market_value": 8628245504,
+      "ticker": "ENVA",
+      "name": "Enova International, Inc.",
+      "market_value": 4304679424,
       "weight_pct": null
     },
     {
-      "ticker": "TGS",
-      "name": "Transportadora de Gas del Sur S.A.",
-      "market_value": 4007699968,
-      "weight_pct": null
-    },
-    {
-      "ticker": "WSFS",
-      "name": "WSFS Financial Corporation",
-      "market_value": 3995930880,
-      "weight_pct": null
-    },
-    {
-      "ticker": "SKT",
-      "name": "Tanger Inc.",
-      "market_value": 4151689984,
-      "weight_pct": null
-    },
-    {
-      "ticker": "SITE",
-      "name": "SiteOne Landscape Supply, Inc.",
-      "market_value": 3986173696,
-      "weight_pct": null
-    },
-    {
-      "ticker": "KRC",
-      "name": "Kilroy Realty Corporation",
-      "market_value": 4020058624,
-      "weight_pct": null
-    },
-    {
-      "ticker": "SKE",
-      "name": "Skeena Resources Limited",
-      "market_value": 3978422272,
-      "weight_pct": null
-    },
-    {
-      "ticker": "FSLY",
-      "name": "Fastly, Inc.",
-      "market_value": 3976127744,
-      "weight_pct": null
-    },
-    {
-      "ticker": "SKYW",
-      "name": "SkyWest, Inc.",
-      "market_value": 3971749376,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CVBF",
-      "name": "CVB Financial Corp.",
-      "market_value": 3965222400,
-      "weight_pct": null
-    },
-    {
-      "ticker": "JMKE",
-      "name": "Jersey Mike's Subs Inc.",
-      "market_value": 3955852544,
-      "weight_pct": null
-    },
-    {
-      "ticker": "BFH",
-      "name": "Bread Financial Holdings, Inc.",
-      "market_value": 3953726976,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ERO",
-      "name": "Ero Copper Corp.",
-      "market_value": 3949940480,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MDU",
-      "name": "MDU Resources Group, Inc.",
-      "market_value": 3946155776,
+      "ticker": "ITGR",
+      "name": "Integer Holdings Corporation",
+      "market_value": 4298929152,
       "weight_pct": null
     },
     {
       "ticker": "PRIM",
       "name": "Primoris Services Corporation",
-      "market_value": 3941621248,
+      "market_value": 4290480384,
       "weight_pct": null
     },
     {
-      "ticker": "BRC",
-      "name": "Brady Corporation",
-      "market_value": 3940472064,
+      "ticker": "HTFL",
+      "name": "Heartflow, Inc.",
+      "market_value": 4288552704,
       "weight_pct": null
     },
     {
-      "ticker": "SUNC",
-      "name": "SunocoCorp LLC",
-      "market_value": 3931792640,
+      "ticker": "ARX",
+      "name": "Accelerant Holdings",
+      "market_value": 4285129984,
       "weight_pct": null
     },
     {
-      "ticker": "ITRI",
-      "name": "Itron, Inc.",
-      "market_value": 3929861120,
+      "ticker": "VNT",
+      "name": "Vontier Corporation",
+      "market_value": 4280431872,
       "weight_pct": null
     },
     {
-      "ticker": "SRAD",
-      "name": "Sportradar Group AG",
-      "market_value": 3918399744,
+      "ticker": "SLM",
+      "name": "SLM Corporation",
+      "market_value": 4276060160,
       "weight_pct": null
     },
     {
-      "ticker": "SIG",
-      "name": "Signet Jewelers Limited",
-      "market_value": 3918321408,
+      "ticker": "YOU",
+      "name": "Clear Secure, Inc.",
+      "market_value": 5641994752,
       "weight_pct": null
     },
     {
-      "ticker": "KFY",
-      "name": "Korn Ferry",
-      "market_value": 3913506560,
+      "ticker": "PTEN",
+      "name": "Patterson-UTI Energy, Inc.",
+      "market_value": 4275324416,
       "weight_pct": null
     },
     {
-      "ticker": "ARIS",
-      "name": "Aris Mining Corporation",
-      "market_value": 3907732992,
+      "ticker": "CVSA",
+      "name": "Covista Inc.",
+      "market_value": 4271191296,
       "weight_pct": null
     },
     {
-      "ticker": "JOYY",
-      "name": "JOYY Inc.",
-      "market_value": 3906616320,
+      "ticker": "NWE",
+      "name": "NorthWestern Energy Group, Inc.",
+      "market_value": 4261341184,
       "weight_pct": null
     },
     {
-      "ticker": "CAAP",
-      "name": "Corporaci\u00f3n Am\u00e9rica Airports S.A.",
-      "market_value": 3901309440,
+      "ticker": "FRVO",
+      "name": "Fervo Energy Company",
+      "market_value": 4259328256,
       "weight_pct": null
     },
     {
-      "ticker": "TNL",
-      "name": "Travel + Leisure Co.",
-      "market_value": 3901217536,
+      "ticker": "UFPI",
+      "name": "UFP Industries, Inc.",
+      "market_value": 4255709184,
       "weight_pct": null
     },
     {
-      "ticker": "TLX",
-      "name": "Telix Pharmaceuticals Limited",
-      "market_value": 3890530048,
+      "ticker": "HHH",
+      "name": "Howard Hughes Holdings Inc.",
+      "market_value": 4242470656,
+      "weight_pct": null
+    },
+    {
+      "ticker": "BC",
+      "name": "Brunswick Corporation",
+      "market_value": 4239695616,
+      "weight_pct": null
+    },
+    {
+      "ticker": "ALH",
+      "name": "Alliance Laundry Holdings Inc.",
+      "market_value": 4234207488,
+      "weight_pct": null
+    },
+    {
+      "ticker": "KNTK",
+      "name": "Kinetik Holdings Inc.",
+      "market_value": 8888069120,
+      "weight_pct": null
+    },
+    {
+      "ticker": "LBTYB",
+      "name": "Liberty Global Ltd.",
+      "market_value": 4219252992,
+      "weight_pct": null
+    },
+    {
+      "ticker": "INDV",
+      "name": "Indivior Pharmaceuticals, Inc.",
+      "market_value": 4214920448,
       "weight_pct": null
     },
     {
       "ticker": "PARR",
       "name": "Par Pacific Holdings, Inc.",
-      "market_value": 3880717056,
+      "market_value": 4208368640,
       "weight_pct": null
     },
     {
-      "ticker": "PJT",
-      "name": "PJT Partners Inc.",
-      "market_value": 6464977920,
+      "ticker": "MMYT",
+      "name": "MakeMyTrip Limited",
+      "market_value": 4196897536,
       "weight_pct": null
     },
     {
-      "ticker": "BNL",
-      "name": "Broadstone Net Lease, Inc.",
-      "market_value": 4025874944,
+      "ticker": "BCO",
+      "name": "The Brink's Company",
+      "market_value": 4192228864,
       "weight_pct": null
     },
     {
-      "ticker": "HP",
-      "name": "Helmerich & Payne, Inc.",
-      "market_value": 3854644992,
+      "ticker": "CGAU",
+      "name": "Centerra Gold Inc.",
+      "market_value": 4191869440,
       "weight_pct": null
     },
     {
-      "ticker": "PBLS",
-      "name": "Parabilis Medicines, Inc.",
-      "market_value": 3854237184,
+      "ticker": "AZZ",
+      "name": "AZZ Inc.",
+      "market_value": 4188878592,
       "weight_pct": null
     },
     {
-      "ticker": "CRK",
-      "name": "Comstock Resources, Inc.",
-      "market_value": 3852301568,
+      "ticker": "FHI",
+      "name": "Federated Hermes, Inc.",
+      "market_value": 4186201856,
       "weight_pct": null
     },
     {
-      "ticker": "AQN",
-      "name": "Algonquin Power & Utilities Corp.",
-      "market_value": 3849509376,
+      "ticker": "CNK",
+      "name": "Cinemark Holdings, Inc.",
+      "market_value": 4178622208,
       "weight_pct": null
     },
     {
-      "ticker": "NVST",
-      "name": "Envista Holdings Corporation",
-      "market_value": 3846794240,
+      "ticker": "MC",
+      "name": "Moelis & Company",
+      "market_value": 4172236032,
       "weight_pct": null
     },
     {
-      "ticker": "INDB",
-      "name": "Independent Bank Corp.",
-      "market_value": 3846370816,
+      "ticker": "MTH",
+      "name": "Meritage Homes Corporation",
+      "market_value": 4161365760,
       "weight_pct": null
     },
     {
-      "ticker": "CDP",
-      "name": "COPT Defense Properties",
-      "market_value": 3924810240,
+      "ticker": "FBP",
+      "name": "First BanCorp.",
+      "market_value": 4128150272,
+      "weight_pct": null
+    },
+    {
+      "ticker": "GEO",
+      "name": "The GEO Group, Inc.",
+      "market_value": 4127590144,
+      "weight_pct": null
+    },
+    {
+      "ticker": "BMA",
+      "name": "Banco Macro S.A.",
+      "market_value": 4127264768,
+      "weight_pct": null
+    },
+    {
+      "ticker": "LIVN",
+      "name": "LivaNova PLC",
+      "market_value": 4123860480,
+      "weight_pct": null
+    },
+    {
+      "ticker": "LGN",
+      "name": "Legence Corp.",
+      "market_value": 8807315456,
+      "weight_pct": null
+    },
+    {
+      "ticker": "AIR",
+      "name": "AAR Corp.",
+      "market_value": 4120308736,
+      "weight_pct": null
+    },
+    {
+      "ticker": "FSLY",
+      "name": "Fastly, Inc.",
+      "market_value": 4111532800,
+      "weight_pct": null
+    },
+    {
+      "ticker": "TRMD",
+      "name": "TORM plc",
+      "market_value": 4106031104,
+      "weight_pct": null
+    },
+    {
+      "ticker": "TDW",
+      "name": "Tidewater Inc.",
+      "market_value": 4100908544,
+      "weight_pct": null
+    },
+    {
+      "ticker": "PAM",
+      "name": "Pampa Energ\u00eda S.A.",
+      "market_value": 4094791680,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MRP",
+      "name": "Millrose Properties, Inc.",
+      "market_value": 4086439424,
+      "weight_pct": null
+    },
+    {
+      "ticker": "UCB",
+      "name": "United Community Banks, Inc.",
+      "market_value": 4085144064,
+      "weight_pct": null
+    },
+    {
+      "ticker": "GEF-B",
+      "name": "Greif, Inc.",
+      "market_value": 4076770816,
+      "weight_pct": null
+    },
+    {
+      "ticker": "TCBI",
+      "name": "Texas Capital Bancshares, Inc.",
+      "market_value": 4076156928,
+      "weight_pct": null
+    },
+    {
+      "ticker": "TDS",
+      "name": "Telephone and Data Systems, Inc.",
+      "market_value": 4073955072,
       "weight_pct": null
     },
     {
       "ticker": "LOPE",
       "name": "Grand Canyon Education, Inc.",
-      "market_value": 3838858496,
+      "market_value": 4060671744,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CATY",
+      "name": "Cathay General Bancorp",
+      "market_value": 4058868736,
+      "weight_pct": null
+    },
+    {
+      "ticker": "TENB",
+      "name": "Tenable Holdings, Inc.",
+      "market_value": 4058658304,
+      "weight_pct": null
+    },
+    {
+      "ticker": "DLO",
+      "name": "DLocal Limited",
+      "market_value": 4044729088,
+      "weight_pct": null
+    },
+    {
+      "ticker": "SKT",
+      "name": "Tanger Inc.",
+      "market_value": 4197116160,
+      "weight_pct": null
+    },
+    {
+      "ticker": "KFY",
+      "name": "Korn Ferry",
+      "market_value": 4024560640,
+      "weight_pct": null
+    },
+    {
+      "ticker": "WSFS",
+      "name": "WSFS Financial Corporation",
+      "market_value": 4009805568,
+      "weight_pct": null
+    },
+    {
+      "ticker": "COLD",
+      "name": "Americold Realty Trust, Inc.",
+      "market_value": 4007250944,
+      "weight_pct": null
+    },
+    {
+      "ticker": "ICUI",
+      "name": "ICU Medical, Inc.",
+      "market_value": 3985621760,
+      "weight_pct": null
+    },
+    {
+      "ticker": "DOO",
+      "name": "BRP Inc.",
+      "market_value": 3984772864,
+      "weight_pct": null
+    },
+    {
+      "ticker": "BRC",
+      "name": "Brady Corporation",
+      "market_value": 3976115456,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CBT",
+      "name": "Cabot Corporation",
+      "market_value": 3973005824,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CAAP",
+      "name": "Corporaci\u00f3n Am\u00e9rica Airports S.A.",
+      "market_value": 3969925376,
+      "weight_pct": null
+    },
+    {
+      "ticker": "ERO",
+      "name": "Ero Copper Corp.",
+      "market_value": 3954112768,
       "weight_pct": null
     },
     {
       "ticker": "CAR",
       "name": "Avis Budget Group, Inc.",
-      "market_value": 3825425664,
+      "market_value": 3928930304,
+      "weight_pct": null
+    },
+    {
+      "ticker": "AQN",
+      "name": "Algonquin Power & Utilities Corp.",
+      "market_value": 3926499584,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CVBF",
+      "name": "CVB Financial Corp.",
+      "market_value": 3921223168,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MDU",
+      "name": "MDU Resources Group, Inc.",
+      "market_value": 3914603520,
+      "weight_pct": null
+    },
+    {
+      "ticker": "KRC",
+      "name": "Kilroy Realty Corporation",
+      "market_value": 3949593088,
+      "weight_pct": null
+    },
+    {
+      "ticker": "SITE",
+      "name": "SiteOne Landscape Supply, Inc.",
+      "market_value": 3909776896,
+      "weight_pct": null
+    },
+    {
+      "ticker": "SUNC",
+      "name": "SunocoCorp LLC",
+      "market_value": 3908610048,
+      "weight_pct": null
+    },
+    {
+      "ticker": "TAC",
+      "name": "TransAlta Corporation",
+      "market_value": 3906305024,
+      "weight_pct": null
+    },
+    {
+      "ticker": "AYA",
+      "name": "Aya Gold & Silver Inc.",
+      "market_value": 3906260736,
+      "weight_pct": null
+    },
+    {
+      "ticker": "VVV",
+      "name": "Valvoline Inc.",
+      "market_value": 3900053248,
+      "weight_pct": null
+    },
+    {
+      "ticker": "APLE",
+      "name": "Apple Hospitality REIT, Inc.",
+      "market_value": 3897725440,
+      "weight_pct": null
+    },
+    {
+      "ticker": "BWLP",
+      "name": "BW LPG Limited",
+      "market_value": 3892526336,
+      "weight_pct": null
+    },
+    {
+      "ticker": "PAY",
+      "name": "Paymentus Holdings, Inc.",
+      "market_value": 3882719232,
+      "weight_pct": null
+    },
+    {
+      "ticker": "JOYY",
+      "name": "JOYY Inc.",
+      "market_value": 3878211840,
+      "weight_pct": null
+    },
+    {
+      "ticker": "WK",
+      "name": "Workiva Inc.",
+      "market_value": 3876086528,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CCC",
+      "name": "CCC Intelligent Solutions Holdings Inc.",
+      "market_value": 3863805184,
+      "weight_pct": null
+    },
+    {
+      "ticker": "JMKE",
+      "name": "Jersey Mike's Subs Inc.",
+      "market_value": 3858062336,
+      "weight_pct": null
+    },
+    {
+      "ticker": "RXO",
+      "name": "RXO, Inc.",
+      "market_value": 3855972608,
+      "weight_pct": null
+    },
+    {
+      "ticker": "TNL",
+      "name": "Travel + Leisure Co.",
+      "market_value": 3855868672,
+      "weight_pct": null
+    },
+    {
+      "ticker": "SIG",
+      "name": "Signet Jewelers Limited",
+      "market_value": 3853948416,
+      "weight_pct": null
+    },
+    {
+      "ticker": "HP",
+      "name": "Helmerich & Payne, Inc.",
+      "market_value": 3853645824,
       "weight_pct": null
     },
     {
@@ -2494,267 +2488,309 @@
       "weight_pct": null
     },
     {
-      "ticker": "APLE",
-      "name": "Apple Hospitality REIT, Inc.",
-      "market_value": 3822179072,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CNS",
-      "name": "Cohen & Steers, Inc.",
-      "market_value": 3815477504,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ACLS",
-      "name": "Axcelis Technologies, Inc.",
-      "market_value": 3801819904,
-      "weight_pct": null
-    },
-    {
-      "ticker": "CENX",
-      "name": "Century Aluminum Company",
-      "market_value": 3800352512,
-      "weight_pct": null
-    },
-    {
-      "ticker": "PAY",
-      "name": "Paymentus Holdings, Inc.",
-      "market_value": 3799599104,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MAT",
-      "name": "Mattel, Inc.",
-      "market_value": 3796953088,
-      "weight_pct": null
-    },
-    {
-      "ticker": "SLGN",
-      "name": "Silgan Holdings Inc.",
-      "market_value": 3795041280,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MIR",
-      "name": "Mirion Technologies, Inc.",
-      "market_value": 3882574848,
-      "weight_pct": null
-    },
-    {
-      "ticker": "WK",
-      "name": "Workiva Inc.",
-      "market_value": 3789564160,
-      "weight_pct": null
-    },
-    {
-      "ticker": "BATRA",
-      "name": "Atlanta Braves Holdings, Inc.",
-      "market_value": 3787830784,
-      "weight_pct": null
-    },
-    {
-      "ticker": "AVNT",
-      "name": "Avient Corporation",
-      "market_value": 3786182912,
-      "weight_pct": null
-    },
-    {
-      "ticker": "IPAR",
-      "name": "Interparfums, Inc.",
-      "market_value": 3776800256,
-      "weight_pct": null
-    },
-    {
-      "ticker": "RHI",
-      "name": "Robert Half Inc.",
-      "market_value": 3776127744,
-      "weight_pct": null
-    },
-    {
-      "ticker": "NP",
-      "name": "Neptune Insurance Holdings Inc.",
-      "market_value": 3775282176,
-      "weight_pct": null
-    },
-    {
-      "ticker": "BILL",
-      "name": "BILL Holdings, Inc.",
-      "market_value": 3773497600,
-      "weight_pct": null
-    },
-    {
-      "ticker": "AMLX",
-      "name": "Amylyx Pharmaceuticals, Inc.",
-      "market_value": 3763706880,
+      "ticker": "DHT",
+      "name": "DHT Holdings, Inc.",
+      "market_value": 3818058240,
       "weight_pct": null
     },
     {
       "ticker": "CRVL",
       "name": "CorVel Corporation",
-      "market_value": 3754896896,
+      "market_value": 3812485632,
       "weight_pct": null
     },
     {
-      "ticker": "BMI",
-      "name": "Badger Meter, Inc.",
-      "market_value": 3753217024,
+      "ticker": "CDP",
+      "name": "COPT Defense Properties",
+      "market_value": 3888898304,
       "weight_pct": null
     },
     {
-      "ticker": "OTTR",
-      "name": "Otter Tail Corporation",
-      "market_value": 3750991616,
+      "ticker": "BNL",
+      "name": "Broadstone Net Lease, Inc.",
+      "market_value": 3951361024,
+      "weight_pct": null
+    },
+    {
+      "ticker": "INDB",
+      "name": "Independent Bank Corp.",
+      "market_value": 3792369920,
+      "weight_pct": null
+    },
+    {
+      "ticker": "ITRI",
+      "name": "Itron, Inc.",
+      "market_value": 3787992064,
       "weight_pct": null
     },
     {
       "ticker": "MSGE",
       "name": "Madison Square Garden Entertainment Corp.",
-      "market_value": 3741370624,
+      "market_value": 3778268928,
       "weight_pct": null
     },
     {
-      "ticker": "BOOT",
-      "name": "Boot Barn Holdings, Inc.",
-      "market_value": 3734121472,
+      "ticker": "AVNT",
+      "name": "Avient Corporation",
+      "market_value": 3776093696,
       "weight_pct": null
     },
     {
-      "ticker": "THO",
-      "name": "THOR Industries, Inc.",
-      "market_value": 3723976192,
+      "ticker": "NVST",
+      "name": "Envista Holdings Corporation",
+      "market_value": 3768091392,
       "weight_pct": null
     },
     {
-      "ticker": "JOE",
-      "name": "The St. Joe Company",
-      "market_value": 3717558784,
-      "weight_pct": null
-    },
-    {
-      "ticker": "LEGN",
-      "name": "Legend Biotech Corporation",
-      "market_value": 3716673792,
-      "weight_pct": null
-    },
-    {
-      "ticker": "DNP",
-      "name": "DNP Select Income Fund Inc.",
-      "market_value": 3712265728,
+      "ticker": "BFH",
+      "name": "Bread Financial Holdings, Inc.",
+      "market_value": 3767009280,
       "weight_pct": null
     },
     {
       "ticker": "FCN",
       "name": "FTI Consulting, Inc.",
-      "market_value": 3707958272,
+      "market_value": 3766218752,
       "weight_pct": null
     },
     {
-      "ticker": "WSBC",
-      "name": "WesBanco, Inc.",
-      "market_value": 3707721728,
+      "ticker": "ACHR",
+      "name": "Archer Aviation Inc.",
+      "market_value": 3765431040,
       "weight_pct": null
     },
     {
-      "ticker": "USAC",
-      "name": "USA Compression Partners, LP",
-      "market_value": 3701853184,
+      "ticker": "TGS",
+      "name": "Transportadora de Gas del Sur S.A.",
+      "market_value": 3765310720,
       "weight_pct": null
     },
     {
-      "ticker": "IOND",
-      "name": "Ionic Digital Inc.",
-      "market_value": 3688786688,
+      "ticker": "NP",
+      "name": "Neptune Insurance Holdings Inc.",
+      "market_value": 3764303616,
       "weight_pct": null
     },
     {
-      "ticker": "TENB",
-      "name": "Tenable Holdings, Inc.",
-      "market_value": 3688588288,
+      "ticker": "SKE",
+      "name": "Skeena Resources Limited",
+      "market_value": 3756353536,
       "weight_pct": null
     },
     {
-      "ticker": "VVV",
-      "name": "Valvoline Inc.",
-      "market_value": 3688343552,
+      "ticker": "CNS",
+      "name": "Cohen & Steers, Inc.",
+      "market_value": 3753771776,
       "weight_pct": null
     },
     {
-      "ticker": "RNST",
-      "name": "Renasant Corporation",
-      "market_value": 3688169984,
+      "ticker": "CRK",
+      "name": "Comstock Resources, Inc.",
+      "market_value": 3752470528,
       "weight_pct": null
     },
     {
-      "ticker": "WT",
-      "name": "WisdomTree, Inc.",
-      "market_value": 3686289664,
+      "ticker": "SKYW",
+      "name": "SkyWest, Inc.",
+      "market_value": 3744215296,
       "weight_pct": null
     },
     {
-      "ticker": "DORM",
-      "name": "Dorman Products, Inc.",
-      "market_value": 3680369920,
+      "ticker": "PBLS",
+      "name": "Parabilis Medicines, Inc.",
+      "market_value": 3740586496,
       "weight_pct": null
     },
     {
-      "ticker": "BWLP",
-      "name": "BW LPG Limited",
-      "market_value": 3678467840,
+      "ticker": "GPGI",
+      "name": "GPGI, Inc.",
+      "market_value": 3739581952,
       "weight_pct": null
     },
     {
-      "ticker": "BANF",
-      "name": "BancFirst Corporation",
-      "market_value": 3652519424,
+      "ticker": "AKO-A",
+      "name": "Embotelladora Andina S.A.",
+      "market_value": 3732643328,
       "weight_pct": null
     },
     {
-      "ticker": "STEP",
-      "name": "StepStone Group Inc.",
-      "market_value": 5726163456,
-      "weight_pct": null
-    },
-    {
-      "ticker": "BELFB",
-      "name": "Bel Fuse Inc.",
-      "market_value": 3648704768,
+      "ticker": "OTTR",
+      "name": "Otter Tail Corporation",
+      "market_value": 3731258624,
       "weight_pct": null
     },
     {
       "ticker": "ATMU",
       "name": "Atmus Filtration Technologies Inc.",
-      "market_value": 3648135936,
+      "market_value": 3728915712,
       "weight_pct": null
     },
     {
-      "ticker": "TAC",
-      "name": "TransAlta Corporation",
-      "market_value": 3646938880,
+      "ticker": "STEP",
+      "name": "StepStone Group Inc.",
+      "market_value": 5843630080,
+      "weight_pct": null
+    },
+    {
+      "ticker": "BELFB",
+      "name": "Bel Fuse Inc.",
+      "market_value": 3724511744,
+      "weight_pct": null
+    },
+    {
+      "ticker": "JOE",
+      "name": "The St. Joe Company",
+      "market_value": 3722112768,
+      "weight_pct": null
+    },
+    {
+      "ticker": "IOND",
+      "name": "Ionic Digital Inc.",
+      "market_value": 3722083840,
+      "weight_pct": null
+    },
+    {
+      "ticker": "BILL",
+      "name": "BILL Holdings, Inc.",
+      "market_value": 3719773184,
+      "weight_pct": null
+    },
+    {
+      "ticker": "BMI",
+      "name": "Badger Meter, Inc.",
+      "market_value": 3703649536,
+      "weight_pct": null
+    },
+    {
+      "ticker": "BATRA",
+      "name": "Atlanta Braves Holdings, Inc.",
+      "market_value": 3697353984,
+      "weight_pct": null
+    },
+    {
+      "ticker": "RHI",
+      "name": "Robert Half Inc.",
+      "market_value": 3697308928,
+      "weight_pct": null
+    },
+    {
+      "ticker": "OLED",
+      "name": "Universal Display Corporation",
+      "market_value": 3694354688,
+      "weight_pct": null
+    },
+    {
+      "ticker": "WT",
+      "name": "WisdomTree, Inc.",
+      "market_value": 3693865216,
+      "weight_pct": null
+    },
+    {
+      "ticker": "BOOT",
+      "name": "Boot Barn Holdings, Inc.",
+      "market_value": 3691116800,
+      "weight_pct": null
+    },
+    {
+      "ticker": "SLGN",
+      "name": "Silgan Holdings Inc.",
+      "market_value": 3685131776,
+      "weight_pct": null
+    },
+    {
+      "ticker": "USAC",
+      "name": "USA Compression Partners, LP",
+      "market_value": 3684459776,
+      "weight_pct": null
+    },
+    {
+      "ticker": "WSBC",
+      "name": "WesBanco, Inc.",
+      "market_value": 3654973440,
+      "weight_pct": null
+    },
+    {
+      "ticker": "DORM",
+      "name": "Dorman Products, Inc.",
+      "market_value": 3651881472,
+      "weight_pct": null
+    },
+    {
+      "ticker": "IPAR",
+      "name": "Interparfums, Inc.",
+      "market_value": 3649337600,
+      "weight_pct": null
+    },
+    {
+      "ticker": "RNST",
+      "name": "Renasant Corporation",
+      "market_value": 3648866048,
       "weight_pct": null
     },
     {
       "ticker": "IRTC",
       "name": "iRhythm Holdings, Inc.",
-      "market_value": 3638456320,
+      "market_value": 3638126848,
       "weight_pct": null
     },
     {
-      "ticker": "SLG",
-      "name": "SL Green Realty Corp.",
-      "market_value": 3913906688,
+      "ticker": "BANF",
+      "name": "BancFirst Corporation",
+      "market_value": 3631352320,
+      "weight_pct": null
+    },
+    {
+      "ticker": "DNP",
+      "name": "DNP Select Income Fund Inc.",
+      "market_value": 3625140992,
+      "weight_pct": null
+    },
+    {
+      "ticker": "ARIS",
+      "name": "Aris Mining Corporation",
+      "market_value": 3612537088,
+      "weight_pct": null
+    },
+    {
+      "ticker": "LEGN",
+      "name": "Legend Biotech Corporation",
+      "market_value": 3611649792,
+      "weight_pct": null
+    },
+    {
+      "ticker": "GNW",
+      "name": "Genworth Financial, Inc.",
+      "market_value": 3608477440,
+      "weight_pct": null
+    },
+    {
+      "ticker": "IDYA",
+      "name": "IDEAYA Biosciences, Inc.",
+      "market_value": 3604847360,
       "weight_pct": null
     },
     {
       "ticker": "OGN",
       "name": "Organon & Co.",
-      "market_value": 3605627392,
+      "market_value": 3603001600,
+      "weight_pct": null
+    },
+    {
+      "ticker": "LMND",
+      "name": "Lemonade, Inc.",
+      "market_value": 3598168832,
       "weight_pct": null
     },
     {
       "ticker": "LXP",
       "name": "LXP Industrial Trust",
-      "market_value": 3589318400,
+      "market_value": 3593445376,
+      "weight_pct": null
+    },
+    {
+      "ticker": "THO",
+      "name": "THOR Industries, Inc.",
+      "market_value": 3589778944,
       "weight_pct": null
     },
     {
@@ -2764,39 +2800,39 @@
       "weight_pct": null
     },
     {
-      "ticker": "LAZ",
-      "name": "Lazard, Inc.",
-      "market_value": 3578385152,
+      "ticker": "TLX",
+      "name": "Telix Pharmaceuticals Limited",
+      "market_value": 3584724224,
       "weight_pct": null
     },
     {
-      "ticker": "KTB",
-      "name": "Kontoor Brands, Inc.",
-      "market_value": 3572707328,
+      "ticker": "VAC",
+      "name": "Marriott Vacations Worldwide Corporation",
+      "market_value": 3583992320,
       "weight_pct": null
     },
     {
-      "ticker": "ACAD",
-      "name": "Acadia Pharmaceuticals Inc.",
-      "market_value": 3563278080,
+      "ticker": "TNK",
+      "name": "Teekay Tankers Ltd.",
+      "market_value": 3575519488,
       "weight_pct": null
     },
     {
-      "ticker": "GNW",
-      "name": "Genworth Financial, Inc.",
-      "market_value": 3563135488,
+      "ticker": "IPGP",
+      "name": "IPG Photonics Corporation",
+      "market_value": 3575028224,
       "weight_pct": null
     },
     {
-      "ticker": "OLED",
-      "name": "Universal Display Corporation",
-      "market_value": 3557373440,
+      "ticker": "ZIM",
+      "name": "ZIM Integrated Shipping Services Ltd.",
+      "market_value": 3570997504,
       "weight_pct": null
     },
     {
-      "ticker": "TARS",
-      "name": "Tarsus Pharmaceuticals, Inc.",
-      "market_value": 3541662976,
+      "ticker": "SBLK",
+      "name": "Star Bulk Carriers Corp.",
+      "market_value": 3569195008,
       "weight_pct": null
     },
     {
@@ -2806,147 +2842,129 @@
       "weight_pct": null
     },
     {
+      "ticker": "MIR",
+      "name": "Mirion Technologies, Inc.",
+      "market_value": 3636022528,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MGNI",
+      "name": "Magnite, Inc.",
+      "market_value": 3546879488,
+      "weight_pct": null
+    },
+    {
+      "ticker": "AMLX",
+      "name": "Amylyx Pharmaceuticals, Inc.",
+      "market_value": 3546741760,
+      "weight_pct": null
+    },
+    {
+      "ticker": "PJT",
+      "name": "PJT Partners Inc.",
+      "market_value": 5907806208,
+      "weight_pct": null
+    },
+    {
+      "ticker": "SXI",
+      "name": "Standex International Corporation",
+      "market_value": 3544307968,
+      "weight_pct": null
+    },
+    {
+      "ticker": "KTB",
+      "name": "Kontoor Brands, Inc.",
+      "market_value": 3536635648,
+      "weight_pct": null
+    },
+    {
+      "ticker": "CENX",
+      "name": "Century Aluminum Company",
+      "market_value": 3526141184,
+      "weight_pct": null
+    },
+    {
+      "ticker": "QTWO",
+      "name": "Q2 Holdings, Inc.",
+      "market_value": 3515557888,
+      "weight_pct": null
+    },
+    {
+      "ticker": "LAZ",
+      "name": "Lazard, Inc.",
+      "market_value": 3515042304,
+      "weight_pct": null
+    },
+    {
+      "ticker": "LIF",
+      "name": "Life360, Inc.",
+      "market_value": 3511803648,
+      "weight_pct": null
+    },
+    {
+      "ticker": "VECO",
+      "name": "Veeco Instruments Inc.",
+      "market_value": 3502101504,
+      "weight_pct": null
+    },
+    {
+      "ticker": "NIC",
+      "name": "Nicolet Bankshares, Inc.",
+      "market_value": 3488796928,
+      "weight_pct": null
+    },
+    {
+      "ticker": "PVH",
+      "name": "PVH Corp.",
+      "market_value": 3484790272,
+      "weight_pct": null
+    },
+    {
+      "ticker": "SRAD",
+      "name": "Sportradar Group AG",
+      "market_value": 3480391424,
+      "weight_pct": null
+    },
+    {
+      "ticker": "COHU",
+      "name": "Cohu, Inc.",
+      "market_value": 3478428160,
+      "weight_pct": null
+    },
+    {
+      "ticker": "MANU",
+      "name": "Manchester",
+      "market_value": 3463627264,
+      "weight_pct": null
+    },
+    {
+      "ticker": "SLG",
+      "name": "SL Green Realty Corp.",
+      "market_value": 3745104640,
+      "weight_pct": null
+    },
+    {
       "ticker": "AXS-PE",
       "name": "AXIS Capital Holdings Limited",
       "market_value": null,
       "weight_pct": null
     },
     {
-      "ticker": "IDYA",
-      "name": "IDEAYA Biosciences, Inc.",
-      "market_value": 3540199168,
+      "ticker": "ELVN",
+      "name": "Enliven Therapeutics, Inc.",
+      "market_value": 3441527808,
       "weight_pct": null
     },
     {
-      "ticker": "MNDY",
-      "name": "monday.com Ltd.",
-      "market_value": 3536653056,
-      "weight_pct": null
-    },
-    {
-      "ticker": "VAC",
-      "name": "Marriott Vacations Worldwide Corporation",
-      "market_value": 3536526848,
-      "weight_pct": null
-    },
-    {
-      "ticker": "NIC",
-      "name": "Nicolet Bankshares, Inc.",
-      "market_value": 3529244928,
-      "weight_pct": null
-    },
-    {
-      "ticker": "TRMD",
-      "name": "TORM plc",
-      "market_value": 3522974720,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MANU",
-      "name": "Manchester",
-      "market_value": 3518824448,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ZIM",
-      "name": "ZIM Integrated Shipping Services Ltd.",
-      "market_value": 3517969152,
+      "ticker": "ACAD",
+      "name": "Acadia Pharmaceuticals Inc.",
+      "market_value": 3437495296,
       "weight_pct": null
     },
     {
       "ticker": "FIBK",
       "name": "First Interstate BancSystem, Inc.",
-      "market_value": 3517693184,
-      "weight_pct": null
-    },
-    {
-      "ticker": "UCTT",
-      "name": "Ultra Clean Holdings, Inc.",
-      "market_value": 3517572352,
-      "weight_pct": null
-    },
-    {
-      "ticker": "DHT",
-      "name": "DHT Holdings, Inc.",
-      "market_value": 3511710720,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MHO",
-      "name": "M/I Homes, Inc.",
-      "market_value": 3508020736,
-      "weight_pct": null
-    },
-    {
-      "ticker": "PVH",
-      "name": "PVH Corp.",
-      "market_value": 3506013696,
-      "weight_pct": null
-    },
-    {
-      "ticker": "QTWO",
-      "name": "Q2 Holdings, Inc.",
-      "market_value": 3499969280,
-      "weight_pct": null
-    },
-    {
-      "ticker": "BATRK",
-      "name": "Atlanta Braves Holdings, Inc.",
-      "market_value": 3481750016,
-      "weight_pct": null
-    },
-    {
-      "ticker": "LMND",
-      "name": "Lemonade, Inc.",
-      "market_value": 3477430016,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MIAX",
-      "name": "Miami International Holdings, Inc.",
-      "market_value": 3463158528,
-      "weight_pct": null
-    },
-    {
-      "ticker": "FSM",
-      "name": "Fortuna Mining Corp.",
-      "market_value": 3459741696,
-      "weight_pct": null
-    },
-    {
-      "ticker": "OPCH",
-      "name": "Option Care Health, Inc.",
-      "market_value": 3455545600,
-      "weight_pct": null
-    },
-    {
-      "ticker": "SMR",
-      "name": "NuScale Power Corporation",
-      "market_value": 3455479808,
-      "weight_pct": null
-    },
-    {
-      "ticker": "IRT",
-      "name": "Independence Realty Trust, Inc.",
-      "market_value": 3535869184,
-      "weight_pct": null
-    },
-    {
-      "ticker": "SXI",
-      "name": "Standex International Corporation",
-      "market_value": 3440898304,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MGNI",
-      "name": "Magnite, Inc.",
-      "market_value": 3437876992,
-      "weight_pct": null
-    },
-    {
-      "ticker": "SBLK",
-      "name": "Star Bulk Carriers Corp.",
-      "market_value": 3428748800,
+      "market_value": 3430965760,
       "weight_pct": null
     },
     {
@@ -2956,51 +2974,33 @@
       "weight_pct": null
     },
     {
-      "ticker": "ZGN",
-      "name": "Ermenegildo Zegna N.V.",
-      "market_value": 3422961664,
+      "ticker": "KN",
+      "name": "Knowles Corporation",
+      "market_value": 3420683520,
       "weight_pct": null
     },
     {
-      "ticker": "HNI",
-      "name": "HNI Corporation",
-      "market_value": 3407702784,
+      "ticker": "IRT",
+      "name": "Independence Realty Trust, Inc.",
+      "market_value": 3506866944,
       "weight_pct": null
     },
     {
-      "ticker": "FFBC",
-      "name": "First Financial Bancorp.",
-      "market_value": 3407408640,
+      "ticker": "TARS",
+      "name": "Tarsus Pharmaceuticals, Inc.",
+      "market_value": 3415793152,
       "weight_pct": null
     },
     {
-      "ticker": "NATL",
-      "name": "NCR Atleos Corporation",
-      "market_value": 3405170944,
+      "ticker": "ECO",
+      "name": "Okeanis Eco Tankers Corp.",
+      "market_value": 3407817472,
       "weight_pct": null
     },
     {
-      "ticker": "PFSI",
-      "name": "PennyMac Financial Services, Inc.",
-      "market_value": 3400749824,
-      "weight_pct": null
-    },
-    {
-      "ticker": "COCO",
-      "name": "The Vita Coco Company, Inc.",
-      "market_value": 3390260736,
-      "weight_pct": null
-    },
-    {
-      "ticker": "ARQT",
-      "name": "Arcutis Biotherapeutics, Inc.",
-      "market_value": 3383627520,
-      "weight_pct": null
-    },
-    {
-      "ticker": "MWA",
-      "name": "Mueller Water Products, Inc.",
-      "market_value": 3376998400,
+      "ticker": "MHO",
+      "name": "M/I Homes, Inc.",
+      "market_value": 3407141376,
       "weight_pct": null
     }
   ]
