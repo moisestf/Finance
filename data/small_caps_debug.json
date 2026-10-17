@@ -4,10 +4,11 @@
     {
       "attempt": "screen offset=0 size=250",
       "returned": 250,
-      "total_reported": 1940,
+      "total_reported": 1973,
       "sample_keys": [
         "ask",
         "askSize",
+        "averageAnalystRating",
         "averageDailyVolume10Day",
         "averageDailyVolume3Month",
         "bid",
@@ -17,7 +18,8 @@
         "cryptoTradeable",
         "currency",
         "customPriceAlertConfidence",
-        "displayName",
+        "dividendDate",
+        "dividendRate",
         "dividendYield",
         "earningsCallTimestampEnd",
         "earningsCallTimestampStart",
@@ -98,11 +100,10 @@
     {
       "attempt": "screen offset=250 size=250",
       "returned": 250,
-      "total_reported": 1940,
+      "total_reported": 1973,
       "sample_keys": [
         "ask",
         "askSize",
-        "averageAnalystRating",
         "averageDailyVolume10Day",
         "averageDailyVolume3Month",
         "bid",
@@ -113,13 +114,14 @@
         "currency",
         "customPriceAlertConfidence",
         "displayName",
+        "dividendDate",
+        "dividendRate",
         "dividendYield",
         "earningsCallTimestampEnd",
         "earningsCallTimestampStart",
         "earningsTimestamp",
         "earningsTimestampEnd",
         "earningsTimestampStart",
-        "epsCurrentYear",
         "epsForward",
         "epsTrailingTwelveMonths",
         "esgPopulated",
@@ -159,7 +161,6 @@
         "postMarketChangePercent",
         "postMarketPrice",
         "postMarketTime",
-        "priceEpsCurrentYear",
         "priceHint",
         "priceToBook",
         "quoteSourceName",
@@ -182,7 +183,6 @@
         "tradeable",
         "trailingAnnualDividendRate",
         "trailingAnnualDividendYield",
-        "trailingPE",
         "triggerable",
         "twoHundredDayAverage",
         "twoHundredDayAverageChange",
@@ -194,7 +194,7 @@
       "attempt": "field extraction",
       "quotes_seen": 500,
       "holdings_built": 500,
-      "missing_market_cap": 13
+      "missing_market_cap": 12
     }
   ]
 }
