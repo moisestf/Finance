@@ -4,7 +4,7 @@
     {
       "attempt": "screen offset=0 size=250",
       "returned": 250,
-      "total_reported": 1904,
+      "total_reported": 1961,
       "sample_keys": [
         "ask",
         "askSize",
@@ -19,7 +19,6 @@
         "currency",
         "customPriceAlertConfidence",
         "displayName",
-        "dividendDate",
         "dividendYield",
         "earningsCallTimestampEnd",
         "earningsCallTimestampStart",
@@ -55,7 +54,6 @@
         "gmtOffSetMilliseconds",
         "hasPrePostMarketData",
         "impliedSharesOutstanding",
-        "ipoExpectedDate",
         "isEarningsDateEstimate",
         "language",
         "longName",
@@ -63,10 +61,6 @@
         "marketCap",
         "marketState",
         "messageBoardId",
-        "postMarketChange",
-        "postMarketChangePercent",
-        "postMarketPrice",
-        "postMarketTime",
         "priceEpsCurrentYear",
         "priceHint",
         "priceToBook",
@@ -90,6 +84,7 @@
         "tradeable",
         "trailingAnnualDividendRate",
         "trailingAnnualDividendYield",
+        "trailingPE",
         "triggerable",
         "twoHundredDayAverage",
         "twoHundredDayAverageChange",
@@ -100,7 +95,7 @@
     {
       "attempt": "screen offset=250 size=250",
       "returned": 250,
-      "total_reported": 1904,
+      "total_reported": 1962,
       "sample_keys": [
         "ask",
         "askSize",
@@ -159,10 +154,8 @@
         "marketCap",
         "marketState",
         "messageBoardId",
-        "postMarketChange",
-        "postMarketChangePercent",
-        "postMarketPrice",
-        "postMarketTime",
+        "nameChangeDate",
+        "prevName",
         "priceEpsCurrentYear",
         "priceHint",
         "priceToBook",
@@ -198,7 +191,7 @@
       "attempt": "field extraction",
       "quotes_seen": 500,
       "holdings_built": 500,
-      "missing_market_cap": 12
+      "missing_market_cap": 13
     }
   ]
 }
