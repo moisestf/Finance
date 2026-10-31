@@ -4,7 +4,7 @@
     {
       "attempt": "screen offset=0 size=250",
       "returned": 250,
-      "total_reported": 1961,
+      "total_reported": 1915,
       "sample_keys": [
         "ask",
         "askSize",
@@ -61,6 +61,10 @@
         "marketCap",
         "marketState",
         "messageBoardId",
+        "postMarketChange",
+        "postMarketChangePercent",
+        "postMarketPrice",
+        "postMarketTime",
         "priceEpsCurrentYear",
         "priceHint",
         "priceToBook",
@@ -95,7 +99,7 @@
     {
       "attempt": "screen offset=250 size=250",
       "returned": 250,
-      "total_reported": 1962,
+      "total_reported": 1915,
       "sample_keys": [
         "ask",
         "askSize",
@@ -154,8 +158,10 @@
         "marketCap",
         "marketState",
         "messageBoardId",
-        "nameChangeDate",
-        "prevName",
+        "postMarketChange",
+        "postMarketChangePercent",
+        "postMarketPrice",
+        "postMarketTime",
         "priceEpsCurrentYear",
         "priceHint",
         "priceToBook",
@@ -191,7 +197,7 @@
       "attempt": "field extraction",
       "quotes_seen": 500,
       "holdings_built": 500,
-      "missing_market_cap": 13
+      "missing_market_cap": 12
     }
   ]
 }
