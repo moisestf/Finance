@@ -1,6 +1,6 @@
 {
   "meta": {
-    "last_updated_utc": "2026-11-03T03:00:42+00:00",
+    "last_updated_utc": "2026-11-04T01:34:22+00:00",
     "tickers": [
       "SEZL",
       "DOGZ",
@@ -2683,7 +2683,7 @@
       {
         "close": 196.25,
         "date": "2026-11-02",
-        "volume": 15414000
+        "volume": 15477500
       }
     ],
     "DOGZ": [
